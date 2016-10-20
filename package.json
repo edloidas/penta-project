@@ -1,0 +1,41 @@
+{
+  "name": "penta-project",
+  "version": "0.0.1",
+  "description": "Action platformer with roguelike elements.",
+  "main": "index.js",
+  "keywords": [
+    "game",
+    "three.js",
+    "WebGL"
+  ],
+  "homepage": "https://github.com/edloidas/penta-project#readme",
+  "bugs": {
+    "url": "https://github.com/edloidas/penta-project/issues"
+  },
+  "license": "GPL-3.0",
+  "author": "Mikita Taukachou <edloidas@gmail.com> (https://edloidas.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edloidas/penta-project.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "cover": "jest --coverage",
+    "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "prepush": "npm test",
+    "fix": "eslint --fix . || exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.14",
+    "eslint": "^3.7.0",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "husky": "^0.11.8",
+    "jest": "^16.0.2"
+  },
+  "engines": {
+    "node": ">= 6.5.0",
+    "npm": ">= 3.10.7"
+  }
+}

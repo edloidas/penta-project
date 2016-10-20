@@ -1,0 +1,12 @@
+# Directories #
+
+node_modules/
+coverage/
+public/
+
+# Files #
+
+npm-debug.log
+
+.DS_Store
+Desktop.ini
