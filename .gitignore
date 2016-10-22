@@ -3,6 +3,7 @@
 node_modules/
 coverage/
 public/
+flow-typed/
 
 # Files #
 
