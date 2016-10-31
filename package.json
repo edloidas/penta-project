@@ -23,7 +23,8 @@
     "cover": "jest --coverage",
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "prepush": "npm test",
-    "fix": "eslint --fix . || exit 0"
+    "fix": "eslint --fix . || exit 0",
+    "download": "node util/tasks/download.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -32,6 +33,8 @@
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-flow-strip-types": "^6.14.0",
     "coveralls": "^2.11.14",
+    "del": "^2.2.2",
+    "download": "^5.0.2",
     "eslint": "^3.7.0",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-flowtype": "^2.20.0",
@@ -39,8 +42,12 @@
     "husky": "^0.11.8",
     "jest": "^16.0.2",
     "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "pify": "^2.3.0",
+    "ramda": "^0.22.1",
     "three": "^0.81.2",
-    "webpack": "2.1.0-beta.25"
+    "webpack": "2.1.0-beta.25",
+    "yauzl": "^2.7.0"
   },
   "engines": {
     "node": ">= 7.0.0",
