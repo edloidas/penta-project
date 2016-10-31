@@ -22,8 +22,11 @@
     "test": "jest",
     "cover": "jest --coverage",
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
-    "prepush": "npm test",
     "fix": "eslint --fix . || exit 0",
+    "prepush": "npm test",
+    "postinstall": "npm run download",
+    "do": "node util/do.js",
+    "clean": "npm run do ./clean",
     "download": "node util/tasks/download.js"
   },
   "dependencies": {},
