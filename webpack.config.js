@@ -5,6 +5,7 @@ Uses $NODE_ENV, `production` or `development`
 const path = require('path');
 const R = require('ramda');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglify-js-plugin');
 const htmlMinify = require('./util/config/minify');
 const jsMinify = require('./util/config/uglify');
@@ -49,7 +50,7 @@ function addPugSupport(cfg) {
     },
   };
   const plugin = new HtmlWebpackPlugin({
-    filename: 'html/index.html',
+    filename: 'index.html',
     template: 'src/html/index.pug',
     minify: isProd ? htmlMinify : false,
   });
@@ -75,11 +76,28 @@ function addBabelSupport(cfg) {
   return R.pipe(addLoader(loader), ...addPlugins(plugins))(cfg);
 }
 
+// Add support for the css bundle
+// - CSS file needs to be required from JS entry
+// - ExtractTextPlugin extracts css from JS to a separate file
+function addPostCSSSupport(cfg) {
+  const loader = {
+    test: /\.css$/,
+    loaders: ExtractTextPlugin.extract({
+      fallbackLoader: 'style', loader: 'css?importLoaders=1!postcss',
+    }),
+  };
+  const plugin = new ExtractTextPlugin('style.css');
+
+  return R.pipe(addLoader(loader), addPlugin(plugin))(cfg);
+}
+
 function makeConfig(cfg) {
   let updatedConfig = cfg;
-
-  updatedConfig = addPugSupport(updatedConfig);
-  updatedConfig = addBabelSupport(updatedConfig);
+  updatedConfig = R.pipe(
+    addPugSupport,
+    addBabelSupport,
+    addPostCSSSupport
+  )(updatedConfig);
 
   return updatedConfig;
 }
