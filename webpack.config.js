@@ -83,7 +83,7 @@ function addPostCSSSupport(cfg) {
   const loader = {
     test: /\.css$/,
     loaders: ExtractTextPlugin.extract({
-      fallbackLoader: 'style', loader: 'css?importLoaders=1!postcss',
+      fallbackLoader: 'style', loader: `css?importLoaders=1!postcss${isProd ? '' : '?sourceMap=inline'}`,
     }),
   };
   const plugin = new ExtractTextPlugin('style.css');

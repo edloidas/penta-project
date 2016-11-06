@@ -8,7 +8,8 @@ const isProd = environment === 'production';
 
 const postcssConfig = {
   parser: false,
-  map: isProd ? false : 'inline',
+  // Map is additionally set in webpack config
+  map: { inline: !isProd },
   plugins: {
     // postcss-import is replaced by webpack's import
     // 'postcss-import': {},
@@ -21,20 +22,21 @@ const postcssConfig = {
 };
 
 function makeConfig() {
-  let prop;
-
+  let plugins;
   if (isProd) {
-    prop = R.merge(postcssConfig.plugins, {
+    // production plugins
+    plugins = {
       'css-mqpacker': {},
       'postcss-discard-comments': {},
-      cssnano: { discardUnused: false },
-    });
+      cssnano: { discardUnused: true },
+    };
   } else {
-    prop = R.merge(postcssConfig.plugins, {
-      stylelint: {},
-    });
+    // development plugins
+    plugins = {
+    };
   }
 
+  const prop = R.merge(postcssConfig.plugins, plugins);
   const cfg = R.set(R.lensProp('plugins'), prop, postcssConfig);
 
   return cfg;
