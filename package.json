@@ -47,13 +47,13 @@
     "del": "^2.2.2",
     "download": "^5.0.2",
     "eslint": "^3.9.1",
-    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-flowtype": "^2.25.0",
     "eslint-plugin-import": "^2.0.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "html-webpack-plugin": "^2.24.1",
     "husky": "^0.11.8",
-    "jest": "^16.0.2",
+    "jest": "^17.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "normalize.css": "^5.0.0",
@@ -73,6 +73,7 @@
     "three": "^0.82.1",
     "uglify-js-plugin": "^0.0.6",
     "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "2.1.0-beta.10",
     "yauzl": "^2.7.0"
   },
   "engines": {
