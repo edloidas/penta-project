@@ -1,0 +1,9 @@
+@import "~normalize.css/normalize.css";
+
+$screenSize: 100%;
+
+html,
+body {
+  width: $screenSize;
+  height: $screenSize;
+}
