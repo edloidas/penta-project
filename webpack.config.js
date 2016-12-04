@@ -44,7 +44,7 @@ const webpackConfig = {
 function addPugSupport(cfg) {
   const loader = {
     test: /\.pug$/,
-    loader: 'pug',
+    loader: 'pug-loader',
     options: {
       pretty: !isProd,
     },
@@ -63,7 +63,7 @@ function addBabelSupport(cfg) {
   const loader = {
     test: /\.js$/,
     exclude: /(node_modules|public)/,
-    loader: 'babel',
+    loader: 'babel-loader',
   };
 
   const devPlugins = [];
@@ -83,7 +83,7 @@ function addPostCSSSupport(cfg) {
   const loader = {
     test: /\.css$/,
     loaders: ExtractTextPlugin.extract({
-      fallbackLoader: 'style', loader: `css?importLoaders=1!postcss${isProd ? '' : '?sourceMap=inline'}`,
+      fallbackLoader: 'style-loader', loader: `css-loader?importLoaders=1!postcss-loader${isProd ? '' : '?sourceMap=inline'}`,
     }),
   };
   const plugin = new ExtractTextPlugin('style.css');
