@@ -14,7 +14,14 @@
     "no-restricted-syntax": [ "off" ],
     "object-property-newline": [ "off", { "allowMultiplePropertiesPerLine": true } ],
     "import/no-extraneous-dependencies": [ "off", { "devDependencies": [ "util/", "**/*.test.js", "**/*.spec.js" ] } ],
-    "no-underscore-dangle": [ "off" ]
+    "no-underscore-dangle": [ "off" ],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }]
   },
   "env": {
     "browser": true,
