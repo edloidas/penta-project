@@ -25,8 +25,7 @@
     "fix": "eslint --fix . || exit 0",
     "prepush": "npm test",
     "postinstall": "npm run download",
-    "do": "node util/do.js",
-    "clean": "npm run do ./clean",
+    "clean": "runwith ./util/clean",
     "download": "node util/tasks/download.js",
     "prod": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack"
@@ -67,6 +66,7 @@
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.3.0",
     "ramda": "^0.22.1",
+    "runwith": "^0.0.3",
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0",
