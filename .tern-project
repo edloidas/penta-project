@@ -4,7 +4,9 @@
     "browser"
   ],
   "loadEagerly": [
-    "**.js"
+    "*.js",
+    "src/**/*.js",
+    "util/**/*.js"
   ],
   "plugins": {
     "doc_comment": {},
