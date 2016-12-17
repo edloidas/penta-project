@@ -6,9 +6,9 @@ const path = require('path');
 const R = require('ramda');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
+// const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const htmlMinify = require('./util/config/minify');
-const jsMinify = require('./util/config/uglify');
+// const jsMinify = require('./util/config/uglify');
 const CONFIG = require('./util/config');
 
 
@@ -68,7 +68,8 @@ function addBabelSupport(cfg) {
 
   const devPlugins = [];
   const prodPlugins = [
-    new UglifyJsPlugin(jsMinify),
+    // TODO: ✘ does not support ES2015+.
+    // new UglifyJsPlugin(jsMinify),
   ];
   const plugins = isProd ? R.concat(devPlugins, prodPlugins) : devPlugins;
 

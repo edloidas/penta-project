@@ -9,9 +9,18 @@ Penta Project
 
 > Action platformer with roguelike elements.
 
-## Description
+## Description ##
 
 Penta project is currently in pre-alpha.
+
+## Issues ##
+
+#### Development: ####
+
+* [ ] UglifyJS2 (webpack plugin) [does not support ES2015+][UglifyJS2-es2015] ( ✘ in [webpack config](webpack.config.js) )
+* [ ] ESLint babel parser does not support `'no-await-in-loop'` rule ( ✘ in [ESLint config](.eslintrc.js) )
+
+Such code is currently disabled. To find and fix it in future, use `TODO: ✘` pattern in search queries.
 
 ## License ##
 
@@ -37,3 +46,5 @@ Take a note, that all project data in the `public/base/` directory (present only
 
 [base-license-url]: http://creativecommons.org/licenses/by-nc-nd/4.0/
 [base-license-image]: http://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg
+
+[UglifyJS2-es2015]: https://github.com/mishoo/UglifyJS2/issues/448
