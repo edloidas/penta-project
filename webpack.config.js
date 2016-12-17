@@ -40,6 +40,7 @@ const webpackConfig = {
   plugins: [],
 };
 
+
 // Allows to convert pug->html
 function addPugSupport(cfg) {
   const loader = {
@@ -53,6 +54,7 @@ function addPugSupport(cfg) {
     filename: 'index.html',
     template: 'src/html/index.pug',
     minify: isProd ? htmlMinify : false,
+    inject: false,
   });
   return R.pipe(addLoader(loader), addPlugin(plugin))(cfg);
 }
@@ -66,12 +68,16 @@ function addBabelSupport(cfg) {
     loader: 'babel-loader',
   };
 
-  const devPlugins = [];
+  const sharedPlugins = [];
+  const devPlugins = [
+    // automatically injected by dev server with --hot flag
+    // new HotModuleReplacementPlugin(),
+  ];
   const prodPlugins = [
     // TODO: ✘ does not support ES2015+.
     // new UglifyJsPlugin(jsMinify),
   ];
-  const plugins = isProd ? R.concat(devPlugins, prodPlugins) : devPlugins;
+  const plugins = R.concat(sharedPlugins)(isProd ? prodPlugins : devPlugins);
 
   const addPlugins = list => R.map(addPlugin, list);
   return R.pipe(addLoader(loader), ...addPlugins(plugins))(cfg);

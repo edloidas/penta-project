@@ -28,7 +28,8 @@
     "clean": "runwith ./util/clean",
     "download": "node util/tasks/download.js",
     "prod": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack"
+    "dev": "cross-env NODE_ENV=development webpack",
+    "dev-server": "webpack-dev-server --inline --hot --progress --open --content-base public/"
   },
   "dependencies": {},
   "devDependencies": {
