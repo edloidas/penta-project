@@ -2,6 +2,13 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "indentation": 2,
-    "unit-whitelist": ["em", "rem", "%", "s"]
+    "unit-whitelist": [
+      [ "em", "rem", "%", "s" ],
+      {
+        "ignoreProperties": {
+          "px": [ "background-position" ]
+        }
+      }
+    ]
   }
 }
