@@ -5,6 +5,7 @@ coverage/
 public/
 flow-typed/
 temp/
+.vscode/
 
 # Files #
 
