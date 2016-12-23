@@ -1,9 +1,5 @@
 const R = require('ramda');
-
-
-const environment = process.env.NODE_ENV;
-// Consider `development` by default
-const isProd = environment === 'production';
+const isProd = require('./util/env');
 
 
 const postcssConfig = {

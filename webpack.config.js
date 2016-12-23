@@ -9,12 +9,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const htmlMinify = require('./util/config/minify');
 // const jsMinify = require('./util/config/uglify');
+const isProd = require('./util/env');
 const CONFIG = require('./util/config');
-
-
-const environment = process.env.NODE_ENV;
-// Consider `development` by default
-const isProd = environment === 'production';
 
 
 // appendToArrayByPath :: Array -> Object -> Object -> Object
