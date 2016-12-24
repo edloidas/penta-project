@@ -21,10 +21,17 @@ const appendToArrayByPath = R.curry((objPath, data, object) =>
 const addRule = appendToArrayByPath(['module', 'rules']);
 // addPlugin :: Object -> Object -> Object
 const addPlugin = appendToArrayByPath(['plugins']);
+// addPlugins :: Array -> Array
+const addPlugins = list => R.map(addPlugin, list);
+
 
 // Webpack config template
 const webpackConfig = {
-  entry: './src/js/app.js',
+  entry: {
+    common: [
+      './src/js/app.js',
+    ],
+  },
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
     publicPath: '',
@@ -37,7 +44,9 @@ const webpackConfig = {
 };
 
 
+// =====================
 // Allows to convert pug->html
+// =====================
 function addPugSupport(cfg) {
   const rule = {
     test: /\.pug$/,
@@ -55,8 +64,11 @@ function addPugSupport(cfg) {
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
 
+
+// =====================
 // Removes Flow types with Babel
 // Uglifies code in production
+// =====================
 function addBabelSupport(cfg) {
   const rule = {
     test: /\.js$/,
@@ -75,34 +87,58 @@ function addBabelSupport(cfg) {
   ];
   const plugins = R.concat(sharedPlugins)(isProd ? prodPlugins : devPlugins);
 
-  const addPlugins = list => R.map(addPlugin, list);
   return R.pipe(addRule(rule), ...addPlugins(plugins))(cfg);
 }
 
+
+// =====================
 // Add support for the css bundle
 // - CSS file needs to be required from JS entry
 // - ExtractTextPlugin extracts css from JS to a separate file
+// =====================
 function addPostCSSSupport(cfg) {
-  const rule = {
+  let rule = {
     test: /\.css$/,
+  };
+
+  const devLoaders = {
+    use: [
+      { loader: 'style-loader' },
+      {
+        loader: 'css-loader',
+        options: { importLoaders: 1 },
+      },
+      {
+        loader: 'postcss-loader',
+        options: { sourceMap: 'inline' },
+      },
+    ],
+  };
+  const prodLoaders = {
     loaders: ExtractTextPlugin.extract({
-      fallbackLoader: 'style-loader', loader: `css-loader?importLoaders=1!postcss-loader${isProd ? '' : '?sourceMap=inline'}`,
+      fallbackLoader: 'style-loader',
+      loader: 'css-loader?importLoaders=1!postcss-loader',
     }),
   };
+  const loaders = isProd ? prodLoaders : devLoaders;
+
+  rule = R.merge(rule)(loaders);
+
   const plugin = new ExtractTextPlugin('style.css');
 
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
 
+
+// =====================
+// Make final config support needed rules
+// =====================
 function makeConfig(cfg) {
-  let updatedConfig = cfg;
-  updatedConfig = R.pipe(
+  return R.pipe(
     addPugSupport,
     addBabelSupport,
     addPostCSSSupport
-  )(updatedConfig);
-
-  return updatedConfig;
+  )(cfg);
 }
 
 module.exports = makeConfig(webpackConfig);
