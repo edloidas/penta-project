@@ -17,8 +17,8 @@ const CONFIG = require('./util/config');
 const appendToArrayByPath = R.curry((objPath, data, object) =>
   R.pipe(R.path(objPath), R.append(data), R.set(R.lensPath(objPath), R.__, object))(object)
 );
-// addLoader :: Object -> Object -> Object
-const addLoader = appendToArrayByPath(['module', 'loaders']);
+// addRule :: Object -> Object -> Object
+const addRule = appendToArrayByPath(['module', 'rules']);
 // addPlugin :: Object -> Object -> Object
 const addPlugin = appendToArrayByPath(['plugins']);
 
@@ -31,7 +31,7 @@ const webpackConfig = {
     filename: 'app.js',
   },
   module: {
-    loaders: [],
+    rules: [],
   },
   plugins: [],
 };
@@ -39,7 +39,7 @@ const webpackConfig = {
 
 // Allows to convert pug->html
 function addPugSupport(cfg) {
-  const loader = {
+  const rule = {
     test: /\.pug$/,
     loader: 'pug-loader',
     options: {
@@ -52,13 +52,13 @@ function addPugSupport(cfg) {
     minify: isProd ? htmlMinify : false,
     inject: false,
   });
-  return R.pipe(addLoader(loader), addPlugin(plugin))(cfg);
+  return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
 
 // Removes Flow types with Babel
 // Uglifies code in production
 function addBabelSupport(cfg) {
-  const loader = {
+  const rule = {
     test: /\.js$/,
     exclude: /(node_modules|public)/,
     loader: 'babel-loader',
@@ -76,14 +76,14 @@ function addBabelSupport(cfg) {
   const plugins = R.concat(sharedPlugins)(isProd ? prodPlugins : devPlugins);
 
   const addPlugins = list => R.map(addPlugin, list);
-  return R.pipe(addLoader(loader), ...addPlugins(plugins))(cfg);
+  return R.pipe(addRule(rule), ...addPlugins(plugins))(cfg);
 }
 
 // Add support for the css bundle
 // - CSS file needs to be required from JS entry
 // - ExtractTextPlugin extracts css from JS to a separate file
 function addPostCSSSupport(cfg) {
-  const loader = {
+  const rule = {
     test: /\.css$/,
     loaders: ExtractTextPlugin.extract({
       fallbackLoader: 'style-loader', loader: `css-loader?importLoaders=1!postcss-loader${isProd ? '' : '?sourceMap=inline'}`,
@@ -91,7 +91,7 @@ function addPostCSSSupport(cfg) {
   };
   const plugin = new ExtractTextPlugin('style.css');
 
-  return R.pipe(addLoader(loader), addPlugin(plugin))(cfg);
+  return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
 
 function makeConfig(cfg) {
