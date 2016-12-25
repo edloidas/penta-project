@@ -25,11 +25,10 @@
     "fix": "eslint --fix . || exit 0",
     "prepush": "npm test",
     "postinstall": "npm run download",
-    "clean": "runwith ./util/clean",
+    "clean": "runwith ./util/clean public/**/*",
     "download": "node util/tasks/download.js",
     "prod": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack",
-    "dev-server": "webpack-dev-server --inline --hot --progress --open --content-base public/"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --open --content-base public/"
   },
   "dependencies": {},
   "devDependencies": {
@@ -61,7 +60,7 @@
     "postcss-calc": "^5.3.1",
     "postcss-discard-comments": "^2.0.4",
     "postcss-loader": "^1.2.1",
-    "postcss-mixins": "^5.4.0",
+    "postcss-mixins": "^5.4.1",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
     "pug": "^2.0.0-beta6",

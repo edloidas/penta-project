@@ -6,10 +6,11 @@ const path = require('path');
 const R = require('ramda');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractConfig = require('./util/config/extract');
 // const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const htmlMinify = require('./util/config/minify');
 // const jsMinify = require('./util/config/uglify');
-const isProd = require('./util/env');
+const isProd = require('./util/env').prod;
 const CONFIG = require('./util/config');
 
 
@@ -116,7 +117,7 @@ function addPostCSSSupport(cfg) {
   };
   const prodLoaders = {
     loaders: ExtractTextPlugin.extract({
-      fallbackLoader: 'style-loader',
+      fallbackLoader: 'style-loader!css-loader?importLoaders=1!postcss-loader?sourceMap=inline',
       loader: 'css-loader?importLoaders=1!postcss-loader',
     }),
   };
@@ -124,7 +125,7 @@ function addPostCSSSupport(cfg) {
 
   rule = R.merge(rule)(loaders);
 
-  const plugin = new ExtractTextPlugin('style.css');
+  const plugin = new ExtractTextPlugin(R.merge({ filename: 'style.css' }, extractConfig));
 
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }

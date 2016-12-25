@@ -1,5 +1,5 @@
 const R = require('ramda');
-const isProd = require('./util/env');
+const isProd = require('./util/env').prod;
 
 
 const postcssConfig = {
@@ -18,19 +18,14 @@ const postcssConfig = {
 };
 
 function makeConfig() {
-  let plugins;
-  if (isProd) {
-    // production plugins
-    plugins = {
-      'css-mqpacker': {},
-      'postcss-discard-comments': {},
-      cssnano: { discardUnused: true },
-    };
-  } else {
-    // development plugins
-    plugins = {
-    };
-  }
+  const devPlugins = {};
+  const prodPlugins = {
+    'css-mqpacker': {},
+    'postcss-discard-comments': {},
+    cssnano: { discardUnused: true },
+  };
+
+  const plugins = isProd ? prodPlugins : devPlugins;
 
   const prop = R.merge(postcssConfig.plugins, plugins);
   const cfg = R.set(R.lensProp('plugins'), prop, postcssConfig);
