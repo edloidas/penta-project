@@ -1,0 +1,11 @@
+/*
+Color pallet
+stylelint-disable declaration-block-semicolon-newline-after
+*/
+$color__blue--dark:  #08131c;
+$color__blue:        #08637e;
+$color__red:         #b82739; /* #B22222 */
+$color__yellow:      #f3c333; /* #ffd700 */
+$color__black:       #1d1f21; /* #111111 */
+$color__white:       #f5f5f5;
+$color__grey:        #969896;

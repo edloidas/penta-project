@@ -13,9 +13,9 @@ Penta Project
 
 Penta project is currently in pre-alpha.
 
-## Issues ##
+## Development ##
 
-#### Development: ####
+#### Issues: ####
 
 * [ ] UglifyJS2 (webpack plugin) [does not support ES2015+][UglifyJS2-es2015] ( ✘ in [webpack config](webpack.config.js) )
 * [ ] ESLint babel parser does not support `'no-await-in-loop'` rule ( ✘ in [ESLint config](.eslintrc.js) )

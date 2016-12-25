@@ -1,5 +1,11 @@
-@import "~normalize.css/normalize.css";
+/*
+`post-css` loader is used to handle the `@import`. To import CSS from
+`node_modules` with `css-loader` default handler use the following syntax:
+  @import "~normalize.css/normalize.css";
+*/
+@import "normalize.css";
 @import "effects.css";
+@import "colors.css";
 
 $screenSize: 100%;
 
@@ -7,4 +13,6 @@ html,
 body {
   width: $screenSize;
   height: $screenSize;
+  overflow: hidden;
+  background-color: $color__white;
 }
