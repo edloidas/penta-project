@@ -76,7 +76,7 @@ function addPugSupport(cfg) {
 // =====================
 function addBabelSupport(cfg) {
   const rule = {
-    test: /\.js$/,
+    test: /\.jsx?$/,
     exclude: /(node_modules|public)/,
     loader: 'babel-loader',
   };
