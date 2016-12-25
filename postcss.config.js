@@ -1,11 +1,12 @@
 const R = require('ramda');
 const isProd = require('./util/env').prod;
+const isDev = require('./util/env').dev;
 
 
 const postcssConfig = {
   parser: false,
   // Map is additionally set in webpack config
-  map: { inline: !isProd },
+  map: { inline: isDev },
   plugins: {
     // postcss-import is replaced by webpack's import
     // 'postcss-import': {},

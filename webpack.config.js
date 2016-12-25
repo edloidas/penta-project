@@ -1,6 +1,6 @@
 /*
 Configurable webpack config.
-Uses $NODE_ENV, `production` or `development`
+Uses $NODE_ENV, `production` or `development` (also default)
 */
 const path = require('path');
 const R = require('ramda');
@@ -11,6 +11,7 @@ const extractConfig = require('./util/config/extract');
 const htmlMinify = require('./util/config/minify');
 // const jsMinify = require('./util/config/uglify');
 const isProd = require('./util/env').prod;
+const isDev = require('./util/env').dev;
 const CONFIG = require('./util/config');
 
 
@@ -29,14 +30,14 @@ const addPlugins = list => R.map(addPlugin, list);
 // Webpack config template
 const webpackConfig = {
   entry: {
-    common: [
+    app: [
       './src/js/app.js',
     ],
   },
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
     publicPath: '',
-    filename: 'app.js',
+    filename: '[name].js',
   },
   module: {
     rules: [],
@@ -47,21 +48,24 @@ const webpackConfig = {
 
 // =====================
 // Allows to convert pug->html
+// Uglifies code in produnction (see `rule.pretty` and `plugin.minify`)
+// Injects CSS in production
 // =====================
 function addPugSupport(cfg) {
   const rule = {
     test: /\.pug$/,
     loader: 'pug-loader',
     options: {
-      pretty: !isProd,
+      pretty: isDev,
     },
   };
   const plugin = new HtmlWebpackPlugin({
     filename: 'index.html',
     template: 'src/html/index.pug',
     minify: isProd ? htmlMinify : false,
-    inject: false,
+    inject: isProd ? 'head' : false,
   });
+
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
 
