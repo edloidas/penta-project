@@ -81,16 +81,16 @@ function addBabelSupport(cfg) {
     loader: 'babel-loader',
   };
 
-  const sharedPlugins = [];
-  const devPlugins = [
-    // automatically injected by dev server with --hot flag
-    // new HotModuleReplacementPlugin(),
+  const plugins = [
+    ...isDev ? [
+      // automatically injected by dev server with --hot flag
+      // new HotModuleReplacementPlugin(),
+    ] : [],
+    ...isProd ? [
+      // TODO: ✘ does not support ES2015+.
+      // new UglifyJsPlugin(jsMinify),
+    ] : [],
   ];
-  const prodPlugins = [
-    // TODO: ✘ does not support ES2015+.
-    // new UglifyJsPlugin(jsMinify),
-  ];
-  const plugins = R.concat(sharedPlugins)(isProd ? prodPlugins : devPlugins);
 
   return R.pipe(addRule(rule), ...addPlugins(plugins))(cfg);
 }
