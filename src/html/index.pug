@@ -8,10 +8,13 @@ html( lang="en" )
 
     link( rel="shortcut icon", href="img/favicon.png" type="image/png" )
 
-    //- Automatically injected by HtmlWebpackPlugin
-    //- link( rel="stylesheet", type="text/css", href="style.css" )
+    //- CSS and JS are automatically injected by HtmlWebpackPlugin
+    //- Currently disabled
 
-    script( src="app.js", defer )
+    link( rel="stylesheet", type="text/css", href="style.css" )
+
+    script( src="engine.js", defer )
+    script( src="ui.js", defer )
 
   body
 

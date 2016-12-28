@@ -30,9 +30,8 @@ const addPlugins = list => R.map(addPlugin, list);
 // Webpack config template
 const webpackConfig = {
   entry: {
-    app: [
-      './src/js/app.js',
-    ],
+    engine: './src/js/engine/index.js',
+    ui: './src/js/ui/index.js',
   },
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
@@ -49,7 +48,7 @@ const webpackConfig = {
 // =====================
 // Allows to convert pug->html
 // Uglifies code in produnction (see `rule.pretty` and `plugin.minify`)
-// Injects CSS in production
+// Injects CSS and JS in production (disabled)
 // =====================
 function addPugSupport(cfg) {
   const rule = {
@@ -63,7 +62,7 @@ function addPugSupport(cfg) {
     filename: 'index.html',
     template: 'src/html/index.pug',
     minify: isProd ? htmlMinify : false,
-    inject: isProd ? 'head' : false,
+    inject: false, // when enabled, use 'head' in production
   });
 
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
