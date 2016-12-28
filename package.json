@@ -27,7 +27,7 @@
     "postinstall": "npm run download",
     "clean": "runwith ./util/clean public/**/*",
     "download": "node util/tasks/download.js",
-    "prod": "cross-env NODE_ENV=production webpack",
+    "prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --open --content-base public/"
   },
   "dependencies": {
