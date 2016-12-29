@@ -9,15 +9,17 @@ html( lang="en" )
     link( rel="shortcut icon", href="img/favicon.png" type="image/png" )
 
     //- CSS and JS are automatically injected by HtmlWebpackPlugin
-    //- Currently disabled
+    //- Currently disabled, using Pug variables and checks instead
+    - const production = self.htmlWebpackPlugin.options.production
 
-    link( rel="stylesheet", type="text/css", href="style.css" )
+    if production
+      link( rel="stylesheet", type="text/css", href="style.css" )
 
     script( src="engine.js", defer )
     script( src="ui.js", defer )
 
   body
-
+    span= self.htmlWebpackPlugin.options.name
     //- <canvas class="renderer"> goes here
 
     //- Game overlay, where other things are redered: logo, menu

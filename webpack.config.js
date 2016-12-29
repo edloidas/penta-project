@@ -7,8 +7,8 @@ const R = require('ramda');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractConfig = require('./util/config/extract');
+const htmlConfig = require('./util/config/html');
 // const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
-const htmlMinify = require('./util/config/minify');
 // const jsMinify = require('./util/config/uglify');
 const isProd = require('./util/env').prod;
 const isDev = require('./util/env').dev;
@@ -25,6 +25,13 @@ const addRule = appendToArrayByPath(['module', 'rules']);
 const addPlugin = appendToArrayByPath(['plugins']);
 // addPlugins :: Array -> Array
 const addPlugins = list => R.map(addPlugin, list);
+
+// mergeOptions :: Object -> String
+const stringifyOptions = R.pipe(R.toPairs, R.map(R.join('=')), R.join('&'));
+// stringifyUse :: Object -> String
+const stringifyUse = use => `${use.loader}${use.options ? '?' : ''}${stringifyOptions(use.options)}`;
+// stringifyUse :: Array -> String
+const stringifyUses = R.pipe(R.map(stringifyUse), R.join('!'));
 
 
 // Webpack config template
@@ -55,15 +62,11 @@ function addPugSupport(cfg) {
     test: /\.pug$/,
     loader: 'pug-loader',
     options: {
-      pretty: isDev,
+      pretty: !isDev,
+      self: true,
     },
   };
-  const plugin = new HtmlWebpackPlugin({
-    filename: 'index.html',
-    template: 'src/html/index.pug',
-    minify: isProd ? htmlMinify : false,
-    inject: false, // when enabled, use 'head' in production
-  });
+  const plugin = new HtmlWebpackPlugin(htmlConfig);
 
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
@@ -118,9 +121,11 @@ function addPostCSSSupport(cfg) {
       },
     ],
   };
+
   const prodLoaders = {
     loaders: ExtractTextPlugin.extract({
-      fallbackLoader: 'style-loader!css-loader?importLoaders=1!postcss-loader?sourceMap=inline',
+      // use `devLoaders` converted to query string as `fallbackLoader`
+      fallbackLoader: stringifyUses(devLoaders.use),
       loader: 'css-loader?importLoaders=1!postcss-loader',
     }),
   };
