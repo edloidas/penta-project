@@ -17,7 +17,10 @@ Penta project is currently in pre-alpha.
 
 #### Issues: ####
 
-* [ ] UglifyJS2 (webpack plugin) [does not support ES2015+][UglifyJS2-es2015] ( ✘ in [webpack config](webpack.config.js) )
+* [x] UglifyJS2 (webpack plugin) [does not support ES2015+][UglifyJS2-es2015] ( ✘ in [webpack config](webpack.config.js) ).
+> To support ES2015+, the `harmony` branch from git repo is used.
+See `uglify-js` dependency and `uglify` task that will remove this dependency from webpack dependencies in `node_modules`.
+
 * [ ] ESLint babel parser does not support `'no-await-in-loop'` rule ( ✘ in [ESLint config](.eslintrc.js) )
 
 Such code is currently disabled. To find and fix it in future, use `TODO: ✘` pattern in search queries.

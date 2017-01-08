@@ -10,8 +10,8 @@ const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 const NoErrorsPlugin = require('webpack').NoErrorsPlugin;
-// const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
-// const jsMinify = require('./util/config/uglify');
+const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
+const jsMinify = require('./util/config/uglify');
 const isProd = require('./util/env').prod;
 const isDev = require('./util/env').dev;
 const CONFIG = require('./util/config');
@@ -109,8 +109,8 @@ function addBabelSupport(cfg) {
       // new HotModuleReplacementPlugin(),
     ] : [],
     ...isProd ? [
-      // TODO: ✘ does not support ES2015+.
-      // new UglifyJsPlugin(jsMinify),
+      // TODO: ✘ does not support ES2015+. Harmony branch is used.
+      new UglifyJsPlugin(jsMinify),
     ] : [],
   ];
 
