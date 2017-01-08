@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
+const NoErrorsPlugin = require('webpack').NoErrorsPlugin;
 // const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 // const jsMinify = require('./util/config/uglify');
 const isProd = require('./util/env').prod;
@@ -48,7 +49,9 @@ const webpackConfig = {
   module: {
     rules: [],
   },
-  plugins: [],
+  plugins: [
+    new NoErrorsPlugin(),
+  ],
 };
 
 
