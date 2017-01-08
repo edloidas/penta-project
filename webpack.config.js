@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
+const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 const NoErrorsPlugin = require('webpack').NoErrorsPlugin;
 // const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 // const jsMinify = require('./util/config/uglify');
@@ -40,6 +41,21 @@ const webpackConfig = {
   entry: {
     engine: './src/js/engine/index.js',
     ui: './src/js/ui/index.js',
+    vendor: [
+      'classnames',
+      'mathjs',
+      'react',
+      'react-dom',
+      'react-hot-loader',
+      'react-redux',
+      'react-router',
+      'react-router-redux',
+      'recompose',
+      'redux',
+      'redux-actions',
+      'redux-devtools',
+      'three',
+    ],
   },
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
@@ -50,6 +66,7 @@ const webpackConfig = {
     rules: [],
   },
   plugins: [
+    new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
     new NoErrorsPlugin(),
   ],
 };
