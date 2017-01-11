@@ -36,8 +36,7 @@ const stringifyUse = use => `${use.loader}${use.options ? '?' : ''}${stringifyOp
 const stringifyUses = R.pipe(R.map(stringifyUse), R.join('!'));
 
 
-// Webpack config template
-const webpackConfig = {
+const webpackConfigTemplate = {
   entry: {
     engine: './src/js/engine/index.js',
     ui: './src/js/ui/index.js',
@@ -170,4 +169,4 @@ function makeConfig(cfg) {
   )(cfg);
 }
 
-module.exports = makeConfig(webpackConfig);
+module.exports = makeConfig(webpackConfigTemplate);
