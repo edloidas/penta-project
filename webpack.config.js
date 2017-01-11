@@ -10,6 +10,7 @@ const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
+const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
 const NoErrorsPlugin = require('webpack').NoErrorsPlugin;
 const DefinePlugin = require('webpack').DefinePlugin;
 const jsMinify = require('./util/config/uglify');
@@ -74,6 +75,7 @@ const webpackConfigTemplate = {
     new DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(env.type) },
     }),
+    new NamedModulesPlugin(),
     new NoErrorsPlugin(),
   ],
 };
@@ -155,7 +157,7 @@ function addPostCSSSupport(cfg) {
   const prodLoaders = {
     loaders: ExtractTextPlugin.extract({
       // use `devLoaders` converted to query string as `fallbackLoader`
-      fallbackLoader: stringifyUses(devLoaders.use),
+      fallbackLoader: stringifyUse(loader.style),
       loader: `${stringifyUse(loader.css)}!postcss-loader`,
     }),
   };
