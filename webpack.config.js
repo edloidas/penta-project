@@ -9,12 +9,15 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
-const NoErrorsPlugin = require('webpack').NoErrorsPlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
+const NoErrorsPlugin = require('webpack').NoErrorsPlugin;
+const DefinePlugin = require('webpack').DefinePlugin;
 const jsMinify = require('./util/config/uglify');
-const isProd = require('./util/env').prod;
-const isDev = require('./util/env').dev;
+const env = require('./util/env');
 const CONFIG = require('./util/config');
+
+const isProd = env.prod;
+const isDev = env.dev;
 
 
 // appendToArrayByPath :: Array -> Object -> Object -> Object
@@ -66,6 +69,9 @@ const webpackConfigTemplate = {
   },
   plugins: [
     new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
+    new DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify(env.type) },
+    }),
     new NoErrorsPlugin(),
   ],
 };
@@ -108,7 +114,6 @@ function addBabelSupport(cfg) {
       // new HotModuleReplacementPlugin(),
     ] : [],
     ...isProd ? [
-      // TODO: ✘ does not support ES2015+. Harmony branch is used.
       new UglifyJsPlugin(jsMinify),
     ] : [],
   ];
