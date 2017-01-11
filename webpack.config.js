@@ -31,8 +31,10 @@ const addPlugin = appendToArrayByPath(['plugins']);
 // addPlugins :: Array -> Array
 const addPlugins = list => R.map(addPlugin, list);
 
+// stringifyBoolProperty :: Array -> Array
+const stringifyBoolProperty = R.ifElse(v => R.equals(R.last(v), true), R.init, R.clone);
 // mergeOptions :: Object -> String
-const stringifyOptions = R.pipe(R.toPairs, R.map(R.join('=')), R.join('&'));
+const stringifyOptions = R.pipe(R.toPairs, R.map(R.pipe(stringifyBoolProperty, R.join('='))), R.join('&'));
 // stringifyUse :: Object -> String
 const stringifyUse = use => `${use.loader}${use.options ? '?' : ''}${stringifyOptions(use.options)}`;
 // stringifyUse :: Array -> String
@@ -132,25 +134,29 @@ function addPostCSSSupport(cfg) {
     test: /\.css$/,
   };
 
+  const loader = {
+    style: {
+      loader: 'style-loader',
+    },
+    css: {
+      loader: 'css-loader',
+      options: { importLoaders: 1 },
+    },
+    postcss: {
+      loader: 'postcss-loader',
+      options: { sourceMap: 'inline' },
+    },
+  };
+
   const devLoaders = {
-    use: [
-      { loader: 'style-loader' },
-      {
-        loader: 'css-loader',
-        options: { importLoaders: 1 },
-      },
-      {
-        loader: 'postcss-loader',
-        options: { sourceMap: 'inline' },
-      },
-    ],
+    use: Object.values(loader),
   };
 
   const prodLoaders = {
     loaders: ExtractTextPlugin.extract({
       // use `devLoaders` converted to query string as `fallbackLoader`
       fallbackLoader: stringifyUses(devLoaders.use),
-      loader: 'css-loader?importLoaders=1!postcss-loader',
+      loader: `${stringifyUse(loader.css)}!postcss-loader`,
     }),
   };
   const loaders = isProd ? prodLoaders : devLoaders;
