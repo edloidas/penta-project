@@ -22,7 +22,7 @@ module.exports = {
       'exports': 'always-multiline',
       'functions': 'never'
     }],
-    // TODO: ✘ no support in 'babel-eslint'; should be 'error'
+    // no support in 'babel-eslint'; should be 'error'
     'no-await-in-loop': [ 'off' ]
   },
   'env': {
