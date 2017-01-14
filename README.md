@@ -13,23 +13,13 @@ Penta Project
 
 Penta project is currently in pre-alpha.
 
+## Contributing ##
+
+Want to contribute? Read the [guide](docs/CONTRIBUTING.md) first.
+
 ## Development ##
 
-##### JS: uglify & tree-shaking #####
-
-* [x] UglifyJS2 (webpack plugin) [does not support ES2015+][UglifyJS2-es2015].
-
-To support ES2015+, the `harmony` branch from git repo is used.
-See `uglify-js` dependency and `uglify` task that will remove this dependency from webpack dependencies in `node_modules`.
-
-##### ESLint #####
-
-* [ ] ESLint babel parser does not support `'no-await-in-loop'` rule ( ✘ in [ESLint config](.eslintrc.js) )
-
-##### CSS: scoping #####
-
-* [ ] CSS Modules [doesn't work](https://github.com/webpack/css-loader/issues/186#issuecomment-171042804) with webpack's HMR on plain CSS.
-It either process everything with React, or reloads the page on CSS update. It was decided to use BEM notation instead.
+The list of a known development issues and explanation of the selected technologies can be found in [docs](docs/DEVELOPMENT.md).
 
 ## License ##
 
@@ -55,5 +45,3 @@ Take a note, that all project data in the `public/base/` directory (present only
 
 [base-license-url]: http://creativecommons.org/licenses/by-nc-nd/4.0/
 [base-license-image]: http://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg
-
-[UglifyJS2-es2015]: https://github.com/mishoo/UglifyJS2/issues/448

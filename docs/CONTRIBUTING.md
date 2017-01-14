@@ -103,7 +103,7 @@ Adhering to the following this process is the best way to get your work included
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
 
-**IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the the terms of the [MIT License](LICENSE).
+**IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the the terms of the [GPL-3.0 License](../LICENSE).
 
 ## Git Commit Messages ##
 
