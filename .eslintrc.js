@@ -13,7 +13,6 @@ module.exports = {
     'arrow-spacing': [ 2, { 'before': true, 'after': true } ],
     'no-restricted-syntax': [ 'off' ],
     'object-property-newline': [ 'off', { 'allowMultiplePropertiesPerLine': true } ],
-    'import/no-extraneous-dependencies': [ 'off', { 'devDependencies': [ 'util/', '**/*.test.js', '**/*.spec.js' ] } ],
     'no-underscore-dangle': [ 'off' ],
     'comma-dangle': [ 'error', {
       'arrays': 'always-multiline',
@@ -22,6 +21,8 @@ module.exports = {
       'exports': 'always-multiline',
       'functions': 'never'
     }],
+    'import/no-extraneous-dependencies': [ 'off', { 'devDependencies': [ 'util/', '**/*.test.js', '**/*.spec.js' ] } ],
+    "react/jsx-filename-extension": [ 1, { "extensions": [ ".js", ".jsx" ] } ],
     // no support in 'babel-eslint'; should be 'error'
     'no-await-in-loop': [ 'off' ]
   },
