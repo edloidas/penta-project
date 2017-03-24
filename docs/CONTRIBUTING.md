@@ -67,7 +67,7 @@ Adhering to the following this process is the best way to get your work included
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/penta-project.git doa
+   git clone https://github.com/<your-username>/penta-project.git
    # Navigate to the newly cloned directory
    cd penta-project
    # Assign the original repo to a remote called "upstream"
