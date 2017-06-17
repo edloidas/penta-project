@@ -15,7 +15,7 @@
 
 .effect__film-grain--dynamic {
   &::before {
-    animation: effectFilmgrainDynamicAnimation 2s linear infinite;
+    animation: effectFilmgrainDynamicAnimation 1s linear infinite;
   }
 }
 

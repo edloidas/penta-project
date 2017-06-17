@@ -3,7 +3,6 @@
 `node_modules` with `css-loader` default handler use the following syntax:
   @import "~normalize.css/normalize.css";
 */
-@import "normalize.css";
 @import "effects.css";
 @import "colors.css";
 

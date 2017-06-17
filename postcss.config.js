@@ -14,11 +14,8 @@ const postcssConfig = {
     'postcss-simple-vars': {},
     'postcss-nested': {},
     'postcss-calc': {},
-    autoprefixer: { browsers: [
-      '>1%',
-      'last 2 versions',
-      'not ie < 11',
-    ] },
+    'postcss-normalize': {},
+    autoprefixer: {},
   },
 };
 

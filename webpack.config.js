@@ -51,6 +51,7 @@ const webpackConfigTemplate = {
       'react-redux',
       'react-router',
       'react-router-redux',
+      'history',
       'recompose',
       'redux',
       'redux-actions',
