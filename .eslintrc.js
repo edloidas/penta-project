@@ -22,7 +22,7 @@ module.exports = {
       'functions': 'never'
     }],
     'import/no-extraneous-dependencies': [ 'off', { 'devDependencies': [ 'util/', '**/*.test.js', '**/*.spec.js' ] } ],
-    "react/jsx-filename-extension": [ 1, { "extensions": [ ".js", ".jsx" ] } ],
+    'react/jsx-filename-extension': [ 1, { 'extensions': [ '.js', '.jsx' ] } ],
     // no support in 'babel-eslint'; should be 'error'
     'no-await-in-loop': [ 'off' ]
   },
