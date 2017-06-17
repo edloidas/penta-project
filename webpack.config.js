@@ -11,7 +11,7 @@ const htmlConfig = require('./util/config/html');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
-const NoErrorsPlugin = require('webpack').NoErrorsPlugin;
+const NoEmitOnErrorsPlugin = require('webpack').NoEmitOnErrorsPlugin;
 const DefinePlugin = require('webpack').DefinePlugin;
 const jsMinify = require('./util/config/uglify');
 const env = require('./util/env');
@@ -38,9 +38,6 @@ const stringifyBoolProperty = R.ifElse(v => R.equals(R.last(v), true), R.init, R
 const stringifyOptions = R.pipe(R.toPairs, R.map(R.pipe(stringifyBoolProperty, R.join('='))), R.join('&'));
 // stringifyUse :: Object -> String
 const stringifyUse = use => `${use.loader}${use.options ? '?' : ''}${stringifyOptions(use.options)}`;
-// stringifyUse :: Array -> String
-const stringifyUses = R.pipe(R.map(stringifyUse), R.join('!'));
-
 
 const webpackConfigTemplate = {
   entry: {
@@ -51,7 +48,6 @@ const webpackConfigTemplate = {
       'mathjs',
       'react',
       'react-dom',
-      'react-hot-loader',
       'react-redux',
       'react-router',
       'react-router-redux',
@@ -60,6 +56,8 @@ const webpackConfigTemplate = {
       'redux-actions',
       'redux-devtools',
       'three',
+      // Vendor libraris, that cause error after extraction
+      // 'react-hot-loader',
     ],
   },
   output: {
@@ -76,7 +74,7 @@ const webpackConfigTemplate = {
       'process.env': { NODE_ENV: JSON.stringify(env.type) },
     }),
     new NamedModulesPlugin(),
-    new NoErrorsPlugin(),
+    new NoEmitOnErrorsPlugin(),
   ],
 };
 
