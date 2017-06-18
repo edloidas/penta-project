@@ -9,11 +9,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
-const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
 const NoEmitOnErrorsPlugin = require('webpack').NoEmitOnErrorsPlugin;
 const DefinePlugin = require('webpack').DefinePlugin;
-const jsMinify = require('./util/config/uglify');
 const env = require('./util/env');
 const CONFIG = require('./util/config');
 
@@ -117,7 +115,7 @@ function addBabelSupport(cfg) {
       // new HotModuleReplacementPlugin(),
     ] : [],
     ...isProd ? [
-      new UglifyJsPlugin(jsMinify),
+      // UglifyJs is replaced with Babili, declared in `.babelrc`
     ] : [],
   ];
 
@@ -155,8 +153,8 @@ function addPostCSSSupport(cfg) {
 
   const prodLoaders = {
     loaders: ExtractTextPlugin.extract({
-      // use `devLoaders` converted to query string as `fallbackLoader`
-      fallbackLoader: stringifyUse(loader.style),
+      // use `devLoaders` converted to query string as `fallback`
+      fallback: stringifyUse(loader.style),
       loader: `${stringifyUse(loader.css)}!postcss-loader`,
     }),
   };
