@@ -6,6 +6,7 @@ const path = require('path');
 const R = require('ramda');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BabiliPlugin = require('babili-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
@@ -115,7 +116,9 @@ function addBabelSupport(cfg) {
       // new HotModuleReplacementPlugin(),
     ] : [],
     ...isProd ? [
-      // UglifyJs is replaced with Babili, declared in `.babelrc`
+      // UglifyJs is replaced with Babili
+      // Babili as preset in `.babelrc` does not optimize vendor chunk.
+      new BabiliPlugin(),
     ] : [],
   ];
 

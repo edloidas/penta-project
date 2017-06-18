@@ -9,10 +9,5 @@
       "modules": false,
       "loose": true
     }]
-  ],
-  "env": {
-    "production": {
-      "presets": ["babili"]
-    }
-  }
+  ]
 }
