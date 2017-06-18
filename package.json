@@ -24,7 +24,6 @@
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "fix": "eslint --fix . || exit 0",
     "prepush": "npm test",
-    "remove-uglify": "rimraf node_modules/webpack/node_modules/uglify-js",
     "clean": "rimraf public/*",
     "download": "node util/tasks/download.js",
     "prod": "npm run clean && cross-env NODE_ENV=production webpack",

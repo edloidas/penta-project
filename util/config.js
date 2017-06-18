@@ -4,7 +4,7 @@ const CONFIG = {
     temp: 'temp',
   },
   data: {
-    url: 'https://dl.dropboxusercontent.com/u/40688668/penta-project/data.zip',
+    url: 'https://www.dropbox.com/s/voy5lfw85wjsrkb/data.zip?raw=1',
     dist: 'data',
   },
 };
