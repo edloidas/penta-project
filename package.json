@@ -24,7 +24,7 @@
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "fix": "eslint --fix . || exit 0",
     "prepush": "npm test",
-    "clean": "rimraf public/*",
+    "clean": "rimraf public/*.*",
     "download": "node util/tasks/download.js",
     "prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --open --content-base public/"
@@ -59,7 +59,7 @@
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
     "deep-assign": "^2.0.0",
-    "download": "^6.2.2",
+    "download": "^6.2.3",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-airbnb-base": "11.2.0",
@@ -89,7 +89,6 @@
     "style-loader": "^0.18.2",
     "stylelint": "^7.11.1",
     "stylelint-config-standard": "^16.0.0",
-    "uglify-js": "^3.0.17",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
     "yauzl": "^2.8.0"

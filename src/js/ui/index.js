@@ -13,7 +13,7 @@ import App from './containers/App';
 import configure from './store';
 
 const store = configure();
-const history = syncHistoryWithStore(createHistory(), store);
+const history = syncHistoryWithStore(createHistory({ basename: '/' }), store);
 
 render(
   <Provider store={store}>

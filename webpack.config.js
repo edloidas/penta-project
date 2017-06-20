@@ -9,6 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BabiliPlugin = require('babili-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
+const babiliConfig = require('./util/config/babili');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
 const NoEmitOnErrorsPlugin = require('webpack').NoEmitOnErrorsPlugin;
@@ -43,19 +44,19 @@ const webpackConfigTemplate = {
     engine: './src/js/engine/index.js',
     ui: './src/js/ui/index.js',
     vendor: [
-      'classnames',
-      'mathjs',
+      // 'classnames',
+      // 'mathjs',
       'react',
       'react-dom',
       'react-redux',
       'react-router',
       'react-router-redux',
       'history',
-      'recompose',
+      // 'recompose',
       'redux',
       'redux-actions',
       'redux-devtools',
-      'three',
+      // 'three',
       // Vendor libraris, that cause error after extraction
       // 'react-hot-loader',
     ],
@@ -118,7 +119,7 @@ function addBabelSupport(cfg) {
     ...isProd ? [
       // UglifyJs is replaced with Babili
       // Babili as preset in `.babelrc` does not optimize vendor chunk.
-      new BabiliPlugin(),
+      new BabiliPlugin(babiliConfig),
     ] : [],
   ];
 
@@ -155,7 +156,7 @@ function addPostCSSSupport(cfg) {
   };
 
   const prodLoaders = {
-    loaders: ExtractTextPlugin.extract({
+    use: ExtractTextPlugin.extract({
       // use `devLoaders` converted to query string as `fallback`
       fallback: stringifyUse(loader.style),
       loader: `${stringifyUse(loader.css)}!postcss-loader`,
