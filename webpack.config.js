@@ -159,7 +159,7 @@ function addPostCSSSupport(cfg) {
     use: ExtractTextPlugin.extract({
       // use `devLoaders` converted to query string as `fallback`
       fallback: stringifyUse(loader.style),
-      loader: `${stringifyUse(loader.css)}!postcss-loader`,
+      use: `${stringifyUse(loader.css)}!postcss-loader`,
     }),
   };
   const loaders = isProd ? prodLoaders : devLoaders;
