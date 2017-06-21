@@ -55,8 +55,10 @@ const webpackConfigTemplate = {
       // 'recompose',
       'redux',
       'redux-actions',
-      'redux-devtools',
       // 'three',
+      // Unnesessary libraries
+      // 'styled-components',
+      // 'redux-devtools',
       // Vendor libraris, that cause error after extraction
       // 'react-hot-loader',
     ],

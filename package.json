@@ -22,12 +22,15 @@
     "test": "jest",
     "cover": "jest --coverage",
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
-    "fix": "eslint --fix . || exit 0",
     "prepush": "npm test",
     "clean": "rimraf public/*.*",
     "download": "node util/tasks/download.js",
     "prod": "npm run clean && cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --open --content-base public/"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --open --content-base public/",
+    "lint:js": "eslint --fix .",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css-in-js": "stylelint \"src/js/ui/components/**/*.js\"",
+    "lint": "run-p lint:*"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -43,6 +46,7 @@
     "redux": "^3.7.0",
     "redux-actions": "^2.0.3",
     "redux-devtools": "^3.4.0",
+    "styled-components": "^2.1.0",
     "three": "^0.85.2"
   },
   "devDependencies": {
@@ -73,6 +77,7 @@
     "jest": "^20.0.4",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.0.2",
     "pify": "^3.0.0",
     "postcss-calc": "^6.0.0",
     "postcss-discard-comments": "^2.0.4",
@@ -89,6 +94,7 @@
     "style-loader": "^0.18.2",
     "stylelint": "^7.11.1",
     "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-styled-components": "^0.1.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
     "yauzl": "^2.8.0"

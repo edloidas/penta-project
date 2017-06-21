@@ -1,8 +1,9 @@
 {
+  "processors": ["stylelint-processor-styled-components"],
   "extends": "stylelint-config-standard",
+  "syntax": "scss",
   "rules": {
     "indentation": 2,
-    "selector-pseudo-class-no-unknown": true,
     "unit-whitelist": [
       [ "em", "rem", "%", "s" ],
       {
