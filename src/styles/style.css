@@ -22,6 +22,8 @@ body {
   background-color: $color__white;
   font-family: $font__ingame;
   text-rendering: optimizeLegibility;
+  user-select: none;
+  cursor: default;
 }
 
 #root {

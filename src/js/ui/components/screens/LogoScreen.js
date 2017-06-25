@@ -10,8 +10,6 @@ const Screen = Fullscreen.extend`
   justify-content: center;
   align-items: center;
   background-color: #111;
-  user-select: none;
-  cursor: default;
 `;
 
 const NameHolder = styled.div`
