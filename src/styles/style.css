@@ -5,13 +5,25 @@
 */
 @import "effects.css";
 @import "colors.css";
+@import "fonts.css";
 
 $screenSize: 100%;
 
 html,
-body {
+body,
+#root {
   width: $screenSize;
   height: $screenSize;
+  margin: 0;
   overflow: hidden;
+}
+
+body {
   background-color: $color__white;
+  font-family: $font__ingame;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  position: absolute;
 }

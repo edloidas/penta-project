@@ -1,7 +1,6 @@
 import React from 'react';
-import style from './style.css';
-import MainMenuItem from '../../components/MainMenu/MainMenuItem';
+import LogoScreen from '../../components/screens/LogoScreen';
 
-const App = () => <div className={style.normal}><MainMenuItem name="New Game" /></div>;
+const App = () => <div><LogoScreen /></div>;
 
 export default App;
