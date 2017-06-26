@@ -3,3 +3,4 @@ coverage/
 public/
 temp/
 src/html/
+flow-typed/

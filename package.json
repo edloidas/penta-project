@@ -30,7 +30,7 @@
     "lint:js": "eslint --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:css-in-js": "stylelint \"src/js/ui/components/**/*.js\"",
-    "lint": "run-p lint:*"
+    "lint": "run-p -c lint:*"
   },
   "dependencies": {
     "classnames": "^2.2.5",
