@@ -21,5 +21,5 @@ render(
       <Route path="/" component={App} />
     </Router>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

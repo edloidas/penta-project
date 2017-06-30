@@ -8,9 +8,7 @@ export default function configure(initialState) {
     ? window.devToolsExtension()(createStore)
     : createStore;
 
-  const createStoreWithMiddleware = applyMiddleware(
-    logger
-  )(create);
+  const createStoreWithMiddleware = applyMiddleware(logger)(create);
 
   const store = createStoreWithMiddleware(rootReducer, initialState);
 

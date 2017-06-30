@@ -2,6 +2,7 @@
 
 import styled from 'styled-components';
 
+// eslint-disable-next-line import/prefer-default-export
 export const Fullscreen = styled.div`
   position: absolute;
   top: 0;

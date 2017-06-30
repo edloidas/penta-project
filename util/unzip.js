@@ -8,11 +8,11 @@ function unzip(src, dest, callback) {
   yauzl.open(src, { autoClose: true, lazyEntries: true }, (error, zipfile) => {
     if (error) throw error;
     zipfile.readEntry();
-    zipfile.on('entry', (entry) => {
+    zipfile.on('entry', entry => {
       const fileName = path.join(dest, entry.fileName);
       if (/\/$/.test(entry.fileName)) {
         // directory file names end with '/'
-        mkdirp(fileName, (dirError) => {
+        mkdirp(fileName, dirError => {
           if (dirError) throw dirError;
           zipfile.readEntry();
         });
@@ -21,7 +21,7 @@ function unzip(src, dest, callback) {
         zipfile.openReadStream(entry, (fileError, readStream) => {
           if (fileError) throw fileError;
           // ensure parent directory exists
-          mkdirp(path.dirname(fileName), (err) => {
+          mkdirp(path.dirname(fileName), err => {
             if (err) throw err;
             readStream.pipe(fs.createWriteStream(fileName));
             readStream.on('end', () => {

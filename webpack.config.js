@@ -20,10 +20,13 @@ const CONFIG = require('./util/config');
 const isProd = env.prod;
 const isDev = env.dev;
 
-
 // appendToArrayByPath :: Array -> Object -> Object -> Object
 const appendToArrayByPath = R.curry((objPath, data, object) =>
-  R.pipe(R.path(objPath), R.append(data), R.set(R.lensPath(objPath), R.__, object))(object)
+  R.pipe(
+    R.path(objPath),
+    R.append(data),
+    R.set(R.lensPath(objPath), R.__, object),
+  )(object),
 );
 // addRule :: Object -> Object -> Object
 const addRule = appendToArrayByPath(['module', 'rules']);
@@ -33,11 +36,20 @@ const addPlugin = appendToArrayByPath(['plugins']);
 const addPlugins = list => R.map(addPlugin, list);
 
 // stringifyBoolProperty :: Array -> Array
-const stringifyBoolProperty = R.ifElse(v => R.equals(R.last(v), true), R.init, R.clone);
+const stringifyBoolProperty = R.ifElse(
+  v => R.equals(R.last(v), true),
+  R.init,
+  R.clone,
+);
 // mergeOptions :: Object -> String
-const stringifyOptions = R.pipe(R.toPairs, R.map(R.pipe(stringifyBoolProperty, R.join('='))), R.join('&'));
+const stringifyOptions = R.pipe(
+  R.toPairs,
+  R.map(R.pipe(stringifyBoolProperty, R.join('='))),
+  R.join('&'),
+);
 // stringifyUse :: Object -> String
-const stringifyUse = use => `${use.loader}${use.options ? '?' : ''}${stringifyOptions(use.options)}`;
+const stringifyUse = use =>
+  `${use.loader}${use.options ? '?' : ''}${stringifyOptions(use.options)}`;
 
 const webpackConfigTemplate = {
   entry: {
@@ -81,7 +93,6 @@ const webpackConfigTemplate = {
   ],
 };
 
-
 // =====================
 // Allows to convert pug->html
 // Uglifies code in produnction (see `rule.pretty` and `plugin.minify`)
@@ -101,7 +112,6 @@ function addPugSupport(cfg) {
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
 
-
 // =====================
 // Removes Flow types with Babel
 // Uglifies code in production
@@ -114,20 +124,23 @@ function addBabelSupport(cfg) {
   };
 
   const plugins = [
-    ...isDev ? [
-      // automatically injected by dev server with --hot flag
-      // new HotModuleReplacementPlugin(),
-    ] : [],
-    ...isProd ? [
-      // UglifyJs is replaced with Babili
-      // Babili as preset in `.babelrc` does not optimize vendor chunk.
-      new BabiliPlugin(babiliConfig),
-    ] : [],
+    ...(isDev
+      ? [
+          // automatically injected by dev server with --hot flag
+          // new HotModuleReplacementPlugin(),
+        ]
+      : []),
+    ...(isProd
+      ? [
+          // UglifyJs is replaced with Babili
+          // Babili as preset in `.babelrc` does not optimize vendor chunk.
+          new BabiliPlugin(babiliConfig),
+        ]
+      : []),
   ];
 
   return R.pipe(addRule(rule), ...addPlugins(plugins))(cfg);
 }
-
 
 // =====================
 // Add support for the css bundle
@@ -168,21 +181,18 @@ function addPostCSSSupport(cfg) {
 
   rule = R.merge(rule)(loaders);
 
-  const plugin = new ExtractTextPlugin(R.merge({ filename: 'style.css' }, extractConfig));
+  const plugin = new ExtractTextPlugin(
+    R.merge({ filename: 'style.css' }, extractConfig),
+  );
 
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
 }
-
 
 // =====================
 // Make final config support needed rules
 // =====================
 function makeConfig(cfg) {
-  return R.pipe(
-    addPugSupport,
-    addBabelSupport,
-    addPostCSSSupport
-  )(cfg);
+  return R.pipe(addPugSupport, addBabelSupport, addPostCSSSupport)(cfg);
 }
 
 module.exports = makeConfig(webpackConfigTemplate);

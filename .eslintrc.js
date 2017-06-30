@@ -2,10 +2,14 @@ module.exports = {
   'parser': 'babel-eslint',
   'extends': [
     'airbnb',
-    'plugin:flowtype/recommended'
+    'plugin:flowtype/recommended',
+    'prettier',
+    'prettier/flowtype',
+    'prettier/react',
   ],
   'plugins': [
-    'flowtype'
+    'flowtype',
+    'prettier',
   ],
   'rules': {
     'space-before-function-paren': [ 2, { 'anonymous': 'always', 'named': 'never' } ],
@@ -19,16 +23,22 @@ module.exports = {
       'objects': 'always-multiline',
       'imports': 'always-multiline',
       'exports': 'always-multiline',
-      'functions': 'never'
+      'functions': 'always-multiline',
     }],
     'import/no-extraneous-dependencies': [ 'off', { 'devDependencies': [ 'util/', '**/*.test.js', '**/*.spec.js' ] } ],
     'react/jsx-filename-extension': [ 1, { 'extensions': [ '.js', '.jsx' ] } ],
+    'prettier/prettier': ['error', {
+      'singleQuote': true,
+      'trailingComma': 'all',
+      'jsxBracketSameLine': true,
+    }],
+    // 'quotes': ['error', 'single'],
     // no support in 'babel-eslint'; should be 'error'
-    'no-await-in-loop': [ 'off' ]
+    'no-await-in-loop': [ 'off' ],
   },
   'env': {
     'browser': true,
     'node': true,
-    'jest': true
+    'jest': true,
   }
 }

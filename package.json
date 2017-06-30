@@ -28,9 +28,10 @@
     "prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --open --content-base public/",
     "lint:js": "eslint --fix .",
-    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css-only": "stylelint \"src/**/*.css\"",
     "lint:css-in-js": "stylelint \"src/js/ui/components/**/*.js\"",
-    "lint": "run-p -c lint:*"
+    "lint:css": "run-s -c lint:css-*",
+    "lint": "run-p -c lint:css lint:js"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -67,9 +68,11 @@
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-airbnb-base": "11.2.0",
+    "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-flowtype": "^2.34.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "5.0.1",
+    "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "7.0.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "flow-bin": "^0.48.0",
@@ -88,6 +91,7 @@
     "postcss-nested": "^2.0.2",
     "postcss-normalize": "^3.0.0",
     "postcss-simple-vars": "^4.0.0",
+    "prettier": "^1.5.2",
     "pug": "^2.0.0-rc.2",
     "pug-loader": "^2.3.0",
     "ramda": "^0.24.1",

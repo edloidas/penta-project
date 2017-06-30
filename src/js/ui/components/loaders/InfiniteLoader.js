@@ -4,13 +4,20 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 type Props = {
-  bg: string
-}
+  bg: string,
+};
 
-const flash = keyframes`{
-  15% { opacity: 0.5; padding: 0px; }
-  30% { opacity: 0.1; padding: 5px; }
-}`;
+const flash = keyframes`
+  15% {
+    opacity: 0.5;
+    padding: 0;
+  }
+
+  30% {
+    opacity: 0.1;
+    padding: 5px;
+  }
+`;
 
 const LoaderHolder = styled.ul`
   display: flex;
@@ -18,7 +25,6 @@ const LoaderHolder = styled.ul`
   justify-content: center;
   list-style: none;
   padding: 0;
-
 `;
 
 const LoaderSquare = styled.li`
@@ -32,7 +38,7 @@ const LoaderSquare = styled.li`
   box-sizing: border-box;
   opacity: 0.1;
 
-  &:before {
+  &::before {
     display: block;
     content: ' ';
     height: 100%;
@@ -45,13 +51,12 @@ LoaderSquare.defaultProps = {
   delay: '0s',
 };
 
-const InfiniteLoader = (props: Props) => (
+const InfiniteLoader = (props: Props) =>
   <LoaderHolder>
     <LoaderSquare theme={{ bg: props.bg, delay: '0.2s' }} />
     <LoaderSquare theme={{ bg: props.bg, delay: '0.4s' }} />
     <LoaderSquare theme={{ bg: props.bg, delay: '0.6s' }} />
     <LoaderSquare theme={{ bg: props.bg, delay: '0.8s' }} />
-  </LoaderHolder>
-);
+  </LoaderHolder>;
 
 export default InfiniteLoader;

@@ -4,13 +4,8 @@
   "syntax": "scss",
   "rules": {
     "indentation": 2,
-    "unit-whitelist": [
-      [ "em", "rem", "%", "s" ],
-      {
-        "ignoreProperties": {
-          "px": [ "background-position" ]
-        }
-      }
-    ]
+    "unit-whitelist": [ "px", "em", "rem", "%", "s" ],
+    "block-closing-brace-space-before": "never-single-line",
+    "block-opening-brace-space-after": "never-single-line"
   }
 }

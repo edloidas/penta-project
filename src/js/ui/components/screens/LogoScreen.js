@@ -50,15 +50,16 @@ const LoaderHolder = styled.div`
   margin: 0 0 0 -70px;
 `;
 
-const LogoScreen = () => (
+const LogoScreen = () =>
   <Screen classNameHolder="font__default">
     <NameHolder>
       <Author>edloidas production</Author>
       <Title>Penta Project</Title>
       <Description>A Cyberpunk Action Game</Description>
     </NameHolder>
-    <LoaderHolder><InfiniteLoader bg="white" /></LoaderHolder>
-  </Screen>
-);
+    <LoaderHolder>
+      <InfiniteLoader bg="white" />
+    </LoaderHolder>
+  </Screen>;
 
 export default LogoScreen;
