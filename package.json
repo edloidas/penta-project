@@ -32,7 +32,8 @@
     "lint:css-only": "stylelint \"src/**/*.css\"",
     "lint:css-in-js": "stylelint \"src/js/ui/components/**/*.js\"",
     "lint:css": "run-s -c lint:css-*",
-    "lint": "run-p -c lint:css lint:js"
+    "lint": "run-p -c lint:css lint:js",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -80,6 +81,7 @@
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.4",
     "jest": "^20.0.4",
+    "lint-staged": "^4.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^4.0.2",

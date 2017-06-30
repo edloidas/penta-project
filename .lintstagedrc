@@ -1,0 +1,14 @@
+{
+  "*.js": [
+    "eslint --fix",
+    "git add"
+  ],
+  "src/js/ui/components/**/*.js": [
+    "stylelint --aei",
+    "git add"
+  ],
+  "*.css": [
+    "stylelint --fix",
+    "git add"
+  ]
+}
