@@ -19,9 +19,9 @@
     "url": "git+https://github.com/edloidas/penta-project.git"
   },
   "scripts": {
-    "test": "jest",
-    "cover": "jest --coverage",
-    "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "test": "jest --testPathPattern=^test",
+    "cover": "jest --testPathPattern=^test --coverage",
+    "report": "node_modules/.bin/jest --testPathPattern=^test --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "prepush": "npm test",
     "clean": "rimraf public/*.*",
     "download": "node util/tasks/download.js",

@@ -6,7 +6,7 @@
   "loadEagerly": [
     "*.js",
     "src/**/*.js",
-    "util/**/*.js"
+    "test/**/*.js"
   ],
   "plugins": {
     "doc_comment": {},
