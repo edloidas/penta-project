@@ -27,6 +27,7 @@
     "download": "node util/tasks/download.js",
     "prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --open --content-base public/",
+    "prettier-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint:js": "eslint --fix .",
     "lint:css-only": "stylelint \"src/**/*.css\"",
     "lint:css-in-js": "stylelint \"src/js/ui/components/**/*.js\"",
