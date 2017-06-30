@@ -13,8 +13,11 @@
   "env": {
     "test": {
       "presets": [
+        "react",
         ["env", {
-          "modules": "commonjs"
+          "cacheDirectory": true,
+          "modules": "commonjs",
+          "loose": true
         }]
       ]
     }
