@@ -16,4 +16,5 @@ install:
 
 test_script:
   - npm run prod
+  - npm run typecheck
   - npm test
