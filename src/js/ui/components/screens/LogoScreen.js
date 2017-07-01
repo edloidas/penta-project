@@ -51,7 +51,7 @@ const LoaderHolder = styled.div`
 `;
 
 const LogoScreen = () =>
-  <Screen classNameHolder="font__default">
+  <Screen className="font__mono">
     <NameHolder>
       <Author>edloidas production</Author>
       <Title>Penta Project</Title>

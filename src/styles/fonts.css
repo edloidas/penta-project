@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Play:400,700|Raleway:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Play:400,700|Raleway:400,700|Roboto:400,700');
 
-$font__default: 'Raleway', Arial, Helvetica, sans-serif;
-$font__ingame: 'Play', monospace;
+$font__default: 'Roboto', Arial, Helvetica, sans-serif;
+$font__accent: 'Raleway', Arial, Helvetica, sans-serif;
+$font__mono: 'Play', monospace;
 
 .font__default {
   font-family: $font__default;
 }
 
-.font__ingame {
-  font-family: $font__ingame;
+.font__accent {
+  font-family: $font__accent;
+}
+
+.font__mono {
+  font-family: $font__mono;
 }

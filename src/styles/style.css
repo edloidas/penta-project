@@ -20,7 +20,7 @@ body,
 
 body {
   background-color: $color__white;
-  font-family: $font__ingame;
+  font-family: $font__default;
   text-rendering: optimizeLegibility;
   user-select: none;
   cursor: default;
