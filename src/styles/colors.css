@@ -2,10 +2,15 @@
 Color pallet
 stylelint-disable declaration-block-semicolon-newline-after
 */
-$color__blue--dark:  #08131c;
-$color__blue:        #08637e;
-$color__red:         #b82739; /* #B22222 */
-$color__yellow:      #f3c333; /* #ffd700 */
-$color__black:       #1d1f21; /* #111111 */
-$color__white:       #f5f5f5;
-$color__grey:        #969896;
+$ui__bg:          #111;
+$ui__bg--menu:    #1a1a1a;
+$ui__bg--active1: #1d1f21;
+$ui__bg--active2: #282a2e;
+$ui__bg--active3: #373b41;
+
+$ui__font--desc:  #c5c8c6;
+$ui__font:        white;
+
+$ui__accent:      darkgoldenrod;
+$ui__hp:          #b82739;
+$ui__eg:          #08637e;

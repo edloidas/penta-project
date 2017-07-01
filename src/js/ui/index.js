@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 
 import { Router, Route } from 'react-router';
 import createHistory from 'history/createBrowserHistory';

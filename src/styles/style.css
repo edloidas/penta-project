@@ -19,7 +19,7 @@ body,
 }
 
 body {
-  background-color: $color__white;
+  background-color: $ui__bg;
   font-family: $font__default;
   text-rendering: optimizeLegibility;
   user-select: none;

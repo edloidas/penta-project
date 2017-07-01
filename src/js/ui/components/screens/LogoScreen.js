@@ -1,15 +1,15 @@
-/* @flow */
+// @flow
 
 import React from 'react';
 import styled from 'styled-components';
-import { Fullscreen } from '../base';
+import { Fullscreen, colors } from '../base';
 import InfiniteLoader from '../loaders/InfiniteLoader';
 
 const Screen = Fullscreen.extend`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #111;
+  background-color: ${colors.bg};
 `;
 
 const NameHolder = styled.div`
@@ -24,7 +24,7 @@ const Author = styled.div`
   font-size: 1.25rem;
   font-weight: lighter;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
+  color: ${colors.fontInactive};
 `;
 
 const Title = styled.div`
@@ -32,14 +32,14 @@ const Title = styled.div`
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  color: white;
+  color: ${colors.font};
 `;
 
 const Description = styled.div`
   margin: -0.4rem 0 0 0;
   font-size: 2rem;
   text-transform: lowercase;
-  color: darkgoldenrod;
+  color: ${colors.accent};
 `;
 
 const LoaderHolder = styled.div`
@@ -58,7 +58,7 @@ const LogoScreen = () =>
       <Description>A Cyberpunk Action Game</Description>
     </NameHolder>
     <LoaderHolder>
-      <InfiniteLoader bg="white" />
+      <InfiniteLoader bg={colors.bgReverse} />
     </LoaderHolder>
   </Screen>;
 
