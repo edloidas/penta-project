@@ -24,7 +24,7 @@
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "clean": "rimraf public/*.*",
     "download": "node util/tasks/download.js",
-    "typecheck": "flow",
+    "typecheck": "flow check",
     "prettier-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint:js": "eslint --fix .",
     "lint:css-only": "stylelint \"src/**/*.css\"",
@@ -34,7 +34,7 @@
     "precommit": "lint-staged",
     "prepush": "npm test",
     "prod": "npm run clean && cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --open --content-base public/"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --history-api-fallback --open --content-base public/"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -45,6 +45,7 @@
     "react-hot-loader": "^1.3.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "react-router-redux": "^4.0.8",
     "recompose": "^0.23.5",
     "redux": "^3.7.1",

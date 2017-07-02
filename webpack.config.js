@@ -77,7 +77,7 @@ const webpackConfigTemplate = {
   },
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
-    publicPath: '',
+    publicPath: '/',
     filename: '[name].js',
   },
   module: {

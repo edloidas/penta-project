@@ -1,6 +1,6 @@
 // @flow
 
-import { Router, Route } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { Provider } from 'react-redux';
@@ -9,7 +9,8 @@ import React from 'react';
 
 import '../../styles/style.css';
 
-import App from './containers/App';
+import Start from './containers/Start';
+import MainMenu from './containers/MainMenu';
 import configure from './store';
 
 const store = configure();
@@ -18,7 +19,10 @@ const history = syncHistoryWithStore(createHistory({ basename: '/' }), store);
 render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={App} />
+      <div>
+        <Route exact path="/" component={Start} />
+        <Route path="/menu" component={MainMenu} />
+      </div>
     </Router>
   </Provider>,
   document.getElementById('root'),
