@@ -1,15 +1,15 @@
 {
-  "ecmaVersion": 6,
+  "ecmaVersion": 7,
   "libs": [
     "browser"
   ],
   "loadEagerly": [
     "*.js",
     "src/**/*.js",
-    "test/**/*.js"
+    "test/**/*.js",
+    "node_modules/**"
   ],
   "plugins": {
-    "doc_comment": {},
     "complete_strings": {
       "maxLength": 15
     },
