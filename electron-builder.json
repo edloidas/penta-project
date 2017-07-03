@@ -1,0 +1,13 @@
+{
+  "appId": "com.edloidas.penta-project",
+  "productName": "Penta Project",
+  "asar": false,
+  "compression": "normal",
+  "directories": {
+    "buildResources": "build",
+    "output": "dist"
+  },
+  "files": [
+    "build"
+  ]
+}

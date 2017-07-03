@@ -1,6 +1,6 @@
 const CONFIG = {
   root: {
-    dist: 'public',
+    dist: 'build',
     temp: 'temp',
   },
   data: {

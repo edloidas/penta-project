@@ -1,5 +1,5 @@
 /*
-Configurable webpack config.
+Game webpack config. Compiles engine and ui.
 Uses $NODE_ENV, `production` or `development` (also default)
 */
 const path = require('path');
@@ -119,7 +119,7 @@ function addPugSupport(cfg) {
 function addBabelSupport(cfg) {
   const rule = {
     test: /\.jsx?$/,
-    exclude: /(node_modules|public)/,
+    exclude: /(node_modules|build|dist)/,
     loader: 'babel-loader',
   };
 

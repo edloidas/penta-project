@@ -1,6 +1,7 @@
 node_modules/
 coverage/
-public/
+build/
+dist/
 temp/
 src/html/
 flow-typed/
