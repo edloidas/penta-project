@@ -1,7 +1,13 @@
-const [src, dest] = require('minimist')(process.argv.slice(2))._;
+const args = require('minimist')(process.argv.slice(2));
 const path = require('path');
 const fs = require('fs');
 
-fs
-  .createReadStream(path.resolve(__dirname, '../..', src))
-  .pipe(fs.createWriteStream(path.join(__dirname, '../..', dest)));
+const [src, dest] = args._.map(file => path.resolve(__dirname, '../..', file));
+const dir = path.parse(dest).dir;
+
+// TODO: create full path, if doesn't exists
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir);
+}
+
+fs.createReadStream(src).pipe(fs.createWriteStream(dest));
