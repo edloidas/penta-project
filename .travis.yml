@@ -7,6 +7,6 @@ node_js:
   - "8"
 
 script:
-  - npm run build
-  - npm run typecheck
-  - npm run report
+  - yarn build
+  - yarn typecheck
+  - yarn report

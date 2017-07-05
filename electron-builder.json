@@ -1,7 +1,7 @@
 {
   "appId": "com.edloidas.penta-project",
   "productName": "Penta Project",
-  "asar": false,
+  "asar": true,
   "compression": "normal",
   "directories": {
     "buildResources": "build",
