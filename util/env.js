@@ -3,5 +3,5 @@ const environment = process.env.NODE_ENV;
 module.exports = {
   prod: environment === 'production',
   dev: environment === 'development' || !environment,
-  type: environment || 'development',
+  type: environment || 'development'
 };

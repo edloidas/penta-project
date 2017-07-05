@@ -4,7 +4,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 type Props = {
-  bg: string,
+  bg: string
 };
 
 const flash = keyframes`
@@ -48,7 +48,7 @@ const LoaderSquare = styled.li`
 
 LoaderSquare.defaultProps = {
   bg: 'black',
-  delay: '0s',
+  delay: '0s'
 };
 
 const InfiniteLoader = (props: Props) =>

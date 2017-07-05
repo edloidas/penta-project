@@ -16,11 +16,17 @@ module.exports = {
     'no-restricted-syntax': [ 'off' ],
     'object-property-newline': [ 'off', { 'allowMultiplePropertiesPerLine': true } ],
     'no-underscore-dangle': [ 'off' ],
+    'comma-dangle': [ 'error', {
+        'arrays': 'never',
+        'objects': 'never',
+        'imports': 'never',
+        'exports': 'never',
+        'functions': 'ignore',
+    }],
     'import/no-extraneous-dependencies': [ 'off', { 'devDependencies': [ 'util/', '**/*.test.js', '**/*.spec.js' ] } ],
     'react/jsx-filename-extension': [ 1, { 'extensions': [ '.js', '.jsx' ] } ],
     'prettier/prettier': ['error', {
       'singleQuote': true,
-      'trailingComma': 'all',
       'jsxBracketSameLine': true,
     }],
     // 'quotes': ['error', 'single'],

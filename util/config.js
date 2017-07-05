@@ -1,12 +1,12 @@
 const CONFIG = {
   root: {
     dist: 'build',
-    temp: 'temp',
+    temp: 'temp'
   },
   data: {
     url: 'https://www.dropbox.com/s/voy5lfw85wjsrkb/data.zip?raw=1',
-    dist: 'data',
-  },
+    dist: 'data'
+  }
 };
 
 module.exports = CONFIG;

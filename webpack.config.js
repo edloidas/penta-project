@@ -25,8 +25,8 @@ const appendToArrayByPath = R.curry((objPath, data, object) =>
   R.pipe(
     R.path(objPath),
     R.append(data),
-    R.set(R.lensPath(objPath), R.__, object),
-  )(object),
+    R.set(R.lensPath(objPath), R.__, object)
+  )(object)
 );
 // addRule :: Object -> Object -> Object
 const addRule = appendToArrayByPath(['module', 'rules']);
@@ -39,13 +39,13 @@ const addPlugins = list => R.map(addPlugin, list);
 const stringifyBoolProperty = R.ifElse(
   v => R.equals(R.last(v), true),
   R.init,
-  R.clone,
+  R.clone
 );
 // mergeOptions :: Object -> String
 const stringifyOptions = R.pipe(
   R.toPairs,
   R.map(R.pipe(stringifyBoolProperty, R.join('='))),
-  R.join('&'),
+  R.join('&')
 );
 // stringifyUse :: Object -> String
 const stringifyUse = use =>
@@ -66,31 +66,31 @@ const webpackConfigTemplate = {
       'history',
       // 'recompose',
       'redux',
-      'redux-actions',
+      'redux-actions'
       // 'three',
       // Unnesessary libraries
       // 'styled-components',
       // 'redux-devtools',
       // Vendor libraris, that cause error after extraction
       // 'react-hot-loader',
-    ],
+    ]
   },
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
     publicPath: '/',
-    filename: '[name].js',
+    filename: '[name].js'
   },
   module: {
-    rules: [],
+    rules: []
   },
   plugins: [
     new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
     new DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify(env.type) },
+      'process.env': { NODE_ENV: JSON.stringify(env.type) }
     }),
     new NamedModulesPlugin(),
-    new NoEmitOnErrorsPlugin(),
-  ],
+    new NoEmitOnErrorsPlugin()
+  ]
 };
 
 // =====================
@@ -104,8 +104,8 @@ function addPugSupport(cfg) {
     loader: 'pug-loader',
     options: {
       pretty: !isDev,
-      self: true,
-    },
+      self: true
+    }
   };
   const plugin = new HtmlWebpackPlugin(htmlConfig);
 
@@ -120,7 +120,7 @@ function addBabelSupport(cfg) {
   const rule = {
     test: /\.jsx?$/,
     exclude: /(node_modules|build|dist)/,
-    loader: 'babel-loader',
+    loader: 'babel-loader'
   };
 
   const plugins = [
@@ -134,9 +134,9 @@ function addBabelSupport(cfg) {
       ? [
           // UglifyJs is replaced with Babili
           // Babili as preset in `.babelrc` does not optimize vendor chunk.
-          new BabiliPlugin(babiliConfig),
+          new BabiliPlugin(babiliConfig)
         ]
-      : []),
+      : [])
   ];
 
   return R.pipe(addRule(rule), ...addPlugins(plugins))(cfg);
@@ -149,40 +149,40 @@ function addBabelSupport(cfg) {
 // =====================
 function addPostCSSSupport(cfg) {
   let rule = {
-    test: /\.css$/,
+    test: /\.css$/
   };
 
   const loader = {
     style: {
-      loader: 'style-loader',
+      loader: 'style-loader'
     },
     css: {
       loader: 'css-loader',
-      options: { importLoaders: 1 },
+      options: { importLoaders: 1 }
     },
     postcss: {
       loader: 'postcss-loader',
-      options: { sourceMap: 'inline' },
-    },
+      options: { sourceMap: 'inline' }
+    }
   };
 
   const devLoaders = {
-    use: Object.values(loader),
+    use: Object.values(loader)
   };
 
   const prodLoaders = {
     use: ExtractTextPlugin.extract({
       // use `devLoaders` converted to query string as `fallback`
       fallback: stringifyUse(loader.style),
-      use: `${stringifyUse(loader.css)}!postcss-loader`,
-    }),
+      use: `${stringifyUse(loader.css)}!postcss-loader`
+    })
   };
   const loaders = isProd ? prodLoaders : devLoaders;
 
   rule = R.merge(rule)(loaders);
 
   const plugin = new ExtractTextPlugin(
-    R.merge({ filename: 'style.css' }, extractConfig),
+    R.merge({ filename: 'style.css' }, extractConfig)
   );
 
   return R.pipe(addRule(rule), addPlugin(plugin))(cfg);

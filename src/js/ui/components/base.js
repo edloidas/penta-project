@@ -29,5 +29,5 @@ export const colors: Colors = {
   font:         '#fff',    // white
   accent:       '#b8860b', // darkgoldenrod
   hp:           '#b82739',
-  eg:           '#08637e',
+  eg:           '#08637e'
 };

@@ -7,5 +7,5 @@ module.exports = {
   preserveLineBreaks: true,
   removeComments: true,
   removeEmptyAttributes: true,
-  useShortDoctype: true,
+  useShortDoctype: true
 };

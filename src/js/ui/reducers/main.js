@@ -3,8 +3,8 @@ import { handleActions } from 'redux-actions';
 const initialState = [
   {
     text: 'Use Redux',
-    id: 0,
-  },
+    id: 0
+  }
 ];
 
 export default handleActions(
@@ -14,9 +14,9 @@ export default handleActions(
       return [
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-          text: action.payload,
+          text: action.payload
         },
-        ...state,
+        ...state
       ];
     },
     // eslint-disable-next-line object-shorthand
@@ -24,11 +24,11 @@ export default handleActions(
       return [
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-          text: action.payload,
+          text: action.payload
         },
-        ...state,
+        ...state
       ];
-    },
+    }
   },
-  initialState,
+  initialState
 );

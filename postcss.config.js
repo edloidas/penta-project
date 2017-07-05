@@ -14,8 +14,8 @@ const postcssConfig = {
     'postcss-nested': {},
     'postcss-calc': {},
     'postcss-normalize': {},
-    autoprefixer: {},
-  },
+    autoprefixer: {}
+  }
 };
 
 function makeConfig() {
@@ -23,7 +23,7 @@ function makeConfig() {
   const prodPlugins = {
     'css-mqpacker': {},
     'postcss-discard-comments': {},
-    cssnano: { discardUnused: true },
+    cssnano: { discardUnused: true }
   };
 
   const plugins = isProd ? prodPlugins : devPlugins;
