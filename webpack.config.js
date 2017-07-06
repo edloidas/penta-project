@@ -119,7 +119,7 @@ function addPugSupport(cfg) {
 function addBabelSupport(cfg) {
   const rule = {
     test: /\.jsx?$/,
-    exclude: /(node_modules|build|dist)/,
+    exclude: /(node_modules|\.\/build|\.\/dist)/,
     loader: 'babel-loader'
   };
 
