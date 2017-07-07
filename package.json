@@ -23,7 +23,6 @@
     "cover": "jest --coverage",
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "clean": "rimraf build/*.*",
-    "download": "node util/tasks/download.js",
     "typecheck": "flow check",
     "prettier-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint:js": "eslint --fix .",
@@ -33,11 +32,12 @@
     "lint": "run-p -c lint:css lint:js",
     "precommit": "lint-staged",
     "prepush": "npm test",
+    "download": "node util/tasks/download.js",
     "build:app": "node util/tasks/copy.js src/js/app/index.js build/index.js",
     "build:game": "cross-env NODE_ENV=production webpack",
     "build": "npm run clean && run-p build:*",
-    "pack": "electron-builder --config electron-builder.json --dir",
     "dist": "electron-builder --config electron-builder.json",
+    "try": "electron build/ --enable-logging",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --history-api-fallback --open --content-base build/"
   },
   "devDependencies": {
