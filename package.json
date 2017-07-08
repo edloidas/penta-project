@@ -35,13 +35,14 @@
     "precommit": "lint-staged",
     "prepush": "npm test",
     "download": "node util/tasks/download.js",
-    "build:app": "node util/tasks/copy.js src/js/app/index.js build/index.js",
-    "build:game": "cross-env NODE_ENV=production webpack",
+    "build:app": "cross-env NODE_ENV=production webpack --config webpack.app.config.js",
+    "build:game": "cross-env NODE_ENV=production webpack --config webpack.game.config.js",
     "build": "npm run clean:build && run-p build:*",
     "dist": "npm run clean:dist && electron-builder --config electron-builder.json",
     "package": "npm run download && run-s clean:* && run-p build:* && build -p always",
-    "try": "cross-env NODE_ENV=development electron build/ --enable-logging",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --history-api-fallback --open --content-base build/"
+    "try:no-build": "electron build/ --enable-logging",
+    "try": "webpack --config webpack.app.config.js && npm run try:no-build",
+    "dev": "webpack-dev-server --config webpack.game.config.js --inline --hot --progress --colors --history-api-fallback --open --content-base build/"
   },
   "dependencies": {
     "electron-log": "^2.2.7",

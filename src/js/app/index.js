@@ -1,8 +1,8 @@
-const { app, BrowserWindow } = require('electron');
+import { app, BrowserWindow } from 'electron';
 // const { autoUpdater } = require('electron-updater');
 // const log = require('electron-log');
-const path = require('path');
-const url = require('url');
+import path from 'path';
+import url from 'url';
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -30,7 +30,7 @@ function initProdEnvironment() {
 
 function initDevEnvironment() {
   // Open DevTools
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 }
 
 function createWindow() {
