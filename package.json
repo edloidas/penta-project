@@ -13,7 +13,7 @@
     "url": "https://github.com/edloidas/penta-project/issues"
   },
   "license": "GPL-3.0",
-  "author": "Mikita Taukachou <edloidas@gmail.com> (https://edloidas.com)",
+  "author": "Edloidas Production <edloidas@gmail.com> (https://edloidas.com)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edloidas/penta-project.git"
@@ -22,7 +22,9 @@
     "test": "jest",
     "cover": "jest --coverage",
     "report": "node_modules/.bin/jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
-    "clean": "rimraf build/*.*",
+    "clean:build": "rimraf build/*.*",
+    "clean:dist": "rimraf dist/",
+    "clean": "run-p clean:*",
     "typecheck": "flow check",
     "prettier-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint:js": "eslint --fix .",
@@ -35,10 +37,15 @@
     "download": "node util/tasks/download.js",
     "build:app": "node util/tasks/copy.js src/js/app/index.js build/index.js",
     "build:game": "cross-env NODE_ENV=production webpack",
-    "build": "npm run clean && run-p build:*",
-    "dist": "electron-builder --config electron-builder.json",
-    "try": "electron build/ --enable-logging",
+    "build": "npm run clean:build && run-p build:*",
+    "dist": "npm run clean:dist && electron-builder --config electron-builder.json",
+    "package": "npm run download && run-s clean:* && run-p build:* && build -p always",
+    "try": "cross-env NODE_ENV=development electron build/ --enable-logging",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --history-api-fallback --open --content-base build/"
+  },
+  "dependencies": {
+    "electron-log": "^2.2.7",
+    "electron-updater": "^2.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

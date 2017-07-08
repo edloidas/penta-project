@@ -23,7 +23,7 @@ The list of a known development issues and explanation of the selected technolog
 
 ## License ##
 
-[GPL-3.0](LICENSE) © [Mikita Taukachou](https://edloidas.com)
+[GPL-3.0](LICENSE) © [Edloidas Production](https://edloidas.com)
 
 Take a note, that all project data in the `public/base/` directory (present only in compiled version) are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License][base-license-url]. ![CC BY-NC-SA][base-license-image]
 

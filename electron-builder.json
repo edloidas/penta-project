@@ -9,5 +9,14 @@
   },
   "files": [
     "build"
-  ]
+  ],
+  "win": {
+    "target": [
+      "nsis",
+      "zip"
+    ],
+    "icon": "build/data/logo/icon.ico"
+  },
+  "mac" : {},
+  "linux": {}
 }
