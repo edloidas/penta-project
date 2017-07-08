@@ -17,20 +17,22 @@ module.exports = {
   entry: './src/js/app/index.js',
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
-    filename: 'index.js'
+    filename: 'index.js',
+    // Allows to use simple name in externals, instead of `require('...')`
+    libraryTarget: 'commonjs2'
   },
-  // HACK: node is used to exclude node packages from loading with webpack
+  // Exclude node packages from loading with webpack
   target: 'node',
-  // HACK: allows to use variable in the main file of the Electron application
+  // Allows to use variable in the main file of the Electron application
   node: {
     __dirname: false
   },
-  // HACK: Externals allows to avoid using webpack's target `electron-main`,
-  // since we need to fix the `__dirname` by setting previous two properties.
+  // Externals allows to avoid using webpack's target `electron-main`, since
+  // we need to fix the `__dirname` by setting previous two properties.
   externals: {
-    electron: `require('electron')`,
-    'electron-updater': `require('electron-updater')`,
-    'electron-log': `require('electron-log')`
+    electron: 'electron',
+    'electron-updater': 'electron-updater',
+    'electron-log': 'electron-log'
   },
   plugins: [
     new DefinePlugin({
