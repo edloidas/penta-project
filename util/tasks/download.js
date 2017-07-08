@@ -13,7 +13,13 @@ const temp = CONFIG.root.temp;
 const dataZip = path.join(temp, nameFromUrl(dataUrl));
 const dataDest = path.join(CONFIG.root.dist, CONFIG.data.dist);
 
+// eslint-disable-next-line no-console
+const logger = msg => () => console.log(msg);
+const root = path.resolve(__dirname, '../..');
+
 clean([dataDest])
   .then(() => download(dataUrl, temp))
+  .then(logger(`Downloaded '${dataUrl}' to '${path.join(root, temp)}'`))
   .then(() => unzip(dataZip, dataDest))
+  .then(logger(`Unziped to '${path.join(root, dataDest)}'`))
   .then(() => clean([temp]));
