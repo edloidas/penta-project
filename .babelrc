@@ -3,7 +3,7 @@
     "react",
     ["env", {
       "targets": {
-        "browsers": ["electron >= 1.7"]
+        "browsers": ["electron >= 1.6"]
       },
       "cacheDirectory": true,
       "modules": false,
