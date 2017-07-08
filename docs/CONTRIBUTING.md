@@ -128,3 +128,5 @@ Adhering to the following this process is the best way to get your work included
   - :arrow_down: `:arrow_down:` when downgrading dependencies.
   - :shirt: `:shirt:` when removing linter warnings.
   - :package: `:package:` release or major (SemVer) update.
+  - :a: `:a:` alpha release (pre-release).
+  - :b: `:b:` beta release (pre-release).
