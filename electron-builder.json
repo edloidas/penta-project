@@ -15,8 +15,18 @@
       "nsis",
       "zip"
     ],
-    "icon": "build/data/logo/icon.ico"
+    "icon": "build/data/logo/icon.ico",
+    "publish": "github"
   },
-  "mac" : {},
-  "linux": {}
+  "mac" : {
+    "icon": "build/data/logo/icon.icns"
+  },
+  "linux": {
+    "target": [
+      "AppImage",
+      "tar.gz",
+      "deb"
+    ],
+    "icon": "build/data/logo/"
+  }
 }
