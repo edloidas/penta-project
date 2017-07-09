@@ -15,6 +15,9 @@
       "presets": [
         "react",
         ["env", {
+          "targets": {
+            "browsers": ["electron >= 1.7"]
+          },
           "cacheDirectory": true,
           "modules": "commonjs",
           "loose": true
