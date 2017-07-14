@@ -14,8 +14,8 @@ const config = {
   width: 800,
   height: 600,
   resizable: false,
-  minimizable: !isDev,
-  maximizable: !isDev,
+  minimizable: isDev,
+  maximizable: isDev,
   fullscreen: !isDev,
   backgroundColor: '#111',
   webPreferences: {

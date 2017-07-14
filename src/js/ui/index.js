@@ -1,8 +1,7 @@
 // @flow
 
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { Route, Redirect } from 'react-router-dom';
+import { ConnectedRouter as Router } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import React from 'react';
@@ -11,10 +10,10 @@ import '../../styles/style.css';
 
 import Start from './containers/Start';
 import MainMenu from './containers/MainMenu';
-import configure from './store';
+import configureStore from './store';
+import history from './store/history';
 
-const store = configure();
-const history = syncHistoryWithStore(createHistory({ basename: '/' }), store);
+const store = configureStore();
 
 // HACK: Redirect is needed to load the root `/` in Electron environment
 render(

@@ -10,7 +10,7 @@ const initialState = [
 export default handleActions(
   {
     // eslint-disable-next-line object-shorthand
-    'show about'(state, action) {
+    'show hero'(state, action) {
       return [
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
