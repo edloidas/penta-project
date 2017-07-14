@@ -11,6 +11,7 @@ const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const babiliConfig = require('./util/config/babili');
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
+const SourceMapDevToolPlugin = require('webpack').SourceMapDevToolPlugin;
 const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
 const NoEmitOnErrorsPlugin = require('webpack').NoEmitOnErrorsPlugin;
 const DefinePlugin = require('webpack').DefinePlugin;
@@ -127,6 +128,10 @@ function addBabelSupport(cfg) {
       ? [
           // automatically injected by dev server with --hot flag
           // new HotModuleReplacementPlugin(),
+          new SourceMapDevToolPlugin({
+            filename: '[name].js.map',
+            exclude: ['vendor.js']
+          })
         ]
       : []),
     ...(isProd
