@@ -65,7 +65,6 @@ const webpackConfigTemplate = {
       'react-router',
       'react-router-redux',
       'history',
-      // 'recompose',
       'redux',
       'redux-actions'
       // 'three',

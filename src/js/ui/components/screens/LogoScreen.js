@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Fullscreen, colors } from '../base';
 import InfiniteLoader from '../loaders/InfiniteLoader';
+import AwaitInputLoader from '../loaders/AwaitInputLoader';
 
 const Screen = Fullscreen.extend`
   display: flex;
@@ -50,7 +51,9 @@ const LoaderHolder = styled.div`
   margin: 0 0 0 -70px;
 `;
 
-const LogoScreen = () =>
+type LogoScreenProps = { isLoading: boolean };
+
+const LogoScreen = (props: LogoScreenProps) =>
   <Screen className="font__mono">
     <NameHolder>
       <Author>edloidas production</Author>
@@ -58,7 +61,9 @@ const LogoScreen = () =>
       <Description>A Cyberpunk Action Game</Description>
     </NameHolder>
     <LoaderHolder>
-      <InfiniteLoader bg={colors.bgReverse} />
+      {props.isLoading
+        ? <InfiniteLoader bg={colors.bgReverse} />
+        : <AwaitInputLoader color={colors.fontInactive} />}
     </LoaderHolder>
   </Screen>;
 

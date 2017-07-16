@@ -3,10 +3,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-type Props = {
-  bg: string
-};
-
 const flash = keyframes`
   15% {
     opacity: 0.5;
@@ -51,7 +47,9 @@ LoaderSquare.defaultProps = {
   delay: '0s'
 };
 
-const InfiniteLoader = (props: Props) =>
+type InfiniteLoaderProps = { bg: string };
+
+const InfiniteLoader = (props: InfiniteLoaderProps) =>
   <LoaderHolder>
     <LoaderSquare theme={{ bg: props.bg, delay: '0.2s' }} />
     <LoaderSquare theme={{ bg: props.bg, delay: '0.4s' }} />

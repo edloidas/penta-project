@@ -8,7 +8,7 @@ import React from 'react';
 
 import '../../styles/style.css';
 
-import Start from './containers/Start';
+import StartScreen from './containers/StartScreen';
 import MainMenu from './containers/MainMenu';
 import configureStore from './store';
 import history from './store/history';
@@ -21,7 +21,7 @@ render(
     <Router history={history}>
       <div>
         {window.location.pathname.includes('index.html') && <Redirect to="/" />}
-        <Route exact path="/" component={Start} />
+        <Route exact path="/" component={StartScreen} />
         <Route path="/menu" component={MainMenu} />
       </div>
     </Router>

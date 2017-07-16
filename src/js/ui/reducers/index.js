@@ -1,8 +1,10 @@
 import { routerReducer as routing } from 'react-router-redux';
 import { combineReducers } from 'redux';
-import main from './main';
+import startScreen from './startScreen';
+import mainMenu from './mainMenu';
 
 export default combineReducers({
   routing,
-  main
+  startScreen,
+  mainMenu
 });
