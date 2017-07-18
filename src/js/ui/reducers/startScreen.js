@@ -1,3 +1,5 @@
+// @flow
+
 import { handleActions } from 'redux-actions';
 
 const initialState = { isReady: false };

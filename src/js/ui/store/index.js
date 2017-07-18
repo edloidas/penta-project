@@ -1,9 +1,11 @@
+// @flow
+
 import { createStore, applyMiddleware } from 'redux';
 
 import { logger, router } from '../middleware';
 import rootReducer from '../reducers';
 
-export default function configure(initialState) {
+export default function configure(initialState?: Object) {
   const create = window.__REDUX_DEVTOOLS_EXTENSION__
     ? window.__REDUX_DEVTOOLS_EXTENSION__()(createStore)
     : createStore;
@@ -16,6 +18,7 @@ export default function configure(initialState) {
     module.hot.accept('../reducers', () => {
       // eslint-disable-next-line global-require
       const nextReducer = require('../reducers');
+      // $FlowIgnore
       store.replaceReducer(nextReducer);
     });
   }

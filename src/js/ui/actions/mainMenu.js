@@ -1,3 +1,5 @@
+// @flow
+
 import { createAction } from 'redux-actions';
 
 export const resumeGame = createAction('resume game');

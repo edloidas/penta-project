@@ -1,3 +1,5 @@
+// @flow
+
 import { app, BrowserWindow } from 'electron';
 // const { autoUpdater } = require('electron-updater');
 // const log = require('electron-log');
@@ -8,7 +10,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win;
+let win /* : BrowserWindow */;
 
 const config = {
   width: 800,
@@ -55,6 +57,7 @@ function createWindow() {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element
+    // $FlowIgnore: reason above
     win = null;
   });
 }

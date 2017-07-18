@@ -1,3 +1,5 @@
+// @flow
+
 import { createAction } from 'redux-actions';
 
 // Start screen
