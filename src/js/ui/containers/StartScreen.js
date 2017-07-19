@@ -15,7 +15,7 @@ class StartScreen extends Component {
   }
 
   componentDidMount() {
-    setTimeout(this.props.actions.startReady, 2000);
+    setTimeout(this.props.actions.startReady(true), 2000);
   }
 
   props: {
