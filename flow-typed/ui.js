@@ -15,8 +15,9 @@ type GenericAction<T, P> = {
   payload: P;
 }
 
-type GenericActionCreator<T, P> = (payload: P) => GenericAction<T, P>;
+type GenericActionCreator<T, P> = (payload: P, ...rest: any[]) => GenericAction<T, P>;
 
-declare type Action<P> = GenericAction<string, P>;
+declare type PAction<P> = GenericAction<string, P>;
 
-declare type PActionCreator<P> = ActionCreator<Action<P>, P>
+// declare type PActionCreator<P> = ActionCreator<Action<P>, P>;
+declare type PActionCreator<P> = GenericActionCreator<string, P>;

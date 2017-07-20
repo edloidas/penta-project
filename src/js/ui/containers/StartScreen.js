@@ -21,8 +21,8 @@ class StartScreen extends Component {
   props: {
     isReady: boolean,
     actions: {
-      startReady: Function,
-      closeStart: Function
+      startReady: typeof StartScreenActions.startReady,
+      closeStart: typeof StartScreenActions.closeStart
     }
   };
 
