@@ -32,3 +32,12 @@
   90% { transform: translate(-10%, 10%); }
   100% { transform: translate(0, 0); }
 }
+
+.effect__appear {
+  animation: effectAppearAnimation 500ms linear;
+}
+
+@keyframes effectAppearAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

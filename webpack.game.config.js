@@ -66,7 +66,8 @@ const webpackConfigTemplate = {
       'react-router-redux',
       'history',
       'redux',
-      'redux-actions'
+      'redux-actions',
+      'react-transition-group'
       // 'three',
       // Unnesessary libraries
       // 'styled-components',

@@ -4,7 +4,7 @@
   "syntax": "scss",
   "rules": {
     "indentation": 2,
-    "unit-whitelist": [ "px", "em", "rem", "%", "s" ],
+    "unit-whitelist": [ "px", "em", "rem", "%", "s", "ms" ],
     "block-closing-brace-space-before": "never-single-line",
     "block-opening-brace-space-after": "never-single-line"
   }

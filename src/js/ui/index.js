@@ -9,7 +9,7 @@ import React from 'react';
 import '../../styles/style.css';
 
 import StartScreen from './containers/StartScreen';
-import MainMenu from './containers/MainMenu';
+import Menu from './containers/Menu';
 import configureStore from './store';
 import history from './store/history';
 
@@ -23,7 +23,7 @@ render(
         {window.location.pathname.includes('index.html') && <Redirect to="/" />}
         <Switch>
           <Route exact path="/" component={StartScreen} />
-          <Route path="/menu" component={MainMenu} />
+          <Route path="/menu" component={Menu} />
         </Switch>
       </div>
     </Router>

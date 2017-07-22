@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import Transition from 'react-transition-group/Transition';
 import LogoScreen from '../components/screens/LogoScreen';
 import * as StartScreenActions from '../actions/startScreen';
 
@@ -16,7 +17,9 @@ class StartScreen extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.props.actions.startReady(true), 2000);
+    // May be replaced by some async works in future
+    const minimunAwait = 2000; // ms
+    setTimeout(() => this.props.actions.startReady(true), minimunAwait);
   }
 
   props: {
@@ -39,16 +42,24 @@ class StartScreen extends Component {
   }
 
   render() {
-    const { isReady } = this.props;
+    const { isReady, isClosed } = this.props;
+    const hidingDuration = 500;
     return (
-      <div
-        tabIndex="0"
-        role="button"
-        onKeyPress={this.handleAnyPress}
-        onClick={this.handleAnyPress}>
-        {this.props.isClosed ? <Redirect to="/menu" /> : null}
-        <LogoScreen isLoading={!isReady} />
-      </div>
+      <Transition in={isClosed} timeout={hidingDuration}>
+        {state =>
+          <div
+            tabIndex="0"
+            role="button"
+            onKeyPress={this.handleAnyPress}
+            onClick={this.handleAnyPress}>
+            {state === 'entered' ? <Redirect to="/menu" /> : null}
+            <LogoScreen
+              isLoading={!isReady}
+              isHiding={isClosed}
+              duration={hidingDuration}
+            />
+          </div>}
+      </Transition>
     );
   }
 }
@@ -60,7 +71,6 @@ function mapStateToProps(state) {
   };
 }
 
-// TODO: absence of `dispatch` type leads to flow errors. Why?
 function mapDispatchToProps(dispatch: Function) {
   return {
     actions: bindActionCreators(StartScreenActions, dispatch)

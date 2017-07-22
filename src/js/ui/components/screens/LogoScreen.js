@@ -11,6 +11,8 @@ const Screen = Fullscreen.extend`
   justify-content: center;
   align-items: center;
   background-color: ${colors.bg};
+  transition: opacity ${props => props.theme.duration}ms;
+  opacity: ${props => (props.theme.isHiding ? 0 : 1)};
 `;
 
 const NameHolder = styled.div`
@@ -52,10 +54,16 @@ const LoaderHolder = styled.div`
   text-align: center;
 `;
 
-type LogoScreenProps = { isLoading: boolean };
+type LogoScreenProps = {
+  isLoading: boolean,
+  isHiding: boolean,
+  duration?: number
+};
 
 const LogoScreen = (props: LogoScreenProps) =>
-  <Screen className="font__mono">
+  <Screen
+    className="font__mono"
+    theme={{ isHiding: props.isHiding, duration: props.duration }}>
     <NameHolder>
       <Author>edloidas production</Author>
       <Title>Penta Project</Title>
@@ -67,5 +75,9 @@ const LogoScreen = (props: LogoScreenProps) =>
         : <AwaitInputLoader color={colors.fontDesc} />}
     </LoaderHolder>
   </Screen>;
+
+LogoScreen.defaultProps = {
+  duration: 1000
+};
 
 export default LogoScreen;

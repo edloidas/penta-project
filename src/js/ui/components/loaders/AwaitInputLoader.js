@@ -24,7 +24,7 @@ const TextHolder = styled.button`
 type AwaitInputLoaderProps = { color?: string };
 
 const AwaitInputLoader = ({ color }: AwaitInputLoaderProps) =>
-  <TextHolder autoFocus theme={{ color }}>
+  <TextHolder autoFocus theme={{ color }} className="font__mono">
     Press Any Key
   </TextHolder>;
 
