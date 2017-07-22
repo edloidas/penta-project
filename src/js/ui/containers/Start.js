@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Transition from 'react-transition-group/Transition';
 import LogoScreen from '../components/screens/LogoScreen';
-import * as StartScreenActions from '../actions/startScreen';
+import * as StartActions from '../actions/startScreen';
 
-class StartScreen extends Component {
+class Start extends Component {
   static defaultProps: { isReady: true };
 
   constructor(props) {
@@ -26,8 +26,8 @@ class StartScreen extends Component {
     isReady: boolean,
     isClosed: boolean,
     actions: {
-      startReady: typeof StartScreenActions.startReady,
-      closeStart: typeof StartScreenActions.closeStart
+      startReady: typeof StartActions.startReady,
+      closeStart: typeof StartActions.closeStart
     }
   };
 
@@ -52,7 +52,7 @@ class StartScreen extends Component {
             role="button"
             onKeyPress={this.handleAnyPress}
             onClick={this.handleAnyPress}>
-            {state === 'entered' ? <Redirect to="/menu" /> : null}
+            {state === 'entered' ? <Redirect to="/menu" push /> : null}
             <LogoScreen
               isLoading={!isReady}
               isHiding={isClosed}
@@ -73,8 +73,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch: Function) {
   return {
-    actions: bindActionCreators(StartScreenActions, dispatch)
+    actions: bindActionCreators(StartActions, dispatch)
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(StartScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(Start);

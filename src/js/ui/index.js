@@ -8,7 +8,7 @@ import React from 'react';
 
 import '../../styles/style.css';
 
-import StartScreen from './containers/StartScreen';
+import Start from './containers/Start';
 import Menu from './containers/Menu';
 import configureStore from './store';
 import history from './store/history';
@@ -20,9 +20,10 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <div>
-        {window.location.pathname.includes('index.html') && <Redirect to="/" />}
+        {window.location.pathname.includes('index.html') &&
+          <Redirect to="/" push />}
         <Switch>
-          <Route exact path="/" component={StartScreen} />
+          <Route exact path="/" component={Start} />
           <Route path="/menu" component={Menu} />
         </Switch>
       </div>
