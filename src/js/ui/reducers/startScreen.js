@@ -1,7 +1,7 @@
 // @flow
 
 import { handleActions, type ActionType } from 'redux-actions';
-import { startReady } from '../actions/startScreen';
+import { startReady, closeStart } from '../actions/startScreen';
 
 type State = { isReady?: boolean, isClosed?: boolean };
 
@@ -15,8 +15,8 @@ export default handleActions(
       return Object.assign({}, state, { isReady: action.payload });
     },
     // eslint-disable-next-line object-shorthand
-    'close start'(state: State): State {
-      return state;
+    'close start'(state: State, action: ActionType<typeof closeStart>): State {
+      return Object.assign({}, state, { isClosed: action.payload });
     }
   },
   initialState

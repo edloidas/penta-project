@@ -3,43 +3,50 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import LogoScreen from '../components/screens/LogoScreen';
 import * as StartScreenActions from '../actions/startScreen';
 
 class StartScreen extends Component {
-  static defaultProps: { isReady: false };
+  static defaultProps: { isReady: true };
 
   constructor(props) {
     super(props);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleAnyPress = this.handleAnyPress.bind(this);
   }
 
   componentDidMount() {
-    setTimeout(this.props.actions.startReady(true), 2000);
+    setTimeout(() => this.props.actions.startReady(true), 2000);
   }
 
   props: {
     isReady: boolean,
+    isClosed: boolean,
     actions: {
       startReady: typeof StartScreenActions.startReady,
       closeStart: typeof StartScreenActions.closeStart
     }
   };
 
-  // TODO: absence of `handleKeyPress` type leads to flow errors. Why?
-  handleKeyPress: Function;
+  // Absence of `handleAnyPress` type leads to flow errors in constructor.
+  handleAnyPress: () => void;
 
-  handleKeyPress(e) {
+  handleAnyPress(e) {
     e.preventDefault();
     if (this.props.isReady) {
-      this.props.actions.closeStart();
+      this.props.actions.closeStart(true);
     }
   }
 
   render() {
     const { isReady } = this.props;
     return (
-      <div tabIndex="0" role="button" onKeyPress={this.handleKeyPress}>
+      <div
+        tabIndex="0"
+        role="button"
+        onKeyPress={this.handleAnyPress}
+        onClick={this.handleAnyPress}>
+        {this.props.isClosed ? <Redirect to="/menu" /> : null}
         <LogoScreen isLoading={!isReady} />
       </div>
     );
@@ -47,7 +54,10 @@ class StartScreen extends Component {
 }
 
 function mapStateToProps(state) {
-  return { isReady: state.isReady };
+  return {
+    isReady: state.startScreen.isReady,
+    isClosed: state.startScreen.isClosed
+  };
 }
 
 // TODO: absence of `dispatch` type leads to flow errors. Why?

@@ -4,22 +4,29 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const blink = keyframes`
-  0% {opacity: 1;}
-  50% {opacity: 0.5;}
-  100% {opacity: 1;}
+  0% {opacity: 0.2;}
+  50% {opacity: 1;}
+  100% {opacity: 0.2;}
 `;
 
-const TextHolder = styled.div`
+const TextHolder = styled.button`
   padding: 5px;
-  font-size: 2rem;
-  animation: ${blink} linear 2s infinite;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: ${blink} ease-in-out 3s infinite 0.5s;
   color: ${props => props.theme.color};
+  opacity: 0.2;
 `;
 
 type AwaitInputLoaderProps = { color?: string };
 
-const AwaitInputLoader = ({ color = 'grey' }: AwaitInputLoaderProps) =>
-  <TextHolder theme={{ color }}>Press Any Key</TextHolder>;
+const AwaitInputLoader = ({ color }: AwaitInputLoaderProps) =>
+  <TextHolder autoFocus theme={{ color }}>
+    Press Any Key
+  </TextHolder>;
 
 AwaitInputLoader.defaultProps = { color: 'grey' };
 

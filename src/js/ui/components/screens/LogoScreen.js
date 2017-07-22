@@ -45,10 +45,11 @@ const Description = styled.div`
 
 const LoaderHolder = styled.div`
   position: absolute;
-  width: 140px;
-  bottom: 20px;
+  width: 220px;
+  bottom: 40px;
   left: 50%;
-  margin: 0 0 0 -70px;
+  margin: 0 0 0 -110px;
+  text-align: center;
 `;
 
 type LogoScreenProps = { isLoading: boolean };
@@ -63,7 +64,7 @@ const LogoScreen = (props: LogoScreenProps) =>
     <LoaderHolder>
       {props.isLoading
         ? <InfiniteLoader bg={colors.bgReverse} />
-        : <AwaitInputLoader color={colors.fontInactive} />}
+        : <AwaitInputLoader color={colors.fontDesc} />}
     </LoaderHolder>
   </Screen>;
 

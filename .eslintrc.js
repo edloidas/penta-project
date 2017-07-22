@@ -25,6 +25,9 @@ module.exports = {
     }],
     'import/no-extraneous-dependencies': [ 'off', { 'devDependencies': [ 'util/', '**/*.test.js', '**/*.spec.js' ] } ],
     'react/jsx-filename-extension': [ 1, { 'extensions': [ '.js', '.jsx' ] } ],
+    "jsx-a11y/no-autofocus": [ 2, {
+            "ignoreNonDOM": true
+        }],
     'prettier/prettier': ['error', {
       'singleQuote': true,
       'jsxBracketSameLine': true,

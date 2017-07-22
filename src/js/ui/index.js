@@ -1,6 +1,6 @@
 // @flow
 
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { ConnectedRouter as Router } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
@@ -21,8 +21,10 @@ render(
     <Router history={history}>
       <div>
         {window.location.pathname.includes('index.html') && <Redirect to="/" />}
-        <Route exact path="/" component={StartScreen} />
-        <Route path="/menu" component={MainMenu} />
+        <Switch>
+          <Route exact path="/" component={StartScreen} />
+          <Route path="/menu" component={MainMenu} />
+        </Switch>
       </div>
     </Router>
   </Provider>,
