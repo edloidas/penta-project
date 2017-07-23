@@ -3,19 +3,27 @@
 
 // @flow
 
+declare type Null = null | void;
+
  type $Npm$Electron$App = {
-   setMenu(Object | null): void
+   setMenu(Object | null): Null
  };
 
 type BrowserWindowConfig = {
   [key: string]: any
 }
 
+class WebContents extends EventEmitter {
+  openDevTools: () => Null
+}
+
 class $Npm$Electron$BrowserWindow {
   constructor: (Object) => $Npm$Electron$BrowserWindow
-  setMenu: (config: BrowserWindowConfig | null) => void
-  loadURL: (url: string) => void
-  on: (event: string, handler: () => void) => void
+  setMenu: (config: BrowserWindowConfig | Null) => Null
+  loadURL: (url: string) => Null
+  on: (event: string, handler: () => Null) => Null
+  close: () => Null
+  webContents: WebContents
 };
 
 declare module 'electron' {

@@ -6,6 +6,9 @@ import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import url from 'url';
 
+import initEnvironment from './initEnvironment';
+import initGameEventsHandlers from './initGameEventsHandlers';
+
 const isDev = process.env.NODE_ENV === 'development';
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -13,8 +16,8 @@ const isDev = process.env.NODE_ENV === 'development';
 let win /* : BrowserWindow */;
 
 const config = {
-  width: 800,
-  height: 600,
+  width: 1600,
+  height: 1000,
   resizable: false,
   minimizable: isDev,
   maximizable: isDev,
@@ -25,24 +28,10 @@ const config = {
   }
 };
 
-function initProdEnvironment() {
-  // Disable Alt key menu
-  win.setMenu(null);
-}
-
-function initDevEnvironment() {
-  // Open DevTools
-  // win.webContents.openDevTools();
-}
-
 function createWindow() {
   win = new BrowserWindow(config);
 
-  if (isDev) {
-    initDevEnvironment();
-  } else {
-    initProdEnvironment();
-  }
+  initEnvironment(win);
 
   const urlConfig = url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -60,6 +49,8 @@ function createWindow() {
     // $FlowIgnore: reason above
     win = null;
   });
+
+  initGameEventsHandlers(win);
 }
 
 // This method will be called when Electron has finished

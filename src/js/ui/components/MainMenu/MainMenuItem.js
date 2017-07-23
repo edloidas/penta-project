@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
 const glitch1 = keyframes`
@@ -70,11 +71,24 @@ const Name = styled.div`
       animation: ${glitch2} 0.2s linear alternate;
     }
   }
+
+  a {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    opacity: 0;
+  }
 `;
 
-const MainMenuItem = (props: { name: string }) =>
+const MainMenuItem = (props: { name: string, to: string }) =>
   <Name data-text={props.name}>
     {props.name}
+    <Link to={props.to} />
   </Name>;
 
 export default MainMenuItem;

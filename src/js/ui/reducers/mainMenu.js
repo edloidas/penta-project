@@ -1,35 +1,17 @@
 // @flow
 
-import { handleActions } from 'redux-actions';
+import { handleActions, type ActionType } from 'redux-actions';
+import { exitGame } from '../actions/mainMenu';
 
-const initialState = [
-  {
-    text: 'Use Redux',
-    id: 0
-  }
-];
+type State = { isExited: boolean };
+
+const initialState: State = { isExited: false };
 
 export default handleActions(
   {
     // eslint-disable-next-line object-shorthand
-    'show hero'(state, action) {
-      return [
-        {
-          id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-          text: action.payload
-        },
-        ...state
-      ];
-    },
-    // eslint-disable-next-line object-shorthand
-    'exit game'(state, action) {
-      return [
-        {
-          id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-          text: action.payload
-        },
-        ...state
-      ];
+    'exit game'(state: State, action: ActionType<typeof exitGame>): State {
+      return Object.assign({}, state, { isExited: action.payload });
     }
   },
   initialState
