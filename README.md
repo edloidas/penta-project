@@ -11,7 +11,7 @@ Penta Project
 
 ## Description ##
 
-Penta project is currently in pre-alpha.
+Penta Project is currently in pre-alpha.
 
 ## Contributing ##
 
@@ -19,13 +19,13 @@ Want to contribute? Read the [guide](docs/CONTRIBUTING.md) first.
 
 ## Development ##
 
-The list of a known development issues and explanation of the selected technologies can be found in [docs](docs/DEVELOPMENT.md).
+The guide on how to run the project, a list of all known _development_ issues and explanation of the selected technologies can be found in [docs](docs/DEVELOPMENT.md).
 
 ## License ##
 
 [GPL-3.0](LICENSE) © [Edloidas Production](https://edloidas.com)
 
-Take a note, that all project data in the `public/base/` directory (present only in compiled version) are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License][base-license-url]. ![CC BY-NC-SA][base-license-image]
+Take a note, that all project data in the `build/data/` directory (present after running `yarn download`) are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License][base-license-url]. ![CC BY-NC-SA][base-license-image]
 
 <!-- Links -->
 [travis-url]: https://travis-ci.org/edloidas/penta-project
