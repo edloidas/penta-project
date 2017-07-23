@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import configureStore from '../../src/js/ui/store';
 import Start from '../../src/js/ui/containers/Start';
-import { startReady } from '../../src/js/ui/actions/start';
+import { finalizeStart } from '../../src/js/ui/actions/start';
 
 describe('<Start />', () => {
   test('Should renders', () => {
@@ -21,7 +21,7 @@ describe('<Start />', () => {
 
   test('Should switch to Await loader', () => {
     const store = configureStore();
-    store.dispatch(startReady(true));
+    store.dispatch(finalizeStart(true));
 
     const tree = renderer
       .create(

@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom';
 import Transition from 'react-transition-group/Transition';
 import LogoScreen from '../components/screens/LogoScreen';
 import * as StartActions from '../actions/start';
+import { type State } from '../store';
 
 class Start extends Component {
   static defaultProps: { isReady: true };
@@ -19,14 +20,14 @@ class Start extends Component {
   componentDidMount() {
     // May be replaced by some async works in future
     const minimunAwait = 2000; // ms
-    setTimeout(() => this.props.actions.startReady(true), minimunAwait);
+    setTimeout(() => this.props.actions.finalizeStart(true), minimunAwait);
   }
 
   props: {
     isReady: boolean,
     isClosed: boolean,
     actions: {
-      startReady: typeof StartActions.startReady,
+      finalizeStart: typeof StartActions.finalizeStart,
       closeStart: typeof StartActions.closeStart
     }
   };
@@ -64,7 +65,7 @@ class Start extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state: State) {
   return {
     isReady: state.start.isReady,
     isClosed: state.start.isClosed

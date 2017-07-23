@@ -2,6 +2,6 @@
 
 import { createAction } from 'redux-actions';
 
-// Start screen
-export const startReady: PActionCreator<boolean> = createAction('start ready');
-export const closeStart: PActionCreator<boolean> = createAction('close start');
+// eslint-disable-next-line prettier/prettier
+export const finalizeStart: PActionCreator<boolean> = createAction('START_FINALIZE');
+export const closeStart: PActionCreator<boolean> = createAction('START_CLOSE');

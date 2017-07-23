@@ -3,7 +3,7 @@
 import { handleActions, type ActionType } from 'redux-actions';
 import { exitGame } from '../actions/menu';
 
-type State = { isExited: boolean };
+export type State = { isExited?: boolean };
 
 const initialState: State = { isExited: false };
 

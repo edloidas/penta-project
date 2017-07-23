@@ -1,20 +1,20 @@
 // @flow
 
 import { handleActions, type ActionType } from 'redux-actions';
-import { startReady, closeStart } from '../actions/start';
+import { finalizeStart, closeStart } from '../actions/start';
 
-type State = { isReady?: boolean, isClosed?: boolean };
+export type State = { isReady?: boolean, isClosed?: boolean };
+type FinalizeStartAction = ActionType<typeof finalizeStart>;
+type CloseStartAction = ActionType<typeof closeStart>;
 
 const initialState: State = { isReady: false, isClosed: false };
 
 export default handleActions(
   {
-    // eslint-disable-next-line object-shorthand
-    'start ready'(state: State, action: ActionType<typeof startReady>): State {
+    START_FINALIZE(state: State, action: FinalizeStartAction): State {
       return Object.assign({}, state, { isReady: action.payload });
     },
-    // eslint-disable-next-line object-shorthand
-    'close start'(state: State, action: ActionType<typeof closeStart>): State {
+    START_CLOSE(state: State, action: CloseStartAction): State {
       return Object.assign({}, state, { isClosed: action.payload });
     }
   },
