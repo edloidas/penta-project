@@ -21,6 +21,7 @@
     - `yarn test` — run test with Jest;
     - `yarn run typecheck` — check code types with Flow;
     - `yarn run lint` — lint code with ESLint, Stylelint and Prettier, and try fix errors.
+    - `yarn run review` — full review: lint, check types and run tests.
   * Building:
     - `yarn run build` — build the `app`, `engine` and `ui` for production.
     - `yarn run dist` — build the desktop Electron application (installer and unpacked) only. Uses code from `build` stage.

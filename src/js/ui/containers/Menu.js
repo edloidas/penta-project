@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import MainMenu, {
   type MenuItemProperties
 } from '../components/MainMenu/MainMenu';
-import * as MenuActions from '../actions/mainMenu';
+import * as MenuActions from '../actions/menu';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Menu extends Component {
@@ -44,7 +44,7 @@ class Menu extends Component {
 }
 
 function mapStateToProps(state) {
-  return { isExited: state.mainMenu.isExited };
+  return { isExited: state.menu.isExited };
 }
 
 function mapDispatchToProps(dispatch: Function) {

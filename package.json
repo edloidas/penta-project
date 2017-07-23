@@ -35,6 +35,7 @@
     "lint:css-in-js": "stylelint \"src/js/ui/components/**/*.js\"",
     "lint:css": "run-s -c lint:css-*",
     "lint": "run-p -c lint:css lint:js",
+    "review": "run-p -c test typecheck lint",
     "precommit": "lint-staged",
     "prepush": "npm test",
     "download": "node util/tasks/download.js",

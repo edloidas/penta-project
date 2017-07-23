@@ -1,7 +1,7 @@
 // @flow
 
 import { handleActions, type ActionType } from 'redux-actions';
-import { startReady, closeStart } from '../actions/startScreen';
+import { startReady, closeStart } from '../actions/start';
 
 type State = { isReady?: boolean, isClosed?: boolean };
 

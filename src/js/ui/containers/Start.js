@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Transition from 'react-transition-group/Transition';
 import LogoScreen from '../components/screens/LogoScreen';
-import * as StartActions from '../actions/startScreen';
+import * as StartActions from '../actions/start';
 
 class Start extends Component {
   static defaultProps: { isReady: true };
@@ -66,8 +66,8 @@ class Start extends Component {
 
 function mapStateToProps(state) {
   return {
-    isReady: state.startScreen.isReady,
-    isClosed: state.startScreen.isClosed
+    isReady: state.start.isReady,
+    isClosed: state.start.isClosed
   };
 }
 

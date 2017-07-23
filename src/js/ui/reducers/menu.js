@@ -1,7 +1,7 @@
 // @flow
 
 import { handleActions, type ActionType } from 'redux-actions';
-import { exitGame } from '../actions/mainMenu';
+import { exitGame } from '../actions/menu';
 
 type State = { isExited: boolean };
 
