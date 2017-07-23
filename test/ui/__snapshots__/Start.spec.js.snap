@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Start /> Should renders 1`] = `
+<div
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="font__mono sc-ifAKCX kkqOZo"
+  >
+    <div
+      className="sc-EHOje bhMvGD"
+    >
+      <div
+        className="sc-bZQynM lbASZa"
+      >
+        edloidas production
+      </div>
+      <div
+        className="sc-gzVnrw iaDCVW"
+      >
+        Penta Project
+      </div>
+      <div
+        className="sc-htoDjs ixAwGv"
+      >
+        A Cyberpunk Action Game
+      </div>
+    </div>
+    <div
+      className="sc-dnqmqq dsZHde"
+    >
+      <ul
+        className="sc-bwzfXH elIQZf"
+      >
+        <li
+          className="sc-htpNat zPrue"
+        />
+        <li
+          className="sc-htpNat cSfyWI"
+        />
+        <li
+          className="sc-htpNat bSYqvw"
+        />
+        <li
+          className="sc-htpNat fiZfbi"
+        />
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Start /> Should switch to Await loader 1`] = `
+<div
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="font__mono sc-ifAKCX kkqOZo"
+  >
+    <div
+      className="sc-EHOje bhMvGD"
+    >
+      <div
+        className="sc-bZQynM lbASZa"
+      >
+        edloidas production
+      </div>
+      <div
+        className="sc-gzVnrw iaDCVW"
+      >
+        Penta Project
+      </div>
+      <div
+        className="sc-htoDjs ixAwGv"
+      >
+        A Cyberpunk Action Game
+      </div>
+    </div>
+    <div
+      className="sc-dnqmqq dsZHde"
+    >
+      <button
+        autoFocus={true}
+        className="font__mono sc-bxivhb eFXPYo"
+      >
+        Press Any Key
+      </button>
+    </div>
+  </div>
+</div>
+`;
