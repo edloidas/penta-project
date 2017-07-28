@@ -1,5 +1,4 @@
 // @flow
-
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { ConnectedRouter as Router } from 'react-router-redux';
 import { Provider } from 'react-redux';

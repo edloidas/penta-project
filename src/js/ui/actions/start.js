@@ -1,5 +1,4 @@
 // @flow
-
 import { createAction } from 'redux-actions';
 
 // eslint-disable-next-line prettier/prettier

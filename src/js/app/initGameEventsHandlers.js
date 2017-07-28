@@ -1,5 +1,4 @@
 // @flow
-
 // eslint-disable-next-line no-unused-vars
 import { BrowserWindow } from 'electron';
 

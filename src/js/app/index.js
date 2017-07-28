@@ -1,5 +1,4 @@
 // @flow
-
 import { app, BrowserWindow } from 'electron';
 // const { autoUpdater } = require('electron-updater');
 // const log = require('electron-log');

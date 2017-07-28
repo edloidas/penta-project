@@ -1,5 +1,4 @@
 // @flow
-
 import { createStore, applyMiddleware } from 'redux';
 
 import { logger, router } from '../middleware';

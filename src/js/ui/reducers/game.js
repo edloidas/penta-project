@@ -1,5 +1,4 @@
 // @flow
-
 import { handleActions, type ActionType } from 'redux-actions';
 import { resumeGame, startNewGame, saveGame, loadGame } from '../actions/game';
 

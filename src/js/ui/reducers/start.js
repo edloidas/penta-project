@@ -1,5 +1,4 @@
 // @flow
-
 import { handleActions, type ActionType } from 'redux-actions';
 import { finalizeStart, closeStart } from '../actions/start';
 
