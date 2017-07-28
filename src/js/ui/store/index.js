@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { logger, router } from '../middleware';
 import rootReducer from '../reducers';
 import { type State as StartState } from '../reducers/start';
-import { type State as MenuState } from '../reducers/menu';
+import { type State as GameState } from '../reducers/game';
 
 type RoutingState = {
   location: {
@@ -18,7 +18,7 @@ type RoutingState = {
 export type State = {
   routing: RoutingState,
   start: StartState,
-  menu: MenuState
+  game: GameState
 };
 
 export default function configure(initialState?: State) {

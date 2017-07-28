@@ -2,15 +2,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import MainMenuItem from './MainMenuItem';
+import MainMenuItem, { type MainMenuItemProps } from './MainMenuItem';
 import { Fullscreen } from '../base';
-
-export type MenuItemProperties = {
-  name: string,
-  to: string,
-  // TODO: Remove `?` in future
-  clickHandler?: (e?: MouseEvent) => void
-};
 
 const Screen = Fullscreen.extend`
   display: flex;
@@ -20,18 +13,18 @@ const Screen = Fullscreen.extend`
 
 const MainMenuHolder = styled.div`padding-left: 6rem;`;
 
-type MainMenuProps = { menuItems: Array<MenuItemProperties> };
+type MainMenuProps = { menuItems: Array<MainMenuItemProps> };
 
 const MainMenu = ({ menuItems }: MainMenuProps) =>
   // logo
   <Screen className="effect__appear">
     <MainMenuHolder>
-      {menuItems.map((item: MenuItemProperties) =>
+      {menuItems.map((item: MainMenuItemProps) =>
         <MainMenuItem
           key={item.name}
           name={item.name}
           to={item.to}
-          onClick={item.clickHandler}
+          clickHandler={item.clickHandler}
         />
       )}
     </MainMenuHolder>

@@ -3,53 +3,51 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import MainMenu, {
-  type MenuItemProperties
-} from '../components/MainMenu/MainMenu';
-import * as MenuActions from '../actions/menu';
+import MainMenu from '../components/MainMenu/MainMenu';
+import { type MainMenuItemProps } from '../components/MainMenu/MainMenuItem';
+import * as GameActions from '../actions/game';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.handleExit = this.handleExit.bind(this);
+    this.handleResume = this.handleResume.bind(this);
   }
 
   props: {
     actions: {
-      // resumeGame: typeof MenuActions.resumeGame,
-      // startNewGame: typeof MenuActions.startNewGame,
-      // showHero: typeof MenuActions.showHero,
-      // showSettings: typeof MenuActions.showSettings,
-      exitGame: typeof MenuActions.exitGame
+      resumeGame: typeof GameActions.resumeGame
     }
   };
 
-  handleExit: () => void;
+  handleResume: (e?: MouseEvent) => void;
 
-  handleExit() {
-    this.props.actions.exitGame();
+  handleResume(e: MouseEvent) {
+    e.stopPropagation();
+    e.preventDefault();
+    this.props.actions.resumeGame(true);
   }
 
   render() {
-    const menuItems: Array<MenuItemProperties> = [
-      { name: 'Resume', to: '/resume' },
+    const menuItems: Array<MainMenuItemProps> = [
+      { name: 'Resume', clickHandler: this.handleResume },
       { name: 'New Game', to: '/new' },
+      { name: 'Save Game', to: '/save' },
       { name: 'Load Game', to: '/load' },
       { name: 'Settings', to: '/settings' },
-      { name: 'Exit', to: '/exit', clickHandler: this.handleExit }
+      { name: 'Exit', to: '/exit' }
     ];
     return <MainMenu menuItems={menuItems} />;
   }
 }
 
-function mapStateToProps(state) {
-  return { isExited: state.menu.isExited };
+function mapStateToProps() {
+  return {};
 }
 
 function mapDispatchToProps(dispatch: Function) {
   return {
-    actions: bindActionCreators(MenuActions, dispatch)
+    actions: bindActionCreators(GameActions, dispatch)
   };
 }
 

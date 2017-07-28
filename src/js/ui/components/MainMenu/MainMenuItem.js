@@ -85,10 +85,22 @@ const Name = styled.div`
   }
 `;
 
-const MainMenuItem = (props: { name: string, to: string }) =>
-  <Name data-text={props.name}>
+export type MainMenuItemProps = {
+  name: string,
+  to?: string,
+  // TODO: Remove `?` in future
+  clickHandler?: (e?: MouseEvent) => void
+};
+
+const MainMenuItem = (props: MainMenuItemProps) =>
+  <Name data-text={props.name} onClick={props.clickHandler}>
     {props.name}
-    <Link to={props.to} />
+    {props.to ? <Link to={props.to} /> : null}
   </Name>;
+
+MainMenuItem.defaultProps = {
+  to: null,
+  clickHandler: null
+};
 
 export default MainMenuItem;
