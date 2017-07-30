@@ -8,23 +8,23 @@ exports[`<Start /> Should renders 1`] = `
   tabIndex="0"
 >
   <div
-    className="font__mono sc-ifAKCX kkqOZo"
+    className="font__mono sc-htoDjs hqoneH"
   >
     <div
-      className="sc-EHOje bhMvGD"
+      className="font__mono sc-bwzfXH cPNnSe"
     >
       <div
-        className="sc-bZQynM lbASZa"
+        className="sc-htpNat hCfKcM"
       >
         edloidas production
       </div>
       <div
-        className="sc-gzVnrw iaDCVW"
+        className="sc-bxivhb lUHxl"
       >
         Penta Project
       </div>
       <div
-        className="sc-htoDjs ixAwGv"
+        className="sc-ifAKCX LmHhu"
       >
         A Cyberpunk Action Game
       </div>
@@ -33,19 +33,19 @@ exports[`<Start /> Should renders 1`] = `
       className="sc-dnqmqq dsZHde"
     >
       <ul
-        className="sc-bwzfXH elIQZf"
+        className="sc-EHOje hTaJON"
       >
         <li
-          className="sc-htpNat zPrue"
+          className="sc-bZQynM kjQUrH"
         />
         <li
-          className="sc-htpNat cSfyWI"
+          className="sc-bZQynM jTHtRk"
         />
         <li
-          className="sc-htpNat bSYqvw"
+          className="sc-bZQynM frRrCA"
         />
         <li
-          className="sc-htpNat fiZfbi"
+          className="sc-bZQynM KEZJa"
         />
       </ul>
     </div>
@@ -61,23 +61,23 @@ exports[`<Start /> Should switch to Await loader 1`] = `
   tabIndex="0"
 >
   <div
-    className="font__mono sc-ifAKCX kkqOZo"
+    className="font__mono sc-htoDjs hqoneH"
   >
     <div
-      className="sc-EHOje bhMvGD"
+      className="font__mono sc-bwzfXH cPNnSe"
     >
       <div
-        className="sc-bZQynM lbASZa"
+        className="sc-htpNat hCfKcM"
       >
         edloidas production
       </div>
       <div
-        className="sc-gzVnrw iaDCVW"
+        className="sc-bxivhb lUHxl"
       >
         Penta Project
       </div>
       <div
-        className="sc-htoDjs ixAwGv"
+        className="sc-ifAKCX LmHhu"
       >
         A Cyberpunk Action Game
       </div>
@@ -87,7 +87,7 @@ exports[`<Start /> Should switch to Await loader 1`] = `
     >
       <button
         autoFocus={true}
-        className="font__mono sc-bxivhb eFXPYo"
+        className="font__mono sc-gzVnrw HhbST"
       >
         Press Any Key
       </button>

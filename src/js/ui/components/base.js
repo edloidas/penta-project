@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 type Colors = { [string]: string };
+type Texts = { [string]: string };
 
 // eslint-disable-next-line import/prefer-default-export
 export const Fullscreen = styled.div`
@@ -29,4 +30,10 @@ export const colors: Colors = {
   accent:       '#b8860b', // darkgoldenrod
   hp:           '#b82739',
   eg:           '#08637e'
+};
+
+export const texts: Texts = {
+  author: 'edloidas production',
+  project: 'Penta Project',
+  genre: 'A Cyberpunk Action Game'
 };

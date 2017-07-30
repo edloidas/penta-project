@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Fullscreen, colors } from '../base';
+import Logo from '../texts/Logo';
 import InfiniteLoader from '../loaders/InfiniteLoader';
 import AwaitInputLoader from '../loaders/AwaitInputLoader';
 
@@ -12,36 +13,6 @@ const Screen = Fullscreen.extend`
   background-color: ${colors.bg};
   transition: opacity ${props => props.theme.duration}ms;
   opacity: ${props => (props.theme.isHiding ? 0 : 1)};
-`;
-
-const NameHolder = styled.div`
-  position: relative;
-  text-align: center;
-`;
-
-const Author = styled.div`
-  position: absolute;
-  width: 100%;
-  top: -2.5rem;
-  font-size: 1.25rem;
-  font-weight: lighter;
-  text-transform: uppercase;
-  color: ${colors.fontInactive};
-`;
-
-const Title = styled.div`
-  position: relative;
-  font-size: 4rem;
-  text-transform: uppercase;
-  letter-spacing: 1rem;
-  color: ${colors.font};
-`;
-
-const Description = styled.div`
-  margin: -0.4rem 0 0 0;
-  font-size: 2rem;
-  text-transform: lowercase;
-  color: ${colors.accent};
 `;
 
 const LoaderHolder = styled.div`
@@ -63,11 +34,7 @@ const LogoScreen = (props: LogoScreenProps) =>
   <Screen
     className="font__mono"
     theme={{ isHiding: props.isHiding, duration: props.duration }}>
-    <NameHolder>
-      <Author>edloidas production</Author>
-      <Title>Penta Project</Title>
-      <Description>A Cyberpunk Action Game</Description>
-    </NameHolder>
+    <Logo />
     <LoaderHolder>
       {props.isLoading
         ? <InfiniteLoader bg={colors.bgReverse} />
