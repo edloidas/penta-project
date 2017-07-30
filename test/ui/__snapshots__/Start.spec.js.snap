@@ -19,7 +19,7 @@ exports[`<Start /> Should renders 1`] = `
         edloidas production
       </div>
       <div
-        className="sc-bxivhb lUHxl"
+        className="sc-bxivhb fBqrjW"
       >
         Penta Project
       </div>
@@ -72,7 +72,7 @@ exports[`<Start /> Should switch to Await loader 1`] = `
         edloidas production
       </div>
       <div
-        className="sc-bxivhb lUHxl"
+        className="sc-bxivhb fBqrjW"
       >
         Penta Project
       </div>

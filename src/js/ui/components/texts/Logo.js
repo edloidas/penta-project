@@ -21,6 +21,7 @@ const Author = styled.div`
 
 const Title = styled.div`
   position: relative;
+  padding: 0 0 0 0.25em;
   font-size: 4em;
   text-transform: uppercase;
   letter-spacing: 0.25em;
