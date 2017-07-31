@@ -33,6 +33,7 @@ class Menu extends Component {
       { name: 'New Game', to: '/new' },
       { name: 'Save Game', to: '/save' },
       { name: 'Load Game', to: '/load' },
+      { name: 'Hero', to: '/hero' },
       { name: 'Settings', to: '/settings' },
       { name: 'Exit', to: '/exit' }
     ];

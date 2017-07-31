@@ -127,6 +127,11 @@
     "webpack-dev-server": "^2.5.1",
     "yauzl": "^2.8.0"
   },
+  "jest": {
+    "globals": {
+      "GAME_VERSION": "0.0.1-alpha.2"
+    }
+  },
   "engines": {
     "node": ">= 7.3.0",
     "npm": ">= 3.10.10",

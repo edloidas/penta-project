@@ -40,5 +40,8 @@ module.exports = {
     'browser': true,
     'node': true,
     'jest': true,
+  },
+  'globals': {
+    'GAME_VERSION': false
   }
 }

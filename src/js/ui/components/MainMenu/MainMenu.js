@@ -2,6 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../texts/Logo';
+import Version from '../texts/Version';
+import Copyright from '../texts/Copyright';
 import MainMenuItem, { type MainMenuItemProps } from './MainMenuItem';
 import { Fullscreen } from '../base';
 
@@ -13,7 +15,8 @@ const Screen = Fullscreen.extend`
 
 const MainMenuHolder = styled.div`
   position: relative;
-  padding-left: 6rem;
+  margin-top: 4rem;
+  padding-left: 8rem;
 `;
 
 const LogoHolder = styled.div`
@@ -23,10 +26,26 @@ const LogoHolder = styled.div`
   width: 23rem;
 `;
 
+const Footer = styled.footer`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0 0.5em;
+  text-align: center;
+  opacity: 0.5;
+`;
+
+const VersionHolder = styled.div`
+  position: absolute;
+  left: 8rem;
+  width: 19rem;
+`;
+
 type MainMenuProps = { menuItems: Array<MainMenuItemProps> };
 
 const MainMenu = ({ menuItems }: MainMenuProps) =>
-  // logo
   <Screen className="effect__appear">
     <MainMenuHolder>
       <LogoHolder>
@@ -41,6 +60,12 @@ const MainMenu = ({ menuItems }: MainMenuProps) =>
         />
       )}
     </MainMenuHolder>
+    <Footer className="font__accent">
+      <VersionHolder>
+        <Version />
+      </VersionHolder>
+      <Copyright />
+    </Footer>
   </Screen>;
 // v0.0.1-alpha.2 pre-release
 

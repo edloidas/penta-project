@@ -16,6 +16,7 @@ const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
 const NoEmitOnErrorsPlugin = require('webpack').NoEmitOnErrorsPlugin;
 const DefinePlugin = require('webpack').DefinePlugin;
 const env = require('./util/env');
+const project = require('./util/project');
 const CONFIG = require('./util/config');
 
 const isProd = env.prod;
@@ -86,7 +87,8 @@ const webpackConfigTemplate = {
   plugins: [
     new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
     new DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify(env.type) }
+      'process.env': { NODE_ENV: JSON.stringify(env.type) },
+      GAME_VERSION: JSON.stringify(project.version)
     }),
     new NamedModulesPlugin(),
     new NoEmitOnErrorsPlugin()

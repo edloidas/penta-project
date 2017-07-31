@@ -35,5 +35,7 @@ export const colors: Colors = {
 export const texts: Texts = {
   author: 'edloidas production',
   project: 'Penta Project',
-  genre: 'A Cyberpunk Action Game'
+  genre: 'A Cyberpunk Action Game',
+  // $FlowIgnore: global variable from webpack
+  version: GAME_VERSION
 };
