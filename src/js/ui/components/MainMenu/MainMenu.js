@@ -34,7 +34,7 @@ const Footer = styled.footer`
   width: 100%;
   padding: 0 0 0.5em;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.75;
 `;
 
 const VersionHolder = styled.div`
@@ -67,6 +67,5 @@ const MainMenu = ({ menuItems }: MainMenuProps) =>
       <Copyright />
     </Footer>
   </Screen>;
-// v0.0.1-alpha.2 pre-release
 
 export default MainMenu;
