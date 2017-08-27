@@ -1,3 +1,4 @@
+declare type Null = null | void;
 //
 // webpack
 //

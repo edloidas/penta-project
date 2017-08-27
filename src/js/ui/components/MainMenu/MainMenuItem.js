@@ -86,9 +86,9 @@ const Name = styled.div`
 
 export type MainMenuItemProps = {
   name: string,
-  to?: string,
+  to?: string | Null,
   // TODO: Remove `?` in future
-  clickHandler?: (e?: MouseEvent) => void
+  clickHandler?: ((e?: MouseEvent) => void) | Null
 };
 
 const MainMenuItem = (props: MainMenuItemProps) =>

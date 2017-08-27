@@ -4,7 +4,7 @@
     "git add"
   ],
   "src/js/ui/components/**/*.js": [
-    "stylelint --aei",
+    "stylelint",
     "git add"
   ],
   "*.css": [

@@ -8,8 +8,19 @@ import LogoScreen from '../components/screens/LogoScreen';
 import * as StartActions from '../actions/start';
 import { type State } from '../store';
 
-class Start extends Component {
-  static defaultProps: { isReady: true };
+type Props = {
+  isReady: boolean,
+  isClosed: boolean,
+  actions: {
+    finalizeStart: typeof StartActions.finalizeStart,
+    closeStart: typeof StartActions.closeStart
+  }
+};
+
+class Start extends Component<Props> {
+  static defaultProps: {
+    isReady: true
+  };
 
   constructor(props) {
     super(props);
@@ -22,14 +33,7 @@ class Start extends Component {
     setTimeout(() => this.props.actions.finalizeStart(true), minimunAwait);
   }
 
-  props: {
-    isReady: boolean,
-    isClosed: boolean,
-    actions: {
-      finalizeStart: typeof StartActions.finalizeStart,
-      closeStart: typeof StartActions.closeStart
-    }
-  };
+  props: Props;
 
   // Absence of `handleAnyPress` type leads to flow errors in constructor.
   handleAnyPress: () => void;

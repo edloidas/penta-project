@@ -6,18 +6,20 @@ import MainMenu from '../components/MainMenu/MainMenu';
 import { type MainMenuItemProps } from '../components/MainMenu/MainMenuItem';
 import * as GameActions from '../actions/game';
 
+type Props = {
+  actions: {
+    resumeGame: typeof GameActions.resumeGame
+  }
+};
+
 // eslint-disable-next-line react/prefer-stateless-function
-class Menu extends Component {
+class Menu extends Component<Props> {
   constructor(props) {
     super(props);
     this.handleResume = this.handleResume.bind(this);
   }
 
-  props: {
-    actions: {
-      resumeGame: typeof GameActions.resumeGame
-    }
-  };
+  props: Props;
 
   handleResume: (e?: MouseEvent) => void;
 
