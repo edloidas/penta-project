@@ -30,17 +30,20 @@ type LogoScreenProps = {
   duration?: number
 };
 
-const LogoScreen = (props: LogoScreenProps) =>
+const LogoScreen = (props: LogoScreenProps) => (
   <Screen
     className="font__mono"
     theme={{ isHiding: props.isHiding, duration: props.duration }}>
     <Logo />
     <LoaderHolder>
-      {props.isLoading
-        ? <InfiniteLoader bg={colors.bgReverse} />
-        : <AwaitInputLoader color={colors.fontDesc} />}
+      {props.isLoading ? (
+        <InfiniteLoader bg={colors.bgReverse} />
+      ) : (
+        <AwaitInputLoader color={colors.fontDesc} />
+      )}
     </LoaderHolder>
-  </Screen>;
+  </Screen>
+);
 
 LogoScreen.defaultProps = {
   duration: 1000

@@ -50,7 +50,7 @@ class Start extends Component<Props> {
     const hidingDuration = 500;
     return (
       <Transition in={isClosed} timeout={hidingDuration}>
-        {state =>
+        {state => (
           <div
             tabIndex="0"
             role="button"
@@ -62,7 +62,8 @@ class Start extends Component<Props> {
               isHiding={isClosed}
               duration={hidingDuration}
             />
-          </div>}
+          </div>
+        )}
       </Transition>
     );
   }

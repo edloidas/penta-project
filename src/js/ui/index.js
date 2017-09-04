@@ -19,8 +19,9 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <div>
-        {window.location.pathname.includes('index.html') &&
-          <Redirect to="/" push />}
+        {window.location.pathname.includes('index.html') && (
+          <Redirect to="/" push />
+        )}
         <Switch>
           <Route exact path="/" component={Start} />
           <Route path="/menu" component={Menu} />

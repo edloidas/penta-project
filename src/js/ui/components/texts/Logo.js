@@ -40,20 +40,13 @@ type LogoProps = {
   fontSize?: string
 };
 
-const Logo = (props: LogoProps) =>
+const Logo = (props: LogoProps) => (
   <LogoHolder className="font__mono" theme={{ fontSize: props.fontSize }}>
-    {props.renderAuthor
-      ? <Author>
-          {texts.author}
-        </Author>
-      : null}
-    <Title>
-      {texts.project}
-    </Title>
-    <Description>
-      {texts.genre}
-    </Description>
-  </LogoHolder>;
+    {props.renderAuthor ? <Author>{texts.author}</Author> : null}
+    <Title>{texts.project}</Title>
+    <Description>{texts.genre}</Description>
+  </LogoHolder>
+);
 
 Logo.defaultProps = {
   renderAuthor: true,

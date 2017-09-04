@@ -49,12 +49,13 @@ LoaderSquare.defaultProps = {
 
 type InfiniteLoaderProps = { bg: string };
 
-const InfiniteLoader = (props: InfiniteLoaderProps) =>
+const InfiniteLoader = (props: InfiniteLoaderProps) => (
   <LoaderHolder>
     <LoaderSquare theme={{ bg: props.bg, delay: '0.2s' }} />
     <LoaderSquare theme={{ bg: props.bg, delay: '0.4s' }} />
     <LoaderSquare theme={{ bg: props.bg, delay: '0.6s' }} />
     <LoaderSquare theme={{ bg: props.bg, delay: '0.8s' }} />
-  </LoaderHolder>;
+  </LoaderHolder>
+);
 
 export default InfiniteLoader;

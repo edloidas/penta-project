@@ -91,11 +91,12 @@ export type MainMenuItemProps = {
   clickHandler?: ((e?: MouseEvent) => void) | Null
 };
 
-const MainMenuItem = (props: MainMenuItemProps) =>
+const MainMenuItem = (props: MainMenuItemProps) => (
   <Name data-text={props.name} onClick={props.clickHandler}>
     {props.name}
     {props.to ? <Link to={props.to} /> : null}
-  </Name>;
+  </Name>
+);
 
 MainMenuItem.defaultProps = {
   to: null,

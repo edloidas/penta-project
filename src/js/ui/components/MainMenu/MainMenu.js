@@ -45,20 +45,20 @@ const VersionHolder = styled.div`
 
 type MainMenuProps = { menuItems: Array<MainMenuItemProps> };
 
-const MainMenu = ({ menuItems }: MainMenuProps) =>
+const MainMenu = ({ menuItems }: MainMenuProps) => (
   <Screen className="effect__appear">
     <MainMenuHolder>
       <LogoHolder>
         <Logo renderAuthor={false} fontSize={'0.5rem'} />
       </LogoHolder>
-      {menuItems.map((item: MainMenuItemProps) =>
+      {menuItems.map((item: MainMenuItemProps) => (
         <MainMenuItem
           key={item.name}
           name={item.name}
           to={item.to}
           clickHandler={item.clickHandler}
         />
-      )}
+      ))}
     </MainMenuHolder>
     <Footer className="font__accent">
       <VersionHolder>
@@ -66,6 +66,7 @@ const MainMenu = ({ menuItems }: MainMenuProps) =>
       </VersionHolder>
       <Copyright />
     </Footer>
-  </Screen>;
+  </Screen>
+);
 
 export default MainMenu;

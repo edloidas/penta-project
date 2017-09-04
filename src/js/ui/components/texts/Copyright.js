@@ -12,12 +12,13 @@ const CopyrightNote = styled.span`text-transform: capitalize;`;
 
 type CopyrightProps = { fontSize?: string };
 
-const Copyright = (props: CopyrightProps) =>
+const Copyright = (props: CopyrightProps) => (
   <CopyrightHolder theme={{ fontSize: props.fontSize }}>
     2017–current ©&nbsp;
     {texts.author}.&nbsp;
     <CopyrightNote>All Rights Reserved.</CopyrightNote>
-  </CopyrightHolder>;
+  </CopyrightHolder>
+);
 
 Copyright.defaultProps = { fontSize: '1rem' };
 

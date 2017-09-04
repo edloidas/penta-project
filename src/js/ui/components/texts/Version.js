@@ -16,11 +16,12 @@ const VersionNote = styled.span`
 
 type VersionProps = { fontSize?: string };
 
-const Version = (props: VersionProps) =>
+const Version = (props: VersionProps) => (
   <VersionHolder theme={{ fontSize: props.fontSize }}>
     <VersionNote>alpha version</VersionNote>&nbsp;
     {texts.version}
-  </VersionHolder>;
+  </VersionHolder>
+);
 
 Version.defaultProps = { fontSize: '1rem' };
 
