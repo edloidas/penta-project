@@ -8,7 +8,9 @@ const CopyrightHolder = styled.span`
   color: ${colors.fontInactive};
 `;
 
-const CopyrightNote = styled.span`text-transform: capitalize;`;
+const CopyrightNote = styled.span`
+  text-transform: capitalize;
+`;
 
 type CopyrightProps = { fontSize?: string };
 

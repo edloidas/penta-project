@@ -1,9 +1,10 @@
 {
   "presets": [
+    "flow",
     "react",
     ["env", {
       "targets": {
-        "browsers": ["electron >= 1.6"]
+        "browsers": ["electron >= 1.7"]
       },
       "cacheDirectory": true,
       "modules": false,
@@ -13,6 +14,7 @@
   "env": {
     "test": {
       "presets": [
+        "flow",
         "react",
         ["env", {
           "targets": {

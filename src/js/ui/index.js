@@ -29,5 +29,6 @@ render(
       </div>
     </Router>
   </Provider>,
+  // $FlowIgnore: no reason to be `null`
   document.getElementById('root')
 );

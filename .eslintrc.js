@@ -28,6 +28,7 @@ module.exports = {
     "jsx-a11y/no-autofocus": [ 2, {
             "ignoreNonDOM": true
         }],
+    'jsx-a11y/anchor-is-valid': [ 'warn', { 'aspects': [ 'invalidHref' ] } ],
     'prettier/prettier': ['error', {
       'singleQuote': true,
       'jsxBracketSameLine': true,
@@ -35,6 +36,7 @@ module.exports = {
     // 'quotes': ['error', 'single'],
     // no support in 'babel-eslint'; should be 'error'
     'no-await-in-loop': [ 'off' ],
+    'jsx-a11y/href-no-hash': [ 'off' ],
   },
   'env': {
     'browser': true,

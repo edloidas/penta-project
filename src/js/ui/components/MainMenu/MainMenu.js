@@ -49,7 +49,7 @@ const MainMenu = ({ menuItems }: MainMenuProps) => (
   <Screen className="effect__appear">
     <MainMenuHolder>
       <LogoHolder>
-        <Logo renderAuthor={false} fontSize={'0.5rem'} />
+        <Logo renderAuthor={false} fontSize="0.5rem" />
       </LogoHolder>
       {menuItems.map((item: MainMenuItemProps) => (
         <MainMenuItem
