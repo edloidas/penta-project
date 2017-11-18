@@ -5,9 +5,11 @@ Uses $NODE_ENV, `production` or `development` (also default)
 const path = require('path');
 const BabiliPlugin = require('babili-webpack-plugin');
 const babiliConfig = require('./util/config/babili');
-const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
-const NoEmitOnErrorsPlugin = require('webpack').NoEmitOnErrorsPlugin;
-const DefinePlugin = require('webpack').DefinePlugin;
+const {
+  NamedModulesPlugin,
+  NoEmitOnErrorsPlugin,
+  DefinePlugin
+} = require('webpack');
 const env = require('./util/env');
 const CONFIG = require('./util/config');
 

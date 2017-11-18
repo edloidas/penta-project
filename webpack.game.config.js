@@ -10,11 +10,13 @@ const BabiliPlugin = require('babili-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const babiliConfig = require('./util/config/babili');
-const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
-const SourceMapDevToolPlugin = require('webpack').SourceMapDevToolPlugin;
-const NamedModulesPlugin = require('webpack').NamedModulesPlugin;
-const NoEmitOnErrorsPlugin = require('webpack').NoEmitOnErrorsPlugin;
-const DefinePlugin = require('webpack').DefinePlugin;
+const { CommonsChunkPlugin } = require('webpack').optimize;
+const {
+  SourceMapDevToolPlugin,
+  NamedModulesPlugin,
+  NoEmitOnErrorsPlugin,
+  DefinePlugin
+} = require('webpack');
 const env = require('./util/env');
 const project = require('./util/project');
 const CONFIG = require('./util/config');

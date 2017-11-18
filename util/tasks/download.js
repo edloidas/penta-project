@@ -9,7 +9,7 @@ const CONFIG = require('../config');
 const nameFromUrl = R.pipe(url.parse, R.prop('pathname'), path.basename);
 
 const dataUrl = CONFIG.data.url;
-const temp = CONFIG.root.temp;
+const { temp } = CONFIG.root;
 const dataZip = path.join(temp, nameFromUrl(dataUrl));
 const dataDest = path.join(CONFIG.root.dist, CONFIG.data.dist);
 
