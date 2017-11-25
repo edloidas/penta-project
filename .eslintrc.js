@@ -15,6 +15,7 @@ module.exports = {
     'spaced-comment': [ 2, 'always', { 'exceptions': [ '-', '+' ] } ],
     'no-restricted-syntax': [ 'off' ],
     'object-property-newline': [ 'off', { 'allowMultiplePropertiesPerLine': true } ],
+    'linebreak-style': 'off',
     'no-underscore-dangle': [ 'off' ],
     'comma-dangle': [ 'error', {
         'arrays': 'never',
