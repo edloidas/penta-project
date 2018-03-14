@@ -3,8 +3,8 @@ Game webpack config. Compiles engine and ui.
 Uses $NODE_ENV, `production` or `development` (also default)
 */
 const path = require('path');
-const BabiliPlugin = require('babili-webpack-plugin');
-const babiliConfig = require('./util/config/babili');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
+const minifyConfig = require('./util/config/minify');
 const {
   NamedModulesPlugin,
   NoEmitOnErrorsPlugin,
@@ -43,7 +43,7 @@ module.exports = {
     new NamedModulesPlugin(),
     new NoEmitOnErrorsPlugin(),
     ...(isProd
-      ? [new BabiliPlugin(Object.assign({}, babiliConfig, { evaluate: true }))]
+      ? [new MinifyPlugin(Object.assign({}, minifyConfig, { evaluate: true }))]
       : [])
   ]
 };

@@ -6,10 +6,10 @@ const path = require('path');
 const R = require('ramda');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BabiliPlugin = require('babili-webpack-plugin');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
-const babiliConfig = require('./util/config/babili');
+const minifyConfig = require('./util/config/minify');
 const { CommonsChunkPlugin } = require('webpack').optimize;
 const {
   SourceMapDevToolPlugin,
@@ -142,7 +142,7 @@ function addBabelSupport(cfg) {
       ? [
           // UglifyJs is replaced with Babili
           // Babili as preset in `.babelrc` does not optimize vendor chunk.
-          new BabiliPlugin(babiliConfig)
+          new MinifyPlugin(minifyConfig)
         ]
       : [])
   ];

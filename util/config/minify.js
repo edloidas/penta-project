@@ -1,11 +1,7 @@
-// html-minifier options
 module.exports = {
-  collapseBooleanAttributes: true,
-  collapseWhitespace: true,
-  conservativeCollapse: true,
-  html5: true,
-  preserveLineBreaks: true,
-  removeComments: true,
-  removeEmptyAttributes: true,
-  useShortDoctype: true
+  removeConsole: true,
+  removeDebugger: true,
+  // Enabling evaluation may result in errors with some libraries, e.g.
+  // `history`: Uncaught TypeError: Cannot read property 'location' of undefined
+  evaluate: false
 };

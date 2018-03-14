@@ -1,5 +1,16 @@
-const htmlMinify = require('./minify');
 const isProd = require('../env').prod;
+
+// html-minifier options
+const htmlMinify = {
+  collapseBooleanAttributes: true,
+  collapseWhitespace: true,
+  conservativeCollapse: true,
+  html5: true,
+  preserveLineBreaks: true,
+  removeComments: true,
+  removeEmptyAttributes: true,
+  useShortDoctype: true
+};
 
 // ExtractTextPlugin options
 module.exports = {

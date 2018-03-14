@@ -35,7 +35,7 @@ const Name = styled.div`
   border: none;
   background-color: #1a1a1a;
   text-align: left;
-  font-family: 'Play', monospaced;
+  font-family: 'Play', monospace;
   font-size: 2rem;
   text-transform: uppercase;
   color: #aaa;
