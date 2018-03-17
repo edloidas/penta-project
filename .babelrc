@@ -4,7 +4,7 @@
     "react",
     ["env", {
       "targets": {
-        "browsers": ["electron >= 1.7"]
+        "browsers": ["electron >= 1.8"]
       },
       "cacheDirectory": true,
       "modules": false,
@@ -18,9 +18,9 @@
         "react",
         ["env", {
           "targets": {
-            "browsers": ["electron >= 1.7"]
+            "browsers": ["electron >= 1.8"]
           },
-          "cacheDirectory": true,
+          "cacheDirectory": "node_modules/.cache/babel-loader",
           "modules": "commonjs",
           "loose": true
         }]
