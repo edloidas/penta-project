@@ -25,23 +25,35 @@ class Start extends Component<Props> {
   constructor(props) {
     super(props);
     this.handleAnyPress = this.handleAnyPress.bind(this);
+    this.focus = this.focus.bind(this);
   }
 
   componentDidMount() {
     // May be replaced by some async works in future
     const minimunAwait = 2000; // ms
-    setTimeout(() => this.props.actions.finalizeStart(true), minimunAwait);
+    setTimeout(() => {
+      this.props.actions.finalizeStart(true);
+      this.focus();
+    }, minimunAwait);
   }
 
   props: Props;
 
+  focusable: HTMLDivElement | null;
+
   // Absence of `handleAnyPress` type leads to flow errors in constructor.
   handleAnyPress: () => void;
-
   handleAnyPress(e) {
     e.preventDefault();
     if (this.props.isReady) {
       this.props.actions.closeStart(true);
+    }
+  }
+
+  focus: () => void;
+  focus() {
+    if (this.focusable != null && document.activeElement !== this.focusable) {
+      this.focusable.focus();
     }
   }
 
@@ -54,6 +66,9 @@ class Start extends Component<Props> {
           <div
             tabIndex="0"
             role="button"
+            ref={div => {
+              this.focusable = div;
+            }}
             onKeyPress={this.handleAnyPress}
             onClick={this.handleAnyPress}>
             {state === 'entered' ? <Redirect to="/menu" push /> : null}
