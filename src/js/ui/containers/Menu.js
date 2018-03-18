@@ -1,10 +1,11 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import MainMenu from '../components/MainMenu/MainMenu';
 import { type MainMenuItemProps } from '../components/MainMenu/MainMenuItem';
 import * as GameActions from '../actions/game';
+import Focusable from './Focusable';
 
 type Props = {
   actions: {
@@ -13,7 +14,7 @@ type Props = {
 };
 
 // eslint-disable-next-line react/prefer-stateless-function
-class Menu extends Component<Props> {
+class Menu extends Focusable<Props> {
   constructor(props) {
     super(props);
     this.handleResume = this.handleResume.bind(this);
@@ -39,7 +40,16 @@ class Menu extends Component<Props> {
       { name: 'Settings', to: '/settings' },
       { name: 'Exit', to: '/exit' }
     ];
-    return <MainMenu menuItems={menuItems} />;
+    return (
+      <div
+        tabIndex="0"
+        role="button"
+        ref={div => {
+          this.focusable = div;
+        }}>
+        <MainMenu menuItems={menuItems} />
+      </div>
+    );
   }
 }
 

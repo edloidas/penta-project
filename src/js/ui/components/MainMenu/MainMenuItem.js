@@ -27,7 +27,8 @@ const glitch2 = keyframes`
   /* stylelint-enable */
 `;
 
-const Name = styled.div`
+const Name = styled.button`
+  display: block;
   position: relative;
   width: 19rem;
   margin: 0 0 0.5rem;
@@ -56,7 +57,8 @@ const Name = styled.div`
     box-sizing: border-box;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: white;
     outline: none;
 
@@ -87,20 +89,25 @@ const Name = styled.div`
 export type MainMenuItemProps = {
   name: string,
   to?: string | Null,
-  // TODO: Remove `?` in future
-  clickHandler?: ((e?: MouseEvent) => void) | Null
+  clickHandler?: (e?: MouseEvent) => void
 };
 
 const MainMenuItem = (props: MainMenuItemProps) => (
-  <Name data-text={props.name} onClick={props.clickHandler}>
+  <Name data-text={props.name} tabIndex="0" onClick={props.clickHandler}>
     {props.name}
-    {props.to ? <Link to={props.to} /> : null}
+    {props.to ? <Link to={props.to} tabIndex="-1" /> : null}
   </Name>
 );
 
 MainMenuItem.defaultProps = {
   to: null,
-  clickHandler: null
+  clickHandler: (e: MouseEvent) => {
+    // $FlowIgnore: Cast from EventTarget to HTMLAnchorElement
+    const link: HTMLAnchorElement | Null = e.target.firstElementChild;
+    if (link) {
+      link.click();
+    }
+  }
 };
 
 export default MainMenuItem;

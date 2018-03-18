@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -7,6 +7,7 @@ import Transition from 'react-transition-group/Transition';
 import LogoScreen from '../components/screens/LogoScreen';
 import * as StartActions from '../actions/start';
 import { type State } from '../store';
+import Focusable from './Focusable';
 
 type Props = {
   isReady: boolean,
@@ -17,7 +18,7 @@ type Props = {
   }
 };
 
-class Start extends Component<Props> {
+class Start extends Focusable<Props> {
   static defaultProps: {
     isReady: true
   };
@@ -25,7 +26,6 @@ class Start extends Component<Props> {
   constructor(props) {
     super(props);
     this.handleAnyPress = this.handleAnyPress.bind(this);
-    this.focus = this.focus.bind(this);
   }
 
   componentDidMount() {
@@ -39,21 +39,12 @@ class Start extends Component<Props> {
 
   props: Props;
 
-  focusable: HTMLDivElement | null;
-
   // Absence of `handleAnyPress` type leads to flow errors in constructor.
   handleAnyPress: () => void;
   handleAnyPress(e) {
     e.preventDefault();
     if (this.props.isReady) {
       this.props.actions.closeStart(true);
-    }
-  }
-
-  focus: () => void;
-  focus() {
-    if (this.focusable != null && document.activeElement !== this.focusable) {
-      this.focusable.focus();
     }
   }
 
