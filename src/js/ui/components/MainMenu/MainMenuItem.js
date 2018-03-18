@@ -58,7 +58,7 @@ const Name = styled.button`
   }
 
   &:hover,
-  &:focus {
+  &:focus-within {
     color: white;
     outline: none;
 
@@ -93,21 +93,18 @@ export type MainMenuItemProps = {
 };
 
 const MainMenuItem = (props: MainMenuItemProps) => (
-  <Name data-text={props.name} tabIndex="0" onClick={props.clickHandler}>
+  <Name
+    data-text={props.name}
+    tabIndex={props.to ? -1 : 0}
+    onClick={props.clickHandler}>
     {props.name}
-    {props.to ? <Link to={props.to} tabIndex="-1" /> : null}
+    {props.to ? <Link to={props.to} tabIndex="0" /> : null}
   </Name>
 );
 
 MainMenuItem.defaultProps = {
   to: null,
-  clickHandler: (e: MouseEvent) => {
-    // $FlowIgnore: Cast from EventTarget to HTMLAnchorElement
-    const link: HTMLAnchorElement | Null = e.target.firstElementChild;
-    if (link) {
-      link.click();
-    }
-  }
+  clickHandler: null
 };
 
 export default MainMenuItem;
