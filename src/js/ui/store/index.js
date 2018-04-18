@@ -27,6 +27,7 @@ export default function configure(initialState?: State) {
 
   const createStoreWithMiddleware = applyMiddleware(logger, router)(create);
 
+  // $FlowIgnore
   const store = createStoreWithMiddleware(rootReducer, initialState);
 
   if (module.hot) {

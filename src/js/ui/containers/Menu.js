@@ -9,7 +9,10 @@ import Focusable from './Focusable';
 
 type Props = {
   actions: {
-    resumeGame: typeof GameActions.resumeGame
+    resumeGame: typeof GameActions.resumeGame,
+    startNewGame: typeof GameActions.startNewGame,
+    saveGame: typeof GameActions.saveGame,
+    loadGame: typeof GameActions.loadGame
   }
 };
 

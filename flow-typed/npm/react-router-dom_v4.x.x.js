@@ -1,7 +1,5 @@
-// flow-typed signature: be340b56956828aa8e9838ed72b7e0a9
-// flow-typed version: 37d8964a70/react-router-dom_v4.x.x/flow_v0.53.x
-
-import * as React from "react";
+// flow-typed signature: 6fe122b8ae0256995f2765654f10c5b2
+// flow-typed version: 154fa81382/react-router-dom_v4.x.x/flow_>=v0.53.x
 
 declare module "react-router-dom" {
   declare export class BrowserRouter extends React$Component<{
@@ -20,6 +18,7 @@ declare module "react-router-dom" {
   }> {}
 
   declare export class Link extends React$Component<{
+    className?: string,
     to: string | LocationShape,
     replace?: boolean,
     children?: React$Node
@@ -84,11 +83,11 @@ declare module "react-router-dom" {
     url: string
   };
 
-  declare export type ContextRouter = {
+  declare export type ContextRouter = {|
     history: RouterHistory,
     location: Location,
     match: Match
-  };
+  |};
 
   declare export type GetUserConfirmation = (
     message: string,
@@ -120,7 +119,7 @@ declare module "react-router-dom" {
   }> {}
 
   declare export class Prompt extends React$Component<{
-    message: string | ((location: Location) => string | true),
+    message: string | ((location: Location) => string | boolean),
     when?: boolean
   }> {}
 
@@ -132,7 +131,7 @@ declare module "react-router-dom" {
   declare export class Route extends React$Component<{
     component?: React$ComponentType<*>,
     render?: (router: ContextRouter) => React$Node,
-    children?: React.ComponentType<ContextRouter>,
+    children?: React$ComponentType<ContextRouter> | React$Node,
     path?: string,
     exact?: boolean,
     strict?: boolean
@@ -143,7 +142,7 @@ declare module "react-router-dom" {
   }> {}
 
   declare export function withRouter<P>(
-    Component: React$ComponentType<ContextRouter & P>
+    Component: React$ComponentType<{| ...ContextRouter, ...P |}>
   ): React$ComponentType<P>;
 
   declare type MatchPathOptions = {
