@@ -21,6 +21,7 @@ body,
 body {
   background-color: $ui__bg;
   font-family: $font__default;
+  font-size: $font__size;
   text-rendering: optimizeLegibility;
   user-select: none;
   cursor: default;
@@ -28,4 +29,8 @@ body {
 
 #root {
   position: absolute;
+}
+
+* {
+  outline: none;
 }

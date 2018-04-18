@@ -3,6 +3,8 @@
 $font__default: 'Roboto', Arial, Helvetica, sans-serif;
 $font__accent: 'Raleway', Arial, Helvetica, sans-serif;
 $font__mono: 'Play', monospace;
+/* stylelint-disable-next-line unit-whitelist */
+$font__size: 16px;
 
 .font__default {
   font-family: $font__default;
