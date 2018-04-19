@@ -45,6 +45,7 @@ module.exports = {
     'jest': true,
   },
   'globals': {
-    'GAME_VERSION': false
+    'GAME_VERSION': false,
+    'store': true
   }
 }

@@ -9,6 +9,7 @@ import '../../styles/style.css';
 
 import Start from './containers/Start';
 import Menu from './containers/Menu';
+import Settings from './containers/Settings';
 import configureStore from './store';
 import history from './store/history';
 
@@ -25,6 +26,7 @@ render(
         <Switch>
           <Route exact path="/" component={Start} />
           <Route path="/menu" component={Menu} />
+          <Route path="/settings" component={Settings} />
         </Switch>
       </div>
     </Router>

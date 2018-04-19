@@ -70,7 +70,8 @@ const webpackConfigTemplate = {
       'history',
       'redux',
       'redux-actions',
-      'react-transition-group'
+      'react-transition-group',
+      'deepmerge'
       // 'three',
       // Unnesessary libraries
       // 'styled-components',

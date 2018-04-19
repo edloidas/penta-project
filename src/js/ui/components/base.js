@@ -1,10 +1,17 @@
 // @flow
 import styled from 'styled-components';
 
-type Colors = { [string]: string };
-type Texts = { [string]: string };
+type Graphics = {
+  screenSize: Array<ScreenSize>,
+  windowMode: Array<WindowMode>,
+  frameRate: Array<FrameRate>,
+  vSync: Array<VSync>,
+  antiAliasing: Array<AntiAliasing>
+};
 
-// eslint-disable-next-line import/prefer-default-export
+type Colors = { [string]: string };
+type Texts = { [string]: string, graphics: Graphics };
+
 export const Fullscreen = styled.div`
   position: absolute;
   top: 0;
@@ -14,6 +21,12 @@ export const Fullscreen = styled.div`
   margin: 0;
   box-sizing: border-box;
   overflow: hidden;
+`;
+
+export const AlignedFullscreen = Fullscreen.extend`
+  display: flex;
+  justify-content: left;
+  align-items: center;
 `;
 
 // prettier-ignore
@@ -37,5 +50,12 @@ export const texts: Texts = {
   project: 'Penta Project',
   genre: 'A Cyberpunk Action Game',
   // $FlowIgnore: global variable from webpack
-  version: GAME_VERSION
+  version: GAME_VERSION,
+  graphics: {
+    screenSize: ['1920x1080', '2560x1400'],
+    windowMode: ['fullscreen', 'windowed'],
+    frameRate: ['30fps', '60fps', '120fps', 'unlimited'],
+    vSync: ['off', 'on'],
+    antiAliasing: ['off', 'x2', 'x4']
+  }
 };

@@ -5,6 +5,7 @@ import { logger, router } from '../middleware';
 import rootReducer from '../reducers';
 import { type State as StartState } from '../reducers/start';
 import { type State as GameState } from '../reducers/game';
+import { type State as SettingsState } from '../reducers/settings';
 
 type RoutingState = {
   location: {
@@ -17,7 +18,8 @@ type RoutingState = {
 export type State = {
   routing: RoutingState,
   start: StartState,
-  game: GameState
+  game: GameState,
+  settings: SettingsState
 };
 
 export default function configure(initialState?: State) {

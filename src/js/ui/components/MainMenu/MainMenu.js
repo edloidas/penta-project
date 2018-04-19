@@ -5,13 +5,7 @@ import Logo from '../texts/Logo';
 import Version from '../texts/Version';
 import Copyright from '../texts/Copyright';
 import MainMenuItem, { type MainMenuItemProps } from './MainMenuItem';
-import { Fullscreen } from '../base';
-
-const Screen = Fullscreen.extend`
-  display: flex;
-  justify-content: left;
-  align-items: center;
-`;
+import { AlignedFullscreen as Screen } from '../base';
 
 const MainMenuHolder = styled.div`
   position: relative;

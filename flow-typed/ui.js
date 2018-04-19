@@ -22,3 +22,18 @@ declare type PAction<P> = GenericAction<string, P>;
 
 // declare type PActionCreator<P> = ActionCreator<Action<P>, P>;
 declare type PActionCreator<P> = GenericActionCreator<string, P>;
+
+//
+// Settings
+//
+//   Graphics
+declare type ScreenSize = '1920x1080' | '2560x1400';
+declare type WindowMode = 'fullscreen' | 'windowed';
+declare type FrameRate = '30fps' | '60fps' | '120fps' | 'unlimited';
+declare type VSync = 'off' | 'on';
+declare type AntiAliasing = 'off' | 'x2' | 'x4';
+
+//
+// Events
+//
+declare type MouseKeyboardEvent = MouseEvent | KeyboardEvent;
