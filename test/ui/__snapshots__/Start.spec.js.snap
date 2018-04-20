@@ -8,44 +8,44 @@ exports[`<Start /> Should renders 1`] = `
   tabIndex="0"
 >
   <div
-    className="font__mono sc-htoDjs hqoneH"
+    className="font__mono sc-dnqmqq difCss"
   >
     <div
-      className="font__mono sc-bwzfXH cPNnSe"
+      className="font__mono sc-htpNat iytjrA"
     >
       <div
-        className="sc-htpNat hCfKcM"
+        className="sc-bxivhb iKpfLW"
       >
         edloidas production
       </div>
       <div
-        className="sc-bxivhb fBqrjW"
+        className="sc-ifAKCX RfDSL"
       >
         Penta Project
       </div>
       <div
-        className="sc-ifAKCX LmHhu"
+        className="sc-EHOje bMrtUk"
       >
         A Cyberpunk Action Game
       </div>
     </div>
     <div
-      className="sc-dnqmqq dsZHde"
+      className="sc-iwsKbI jRAMkw"
     >
       <ul
-        className="sc-EHOje hTaJON"
+        className="sc-bZQynM cyleeR"
       >
         <li
-          className="sc-bZQynM kjQUrH"
+          className="sc-gzVnrw jkUFCj"
         />
         <li
-          className="sc-bZQynM jTHtRk"
+          className="sc-gzVnrw bVjxVl"
         />
         <li
-          className="sc-bZQynM frRrCA"
+          className="sc-gzVnrw jJviaV"
         />
         <li
-          className="sc-bZQynM KEZJa"
+          className="sc-gzVnrw kSojoV"
         />
       </ul>
     </div>
@@ -61,33 +61,33 @@ exports[`<Start /> Should switch to Await loader 1`] = `
   tabIndex="0"
 >
   <div
-    className="font__mono sc-htoDjs hqoneH"
+    className="font__mono sc-dnqmqq difCss"
   >
     <div
-      className="font__mono sc-bwzfXH cPNnSe"
+      className="font__mono sc-htpNat iytjrA"
     >
       <div
-        className="sc-htpNat hCfKcM"
+        className="sc-bxivhb iKpfLW"
       >
         edloidas production
       </div>
       <div
-        className="sc-bxivhb fBqrjW"
+        className="sc-ifAKCX RfDSL"
       >
         Penta Project
       </div>
       <div
-        className="sc-ifAKCX LmHhu"
+        className="sc-EHOje bMrtUk"
       >
         A Cyberpunk Action Game
       </div>
     </div>
     <div
-      className="sc-dnqmqq dsZHde"
+      className="sc-iwsKbI jRAMkw"
     >
       <button
         autoFocus={true}
-        className="font__mono sc-gzVnrw HhbST"
+        className="font__mono sc-htoDjs jDINIj"
       >
         Press Any Key
       </button>
