@@ -2,3 +2,6 @@ coverage/
 build/
 dist/
 temp/
+
+src/js/ui/components/MainMenu/MainMenuItem.js
+src/js/ui/components/SettingsMenu/SettingsMenuItem.js

@@ -37,3 +37,9 @@ declare type AntiAliasing = 'off' | 'x2' | 'x4';
 // Events
 //
 declare type MouseKeyboardEvent = MouseEvent | KeyboardEvent;
+
+//
+// CSS
+//
+declare type CSSTextAlign = 'center' | 'justify' | 'left' | 'right' | 'start' | 'end';
+declare type CSSFlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';

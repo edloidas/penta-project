@@ -3,12 +3,20 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from '../texts/Title';
 import { AlignedFullscreen as Screen } from '../base';
+import SettingsMenuItem from './SettingsMenuItem';
 
 const SettingsMenuHolder = styled.div`
   position: relative;
-  padding-left: 8rem;
+  padding: 10rem 0 10rem 8rem;
+  height: 100%;
+  max-height: 50rem;
 `;
-// margin-top: 4rem;
+
+const SettingsMenuActionsHolder = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 /* eslint-disable no-unused-vars, react/no-unused-prop-types */
 type SettingsMenuProps = {
   handleSwitchGroup: (e?: MouseKeyboardEvent) => void,
@@ -21,6 +29,18 @@ const SettingsMenu = (props: SettingsMenuProps) => (
   <Screen className="effect__appear">
     <SettingsMenuHolder>
       <Title text="Settings" />
+      <SettingsMenuActionsHolder>
+        <SettingsMenuItem
+          key="Apply"
+          name="Apply"
+          clickHandler={props.handleApplySettings}
+        />
+        <SettingsMenuItem
+          key="Reset"
+          name="Reset"
+          clickHandler={props.handleApplySettings}
+        />
+      </SettingsMenuActionsHolder>
     </SettingsMenuHolder>
   </Screen>
 );

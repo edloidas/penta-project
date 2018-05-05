@@ -2,7 +2,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import deepMerge from 'deepmerge';
+import clone from 'lodash.clonedeep';
 import * as SettingsActions from '../actions/settings';
 import { type SettingsData, type SettingsGroup } from '../reducers/settings';
 import { type State } from '../store';
@@ -96,7 +96,7 @@ function mapStateToProps(state: State) {
   return {
     activeGroup: settings.activeGroup,
     hasUnsavedChanges: settings.hasUnsavedChanges,
-    data: deepMerge({}, settings.data)
+    data: clone(settings.data)
   };
 }
 

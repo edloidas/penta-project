@@ -71,7 +71,8 @@ const webpackConfigTemplate = {
       'redux',
       'redux-actions',
       'react-transition-group',
-      'deepmerge'
+      'lodash.clonedeep',
+      'lodash.merge'
       // 'three',
       // Unnesessary libraries
       // 'styled-components',
