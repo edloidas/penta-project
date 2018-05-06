@@ -46,7 +46,7 @@ type LogoProps = {
 };
 
 const Logo = (props: LogoProps) => (
-  <LogoHolder className="font__mono" theme={merge(theme, props.theme)}>
+  <LogoHolder className="font__mono" theme={merge({}, theme, props.theme)}>
     {props.renderAuthor ? <Author>{texts.author}</Author> : null}
     <Title>{texts.project}</Title>
     <Description>{texts.genre}</Description>

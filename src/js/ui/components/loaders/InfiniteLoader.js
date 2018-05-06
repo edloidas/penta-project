@@ -51,10 +51,10 @@ type InfiniteLoaderProps = { theme?: Theme };
 
 const InfiniteLoader = (props: InfiniteLoaderProps) => (
   <LoaderHolder>
-    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.2s' })} />
-    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.4s' })} />
-    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.6s' })} />
-    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.8s' })} />
+    <LoaderSquare theme={merge({}, theme, props.theme, { delay: '0.2s' })} />
+    <LoaderSquare theme={merge({}, theme, props.theme, { delay: '0.4s' })} />
+    <LoaderSquare theme={merge({}, theme, props.theme, { delay: '0.6s' })} />
+    <LoaderSquare theme={merge({}, theme, props.theme, { delay: '0.8s' })} />
   </LoaderHolder>
 );
 

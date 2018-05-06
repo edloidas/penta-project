@@ -30,7 +30,7 @@ type AwaitInputLoaderProps = { theme?: Theme };
 const AwaitInputLoader = (props: AwaitInputLoaderProps) => (
   <TextHolder
     autoFocus
-    theme={merge(theme, props.theme)}
+    theme={merge({}, theme, props.theme)}
     className="font__mono">
     Press Any Key
   </TextHolder>

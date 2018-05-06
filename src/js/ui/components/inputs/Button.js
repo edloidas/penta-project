@@ -72,7 +72,7 @@ const Button = (props: ButtonProps) => (
     data-text={props.name}
     tabIndex={props.to ? -1 : 0}
     onClick={props.clickHandler}
-    theme={merge(theme, props.theme)}>
+    theme={merge({}, theme, props.theme)}>
     {props.name}
     {props.to ? <Link to={props.to} tabIndex="0" /> : null}
   </Name>

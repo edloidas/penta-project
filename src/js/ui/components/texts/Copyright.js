@@ -20,7 +20,7 @@ const theme: Theme = { fontSize: 1 };
 type CopyrightProps = { theme?: Theme };
 
 const Copyright = (props: CopyrightProps) => (
-  <CopyrightHolder theme={merge(theme, props.theme)}>
+  <CopyrightHolder theme={merge({}, theme, props.theme)}>
     2017&#8211;current ©&nbsp;
     {texts.author}.&nbsp;
     <CopyrightNote>All Rights Reserved.</CopyrightNote>

@@ -22,7 +22,7 @@ const theme: Theme = { fontSize: 1 };
 type VersionProps = { theme?: Theme };
 
 const Version = (props: VersionProps) => (
-  <VersionHolder theme={merge(theme, props.theme)}>
+  <VersionHolder theme={merge({}, theme, props.theme)}>
     <VersionNote>alpha version</VersionNote>&nbsp;
     {texts.version}
   </VersionHolder>

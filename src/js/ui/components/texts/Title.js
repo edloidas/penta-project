@@ -19,7 +19,7 @@ type TitleProps = {
 };
 
 const Title = (props: TitleProps) => (
-  <TitleHolder theme={merge(theme, props.theme)}>{props.text}</TitleHolder>
+  <TitleHolder theme={merge({}, theme, props.theme)}>{props.text}</TitleHolder>
 );
 
 Title.defaultProps = { theme };
