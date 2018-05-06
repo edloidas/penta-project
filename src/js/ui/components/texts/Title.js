@@ -1,22 +1,27 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
+import merge from 'lodash.merge';
 import { colors } from '../base';
 
 const TitleHolder = styled.h1`
-  font-size: ${props => props.theme.fontSize};
+  font-size: ${props => props.theme.fontSize}rem;
   color: ${colors.fontDesc};
 `;
 
+type Theme = { fontSize: number };
+
+const theme: Theme = { fontSize: 3 };
+
 type TitleProps = {
-  fontSize?: string,
-  text: string
+  text: string,
+  theme?: Theme
 };
 
 const Title = (props: TitleProps) => (
-  <TitleHolder theme={{ fontSize: props.fontSize }}>{props.text}</TitleHolder>
+  <TitleHolder theme={merge(theme, props.theme)}>{props.text}</TitleHolder>
 );
 
-Title.defaultProps = { fontSize: '3rem' };
+Title.defaultProps = { theme };
 
 export default Title;

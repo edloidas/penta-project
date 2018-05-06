@@ -1,12 +1,13 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
+import merge from 'lodash.merge';
 import { colors, texts } from '../base';
 
 const LogoHolder = styled.div`
   position: relative;
   text-align: center;
-  font-size: ${props => props.theme.fontSize};
+  font-size: ${props => props.theme.fontSize}rem;
 `;
 
 const Author = styled.div`
@@ -35,13 +36,17 @@ const Description = styled.div`
   color: ${colors.accent};
 `;
 
+type Theme = { fontSize: number };
+
+const theme: Theme = { fontSize: 1 };
+
 type LogoProps = {
   renderAuthor?: boolean,
-  fontSize?: string
+  theme?: Theme
 };
 
 const Logo = (props: LogoProps) => (
-  <LogoHolder className="font__mono" theme={{ fontSize: props.fontSize }}>
+  <LogoHolder className="font__mono" theme={merge(theme, props.theme)}>
     {props.renderAuthor ? <Author>{texts.author}</Author> : null}
     <Title>{texts.project}</Title>
     <Description>{texts.genre}</Description>
@@ -50,7 +55,7 @@ const Logo = (props: LogoProps) => (
 
 Logo.defaultProps = {
   renderAuthor: true,
-  fontSize: '1rem'
+  theme
 };
 
 export default Logo;

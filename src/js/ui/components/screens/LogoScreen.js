@@ -37,9 +37,9 @@ const LogoScreen = (props: LogoScreenProps) => (
     <Logo />
     <LoaderHolder>
       {props.isLoading ? (
-        <InfiniteLoader bg={colors.bgReverse} />
+        <InfiniteLoader theme={{ bg: colors.bgReverse }} />
       ) : (
-        <AwaitInputLoader color={colors.fontDesc} />
+        <AwaitInputLoader theme={{ color: colors.fontDesc }} />
       )}
     </LoaderHolder>
   </Screen>

@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import merge from 'lodash.merge';
 
 const blink = keyframes`
   0% {opacity: 0.2;}
@@ -20,14 +21,21 @@ const TextHolder = styled.button`
   opacity: 0.2;
 `;
 
-type AwaitInputLoaderProps = { color?: string };
+type Theme = { color: string };
 
-const AwaitInputLoader = ({ color }: AwaitInputLoaderProps) => (
-  <TextHolder autoFocus theme={{ color }} className="font__mono">
+const theme: Theme = { color: 'grey' };
+
+type AwaitInputLoaderProps = { theme?: Theme };
+
+const AwaitInputLoader = (props: AwaitInputLoaderProps) => (
+  <TextHolder
+    autoFocus
+    theme={merge(theme, props.theme)}
+    className="font__mono">
     Press Any Key
   </TextHolder>
 );
 
-AwaitInputLoader.defaultProps = { color: 'grey' };
+AwaitInputLoader.defaultProps = { theme };
 
 export default AwaitInputLoader;

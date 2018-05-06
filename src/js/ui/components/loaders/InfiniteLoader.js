@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import merge from 'lodash.merge';
 
 const flash = keyframes`
   15% {
@@ -42,20 +43,21 @@ const LoaderSquare = styled.li`
   }
 `;
 
-LoaderSquare.defaultProps = {
-  bg: 'black',
-  delay: '0s'
-};
+type Theme = { bg: string };
 
-type InfiniteLoaderProps = { bg: string };
+const theme: Theme = { bg: 'black' };
+
+type InfiniteLoaderProps = { theme?: Theme };
 
 const InfiniteLoader = (props: InfiniteLoaderProps) => (
   <LoaderHolder>
-    <LoaderSquare theme={{ bg: props.bg, delay: '0.2s' }} />
-    <LoaderSquare theme={{ bg: props.bg, delay: '0.4s' }} />
-    <LoaderSquare theme={{ bg: props.bg, delay: '0.6s' }} />
-    <LoaderSquare theme={{ bg: props.bg, delay: '0.8s' }} />
+    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.2s' })} />
+    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.4s' })} />
+    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.6s' })} />
+    <LoaderSquare theme={merge(theme, props.theme, { delay: '0.8s' })} />
   </LoaderHolder>
 );
+
+InfiniteLoader.defaultProps = { theme };
 
 export default InfiniteLoader;
