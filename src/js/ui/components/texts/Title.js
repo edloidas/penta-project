@@ -5,6 +5,7 @@ import merge from 'lodash.merge';
 import { colors } from '../base';
 
 const TitleHolder = styled.h1`
+  margin-top: 0;
   font-size: ${props => props.theme.fontSize}rem;
   color: ${colors.fontDesc};
 `;
@@ -19,7 +20,9 @@ type TitleProps = {
 };
 
 const Title = (props: TitleProps) => (
-  <TitleHolder theme={merge({}, theme, props.theme)}>{props.text}</TitleHolder>
+  <TitleHolder className="font__accent" theme={merge({}, theme, props.theme)}>
+    {props.text}
+  </TitleHolder>
 );
 
 Title.defaultProps = { theme };
