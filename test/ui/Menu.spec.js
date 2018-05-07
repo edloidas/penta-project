@@ -4,10 +4,9 @@ import { ConnectedRouter as Router } from 'react-router-redux';
 import renderer from 'react-test-renderer';
 import configureStore from '../../src/js/ui/store';
 import history from '../../src/js/ui/store/history';
-import Start from '../../src/js/ui/containers/Start';
-import { finalizeStart } from '../../src/js/ui/actions/start';
+import Menu from '../../src/js/ui/containers/Menu';
 
-describe('<Start />', () => {
+describe('<Menu />', () => {
   test('Should renders', () => {
     const store = configureStore();
 
@@ -15,23 +14,7 @@ describe('<Start />', () => {
       .create(
         <Provider store={store}>
           <Router history={history}>
-            <Start />
-          </Router>
-        </Provider>
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('Should switch to Await loader', () => {
-    const store = configureStore();
-    store.dispatch(finalizeStart(true));
-
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <Router history={history}>
-            <Start />
+            <Menu />
           </Router>
         </Provider>
       )
