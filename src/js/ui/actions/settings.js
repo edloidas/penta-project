@@ -1,6 +1,6 @@
 // @flow
 import { createAction } from 'redux-actions';
-import { type SettingsGroup, type SettingsData } from '../reducers/settings';
+import { type SettingsData } from '../reducers/settings';
 
 /* eslint-disable prettier/prettier */
 export const switchSettings: PActionCreator<SettingsGroup> = createAction('SETTINGS_SWITCH');

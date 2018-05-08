@@ -4,15 +4,18 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import clone from 'lodash.clonedeep';
 import * as SettingsActions from '../actions/settings';
-import { type SettingsData, type SettingsGroup } from '../reducers/settings';
+import { type SettingsData } from '../reducers/settings';
+import SettingsMenu from '../components/SettingsMenu/SettingsMenu';
+import { type NavigationItemProps } from '../components/Navigation/NavigationItem';
+import { texts } from '../components/base';
 import { type State } from '../store';
 import Focusable from './Focusable';
-import SettingsMenu from '../components/SettingsMenu/SettingsMenu';
 
-function checkActivateEvent(e?: MouseEvent | KeyboardEvent) {
-  if (e != null) {
-    e.stopPropagation();
-    e.preventDefault();
+function checkActivateEvent(event?: MouseKeyboardEvent) {
+  if (event != null) {
+    event.stopPropagation();
+    event.preventDefault();
+    const e = event.nativeEvent || event;
     const isMainButtonClicked = e instanceof MouseEvent && e.button === 0;
     const isMainKeyPressed =
       e instanceof KeyboardEvent && (e.code === 'Enter' || e.code === 'Space');
@@ -40,7 +43,14 @@ class Settings extends Focusable<Props> {
     this.handleSwitchGroup = this.handleSwitchGroup.bind(this);
     this.handleSetSettings = this.handleSetSettings.bind(this);
     this.handleApplySettings = this.handleApplySettings.bind(this);
-    this.handleResetGroup = this.handleResetGroup.bind(this);
+    this.handleResetSettings = this.handleResetSettings.bind(this);
+
+    const { settingsGroup } = texts;
+    this.navigationItems = settingsGroup.map(name => ({
+      name,
+      dataKey: name,
+      clickHandler: this.handleSwitchGroup
+    }));
   }
 
   props: Props;
@@ -48,11 +58,17 @@ class Settings extends Focusable<Props> {
   handleSwitchGroup: (e?: MouseKeyboardEvent) => void;
   handleSetSettings: (value: string) => void;
   handleApplySettings: (e?: MouseKeyboardEvent) => void;
-  handleResetGroup: (e?: MouseKeyboardEvent) => void;
+  handleResetSettings: (e?: MouseKeyboardEvent) => void;
+
+  navigationItems: Array<NavigationItemProps>;
 
   handleSwitchGroup(e?: MouseKeyboardEvent) {
-    if (checkActivateEvent(e)) {
-      this.props.actions.switchSettings('graphics');
+    if (checkActivateEvent(e) && e && e.currentTarget) {
+      const key = e.currentTarget.getAttribute('data-key');
+      const { settingsGroup } = texts;
+      const group = settingsGroup.find(v => v === key) || settingsGroup[0];
+      this.props.actions.switchSettings(group);
+      e.currentTarget.blur();
     }
   }
 
@@ -60,13 +76,13 @@ class Settings extends Focusable<Props> {
     this.props.actions.setSettings(data);
   }
 
-  handleApplySettings(e?: MouseEvent | KeyboardEvent) {
+  handleApplySettings(e?: MouseKeyboardEvent) {
     if (checkActivateEvent(e)) {
       this.props.actions.applySettings();
     }
   }
 
-  handleResetGroup(e?: MouseEvent | KeyboardEvent) {
+  handleResetSettings(e?: MouseKeyboardEvent) {
     if (checkActivateEvent(e)) {
       this.props.actions.resetSettings(this.props.data);
     }
@@ -81,10 +97,10 @@ class Settings extends Focusable<Props> {
           this.focusable = div;
         }}>
         <SettingsMenu
-          handleSwitchGroup={this.handleSwitchGroup}
-          handleSetSettings={this.handleSetSettings}
           handleApplySettings={this.handleApplySettings}
-          handleResetGroup={this.handleResetGroup}
+          handleResetSettings={this.handleResetSettings}
+          navigationItems={this.navigationItems}
+          activeKey={this.props.activeGroup}
         />
       </div>
     );

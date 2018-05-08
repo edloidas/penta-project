@@ -21,20 +21,8 @@ class Menu extends Focusable<Props> {
   constructor(props) {
     super(props);
     this.handleResume = this.handleResume.bind(this);
-  }
 
-  props: Props;
-
-  handleResume: (e?: MouseEvent) => void;
-
-  handleResume(e: MouseEvent) {
-    e.stopPropagation();
-    e.preventDefault();
-    this.props.actions.resumeGame(true);
-  }
-
-  render() {
-    const menuItems: Array<MainMenuItemProps> = [
+    this.menuItems = [
       { name: 'Resume', clickHandler: this.handleResume },
       { name: 'New Game', to: '/new' },
       { name: 'Save Game', to: '/save' },
@@ -43,6 +31,21 @@ class Menu extends Focusable<Props> {
       { name: 'Settings', to: '/settings' },
       { name: 'Exit', to: '/exit' }
     ];
+  }
+
+  props: Props;
+
+  handleResume: (e?: MouseKeyboardEvent) => void;
+
+  menuItems: Array<MainMenuItemProps>;
+
+  handleResume(e: MouseKeyboardEvent) {
+    e.stopPropagation();
+    e.preventDefault();
+    this.props.actions.resumeGame(true);
+  }
+
+  render() {
     return (
       <div
         tabIndex="0"
@@ -50,7 +53,7 @@ class Menu extends Focusable<Props> {
         ref={div => {
           this.focusable = div;
         }}>
-        <MainMenu menuItems={menuItems} />
+        <MainMenu menuItems={this.menuItems} />
       </div>
     );
   }

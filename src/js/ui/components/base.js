@@ -10,7 +10,11 @@ type Graphics = {
 };
 
 type Colors = { [string]: string };
-type Texts = { [string]: string, graphics: Graphics };
+type Texts = {
+  [string]: string,
+  settingsGroup: Array<SettingsGroup>,
+  graphics: Graphics
+};
 
 export const Fullscreen = styled.div`
   position: absolute;
@@ -51,6 +55,7 @@ export const texts: Texts = {
   genre: 'A Cyberpunk Action Game',
   // $FlowIgnore: global variable from webpack
   version: GAME_VERSION,
+  settingsGroup: ['graphics', 'sound', 'controls'],
   graphics: {
     screenSize: ['1920x1080', '2560x1400'],
     windowMode: ['fullscreen', 'windowed'],

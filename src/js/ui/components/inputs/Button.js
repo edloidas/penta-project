@@ -62,7 +62,7 @@ const theme: Theme = {
 export type ButtonProps = {
   name: string,
   to?: string | Null,
-  clickHandler?: (e?: MouseEvent) => void,
+  clickHandler?: (e?: MouseKeyboardEvent) => void,
   theme?: Theme
 };
 

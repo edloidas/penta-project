@@ -7,8 +7,6 @@ import {
   resetSettings
 } from '../actions/settings';
 
-export type SettingsGroup = 'graphics' | 'sound' | 'controls';
-
 export type SettingsData = {
   graphics?: {
     screenSize?: ScreenSize,

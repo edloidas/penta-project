@@ -4,12 +4,16 @@ import styled from 'styled-components';
 import Title from '../texts/Title';
 import { AlignedFullscreen as Screen } from '../base';
 import SettingsMenuItem from './SettingsMenuItem';
+import Navigation, { type NavigationProps } from '../Navigation/Navigation';
 
 const SettingsMenuHolder = styled.div`
   position: relative;
-  padding: 10rem 0 10rem 8rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100rem;
   height: 100%;
-  max-height: 50rem;
+  max-height: 70rem;
+  padding: 10rem 8rem;
 `;
 
 const SettingsMenuActionsHolder = styled.div`
@@ -19,16 +23,18 @@ const SettingsMenuActionsHolder = styled.div`
 
 /* eslint-disable no-unused-vars, react/no-unused-prop-types */
 type SettingsMenuProps = {
-  handleSwitchGroup: (e?: MouseKeyboardEvent) => void,
-  handleSetSettings: (value: string) => void,
   handleApplySettings: (e?: MouseKeyboardEvent) => void,
-  handleResetGroup: (e?: MouseKeyboardEvent) => void
-};
+  handleResetSettings: (e?: MouseKeyboardEvent) => void
+} & NavigationProps;
 
 const SettingsMenu = (props: SettingsMenuProps) => (
   <Screen className="effect__appear">
     <SettingsMenuHolder>
-      <Title text="Settings" />
+      <Title text="Settings" theme={{ marginLeft: 2 }} />
+      <Navigation
+        navigationItems={props.navigationItems}
+        activeKey={props.activeKey}
+      />
       <SettingsMenuActionsHolder>
         <SettingsMenuItem
           key="Apply"
@@ -38,15 +44,11 @@ const SettingsMenu = (props: SettingsMenuProps) => (
         <SettingsMenuItem
           key="Reset"
           name="Reset"
-          clickHandler={props.handleApplySettings}
+          clickHandler={props.handleResetSettings}
         />
       </SettingsMenuActionsHolder>
     </SettingsMenuHolder>
   </Screen>
 );
-// groups
-//   groupItem
-// settings item
-// Apply Reset
 
 export default SettingsMenu;
