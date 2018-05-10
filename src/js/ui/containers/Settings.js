@@ -42,6 +42,7 @@ class Settings extends Focusable<Props> {
     super(props);
     this.handleSwitchGroup = this.handleSwitchGroup.bind(this);
     this.handleSetSettings = this.handleSetSettings.bind(this);
+    this.handleReturnToMenu = this.handleReturnToMenu.bind(this);
     this.handleApplySettings = this.handleApplySettings.bind(this);
     this.handleResetSettings = this.handleResetSettings.bind(this);
 
@@ -57,6 +58,7 @@ class Settings extends Focusable<Props> {
 
   handleSwitchGroup: (e?: MouseKeyboardEvent) => void;
   handleSetSettings: (value: string) => void;
+  handleReturnToMenu: () => void;
   handleApplySettings: (e?: MouseKeyboardEvent) => void;
   handleResetSettings: (e?: MouseKeyboardEvent) => void;
 
@@ -76,15 +78,22 @@ class Settings extends Focusable<Props> {
     this.props.actions.setSettings(data);
   }
 
+  handleReturnToMenu() {
+    const { settingsGroup } = texts;
+    this.props.actions.switchSettings(settingsGroup[0]);
+  }
+
   handleApplySettings(e?: MouseKeyboardEvent) {
     if (checkActivateEvent(e)) {
       this.props.actions.applySettings();
+      this.handleReturnToMenu();
     }
   }
 
   handleResetSettings(e?: MouseKeyboardEvent) {
     if (checkActivateEvent(e)) {
       this.props.actions.resetSettings(this.props.data);
+      this.handleReturnToMenu();
     }
   }
 
@@ -97,10 +106,12 @@ class Settings extends Focusable<Props> {
           this.focusable = div;
         }}>
         <SettingsMenu
+          handleReturnToMenu={this.handleReturnToMenu}
           handleApplySettings={this.handleApplySettings}
           handleResetSettings={this.handleResetSettings}
           navigationItems={this.navigationItems}
           activeKey={this.props.activeGroup}
+          hasUnsavedChanges={this.props.hasUnsavedChanges}
         />
       </div>
     );

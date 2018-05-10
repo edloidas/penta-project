@@ -5,3 +5,4 @@ dist/
 temp/
 src/html/
 flow-typed/
+__snapshots__

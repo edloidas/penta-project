@@ -23,8 +23,10 @@ const SettingsMenuActionsHolder = styled.div`
 
 /* eslint-disable no-unused-vars, react/no-unused-prop-types */
 type SettingsMenuProps = {
+  handleReturnToMenu: () => void,
   handleApplySettings: (e?: MouseKeyboardEvent) => void,
-  handleResetSettings: (e?: MouseKeyboardEvent) => void
+  handleResetSettings: (e?: MouseKeyboardEvent) => void,
+  hasUnsavedChanges: boolean
 } & NavigationProps;
 
 const SettingsMenu = (props: SettingsMenuProps) => (
@@ -35,18 +37,31 @@ const SettingsMenu = (props: SettingsMenuProps) => (
         navigationItems={props.navigationItems}
         activeKey={props.activeKey}
       />
-      <SettingsMenuActionsHolder>
-        <SettingsMenuItem
-          key="Apply"
-          name="Apply"
-          clickHandler={props.handleApplySettings}
-        />
-        <SettingsMenuItem
-          key="Reset"
-          name="Reset"
-          clickHandler={props.handleResetSettings}
-        />
-      </SettingsMenuActionsHolder>
+      {props.hasUnsavedChanges ? (
+        <SettingsMenuActionsHolder>
+          <SettingsMenuItem
+            key="Apply"
+            name="Apply"
+            to="/menu"
+            clickHandler={props.handleApplySettings}
+          />
+          <SettingsMenuItem
+            key="Reset"
+            name="Reset"
+            to="/menu"
+            clickHandler={props.handleResetSettings}
+          />
+        </SettingsMenuActionsHolder>
+      ) : (
+        <SettingsMenuActionsHolder>
+          <SettingsMenuItem
+            key="Back"
+            name="Back"
+            to="/menu"
+            clickHandler={props.handleReturnToMenu}
+          />
+        </SettingsMenuActionsHolder>
+      )}
     </SettingsMenuHolder>
   </Screen>
 );

@@ -1,0 +1,502 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Settings /> Should apply settings 1`] = `
+<div
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="effect__appear sc-bwzfXH iVThND"
+  >
+    <div
+      className="sc-bZQynM hKpJBw"
+    >
+      <h1
+        className="font__accent sc-htpNat ggNPGu"
+      >
+        Settings
+      </h1>
+      <div
+        className="font__accent sc-EHOje hPfYAa"
+      >
+        <button
+          className="sc-ifAKCX hgRAff"
+          data-key="graphics"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          graphics
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="sound"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          sound
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="controls"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          controls
+        </button>
+      </div>
+      <div
+        className="sc-gzVnrw jyBrwk"
+      >
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Apply"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Apply
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Reset"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Reset
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Settings /> Should apply settings 2`] = `
+<div
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="effect__appear sc-bwzfXH iVThND"
+  >
+    <div
+      className="sc-bZQynM hKpJBw"
+    >
+      <h1
+        className="font__accent sc-htpNat ggNPGu"
+      >
+        Settings
+      </h1>
+      <div
+        className="font__accent sc-EHOje hPfYAa"
+      >
+        <button
+          className="sc-ifAKCX hgRAff"
+          data-key="graphics"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          graphics
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="sound"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          sound
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="controls"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          controls
+        </button>
+      </div>
+      <div
+        className="sc-gzVnrw jyBrwk"
+      >
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Back"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Back
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Settings /> Should renders 1`] = `
+<div
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="effect__appear sc-bwzfXH iVThND"
+  >
+    <div
+      className="sc-bZQynM hKpJBw"
+    >
+      <h1
+        className="font__accent sc-htpNat ggNPGu"
+      >
+        Settings
+      </h1>
+      <div
+        className="font__accent sc-EHOje hPfYAa"
+      >
+        <button
+          className="sc-ifAKCX hgRAff"
+          data-key="graphics"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          graphics
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="sound"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          sound
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="controls"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          controls
+        </button>
+      </div>
+      <div
+        className="sc-gzVnrw jyBrwk"
+      >
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Back"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Back
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Settings /> Should reset settings 1`] = `
+<div
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="effect__appear sc-bwzfXH iVThND"
+  >
+    <div
+      className="sc-bZQynM hKpJBw"
+    >
+      <h1
+        className="font__accent sc-htpNat ggNPGu"
+      >
+        Settings
+      </h1>
+      <div
+        className="font__accent sc-EHOje hPfYAa"
+      >
+        <button
+          className="sc-ifAKCX hgRAff"
+          data-key="graphics"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          graphics
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="sound"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          sound
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="controls"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          controls
+        </button>
+      </div>
+      <div
+        className="sc-gzVnrw jyBrwk"
+      >
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Apply"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Apply
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Reset"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Reset
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Settings /> Should reset settings 2`] = `
+<div
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="effect__appear sc-bwzfXH iVThND"
+  >
+    <div
+      className="sc-bZQynM hKpJBw"
+    >
+      <h1
+        className="font__accent sc-htpNat ggNPGu"
+      >
+        Settings
+      </h1>
+      <div
+        className="font__accent sc-EHOje hPfYAa"
+      >
+        <button
+          className="sc-ifAKCX hgRAff"
+          data-key="graphics"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          graphics
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="sound"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          sound
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="controls"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          controls
+        </button>
+      </div>
+      <div
+        className="sc-gzVnrw jyBrwk"
+      >
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Back"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Back
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Settings /> Should switch group 1`] = `
+<div
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="effect__appear sc-bwzfXH iVThND"
+  >
+    <div
+      className="sc-bZQynM hKpJBw"
+    >
+      <h1
+        className="font__accent sc-htpNat ggNPGu"
+      >
+        Settings
+      </h1>
+      <div
+        className="font__accent sc-EHOje hPfYAa"
+      >
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="graphics"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          graphics
+        </button>
+        <button
+          className="sc-ifAKCX hgRAff"
+          data-key="sound"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          sound
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="controls"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          controls
+        </button>
+      </div>
+      <div
+        className="sc-gzVnrw jyBrwk"
+      >
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Back"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Back
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Settings /> Should update settings and switch to "changed" state 1`] = `
+<div
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="effect__appear sc-bwzfXH iVThND"
+  >
+    <div
+      className="sc-bZQynM hKpJBw"
+    >
+      <h1
+        className="font__accent sc-htpNat ggNPGu"
+      >
+        Settings
+      </h1>
+      <div
+        className="font__accent sc-EHOje hPfYAa"
+      >
+        <button
+          className="sc-ifAKCX hgRAff"
+          data-key="graphics"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          graphics
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="sound"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          sound
+        </button>
+        <button
+          className="sc-ifAKCX gXidXF"
+          data-key="controls"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          controls
+        </button>
+      </div>
+      <div
+        className="sc-gzVnrw jyBrwk"
+      >
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Apply"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Apply
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+        <button
+          className="effect__glitch sc-bxivhb eGYeuD"
+          data-text="Reset"
+          onClick={[Function]}
+          tabIndex={-1}
+        >
+          Reset
+          <a
+            href="/menu"
+            onClick={[Function]}
+            tabIndex="0"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,5 +1,6 @@
 // @flow
 import { handleActions, type ActionType } from 'redux-actions';
+import merge from 'lodash.merge';
 import {
   switchSettings,
   setSettings,
@@ -46,7 +47,7 @@ export default handleActions(
       return Object.assign({}, state, { activeGroup: action.payload });
     },
     SETTINGS_SET(state: State, action: SetSettingsAction): State {
-      return Object.assign({}, state, {
+      return merge({}, state, {
         data: action.payload,
         hasUnsavedChanges: true
       });
@@ -56,7 +57,7 @@ export default handleActions(
       return Object.assign({}, state, { hasUnsavedChanges: false });
     },
     SETTINGS_RESET(state: State, action: ResetSettingsAction): State {
-      return Object.assign({}, state, {
+      return merge({}, state, {
         data: action.payload,
         hasUnsavedChanges: false
       });
