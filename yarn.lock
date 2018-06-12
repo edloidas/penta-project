@@ -184,6 +184,12 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/electron@^1.6.10":
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/@types/electron/-/electron-1.6.10.tgz#7e87888ed3888767cca68e92772c2c8ea46bc873"
+  dependencies:
+    electron "*"
+
 "@types/history@*", "@types/history@^4.6.2":
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
@@ -3136,6 +3142,14 @@ electron-updater@2.21.0:
     lodash.isequal "^4.5.0"
     semver "^5.5.0"
     source-map-support "^0.5.3"
+
+electron@*:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-2.0.2.tgz#b77e05f83419cc5ec921a2d21f35b55e4bfc3d68"
+  dependencies:
+    "@types/node" "^8.0.24"
+    electron-download "^3.0.1"
+    extract-zip "^1.0.3"
 
 electron@2.0.0-beta.4:
   version "2.0.0-beta.4"
