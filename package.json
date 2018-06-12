@@ -53,6 +53,15 @@
     "electron-updater": "2.21.0"
   },
   "devDependencies": {
+    "@types/history": "^4.6.2",
+    "@types/lodash.merge": "^4.6.3",
+    "@types/react": "^16.3.17",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-redux": "^6.0.2",
+    "@types/react-router-dom": "^4.2.7",
+    "@types/react-router-redux": "^5.0.15",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^2.3.0",
     "autoprefixer": "8.1.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
