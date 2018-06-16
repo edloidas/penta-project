@@ -1,5 +1,5 @@
 /*
-Game webpack config. Compiles engine and ui.
+Game webpack config. Compiles Electron app.
 Uses $NODE_ENV, `production` or `development` (also default)
 */
 const path = require('path');
@@ -16,12 +16,24 @@ const CONFIG = require('./util/config');
 const isProd = env.prod;
 
 module.exports = {
-  entry: './src/js/app/index.js',
+  entry: './src/js/app/index.ts',
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
     filename: 'index.js',
     // Allows to use simple name in externals, instead of `require('...')`
     libraryTarget: 'commonjs2'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /(node_modules|\.\/build|\.\/dist)/
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
   },
   // Exclude node packages from loading with webpack
   target: 'node',
@@ -45,5 +57,7 @@ module.exports = {
     ...(isProd
       ? [new MinifyPlugin(Object.assign({}, minifyConfig, { evaluate: true }))]
       : [])
-  ]
+  ],
+  mode: env.type,
+  devtool: isProd ? false : 'inline-source-map'
 };

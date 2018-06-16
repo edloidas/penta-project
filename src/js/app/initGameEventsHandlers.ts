@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { BrowserWindow, WebContents, Event } from 'electron';
 
-class WebContentsWithHistory extends WebContents {
+declare class WebContentsWithHistory extends WebContents {
   history: History
 }
 

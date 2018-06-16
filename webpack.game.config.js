@@ -119,14 +119,14 @@ function addPugSupport(cfg) {
 }
 
 // =====================
-// Removes Flow types with Babel
+// Compile TypeScript
 // Uglifies code in production
 // =====================
 function addBabelSupport(cfg) {
   const rule = {
-    test: /\.jsx?$/,
+    test: /\.tsx?$/,
     exclude: /(node_modules|\.\/build|\.\/dist)/,
-    loader: 'babel-loader'
+    loader: 'ts-loader'
   };
 
   const plugins = [
