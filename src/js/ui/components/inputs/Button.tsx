@@ -1,5 +1,5 @@
-import React from 'react';
-import merge from 'lodash.merge';
+import * as React from 'react';
+import { merge } from 'lodash';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -78,8 +78,8 @@ const Button: SFC<ButtonProps> = (props: ButtonProps) => (
 );
 
 Button.defaultProps = {
-  to: null,
-  clickHandler: null,
+  // to: null,
+  // clickHandler: null,
   theme
 };
 

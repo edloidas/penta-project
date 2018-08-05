@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win: BrowserWindow;
+let win: BrowserWindow | null | void;
 
 const config = {
   width: 1600,

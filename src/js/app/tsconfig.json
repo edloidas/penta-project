@@ -1,9 +1,17 @@
 {
   "compilerOptions": {
-      "outDir": "./build/",
-      "sourceMap": true,
-      "module": "commonjs",
-      "target": "es2017",
-      "lib": ["es2018", "dom"]
+    "outDir": "build",
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["es2018", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "./",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
   }
 }

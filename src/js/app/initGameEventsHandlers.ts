@@ -2,7 +2,7 @@
 import { BrowserWindow, WebContents, Event } from 'electron';
 
 declare class WebContentsWithHistory extends WebContents {
-  history: History
+  history: History & Array<string>
 }
 
 export default function initGameEventsHandlers(win: BrowserWindow) {

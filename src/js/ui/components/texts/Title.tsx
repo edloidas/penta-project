@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
-import merge from 'lodash.merge';
+import { merge } from 'lodash';
 import { colors } from '../base';
 
 const TitleHolder = styled.h1`

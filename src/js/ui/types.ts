@@ -2,11 +2,17 @@ declare type Null = null | void;
 //
 // webpack
 //
-declare var module: {
+interface NodeModule {
   hot : {
     accept(path: string, callback: () => void): void;
   };
 };
+
+declare var module: NodeModule;
+
+interface Window {
+  __REDUX_DEVTOOLS_EXTENSION__: () => ((...args: any[]) => any)
+}
 
 //
 // Global

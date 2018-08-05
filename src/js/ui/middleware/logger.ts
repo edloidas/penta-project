@@ -1,7 +1,7 @@
-import { Store, Dispatch } from 'redux';
+import { MiddlewareAPI, Dispatch } from 'redux';
+
 // eslint-disable-next-line no-unused-vars
-export default (store: Store<any>) => (next: Dispatch<any>) => (action: PAction<any>) => {
-  // eslint-disable-next-line no-console
+export default (middleware: MiddlewareAPI<any>) => (next: Dispatch<any>) => action => {
   console.log(action);
   return next(action);
 };

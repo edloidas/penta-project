@@ -10,7 +10,6 @@ const MinifyPlugin = require('babel-minify-webpack-plugin');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
 const minifyConfig = require('./util/config/minify');
-const { CommonsChunkPlugin } = require('webpack').optimize;
 const {
   SourceMapDevToolPlugin,
   NamedModulesPlugin,
@@ -57,8 +56,8 @@ const stringifyUse = use =>
 
 const webpackConfigTemplate = {
   entry: {
-    engine: './src/js/engine/index.js',
-    ui: './src/js/ui/index.js',
+    engine: './src/js/engine/index.ts',
+    ui: './src/js/ui/index.tsx',
     vendor: [
       // 'classnames',
       // 'mathjs',
@@ -72,7 +71,7 @@ const webpackConfigTemplate = {
       'redux-actions',
       'react-transition-group',
       'lodash.clonedeep',
-      'lodash.merge'
+      'lodash'
       // 'three',
       // Unnesessary libraries
       // 'styled-components',
@@ -88,15 +87,40 @@ const webpackConfigTemplate = {
   module: {
     rules: []
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.json']
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      minSize: 30000,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
+  },
   plugins: [
-    new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
     new DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(env.type) },
       GAME_VERSION: JSON.stringify(project.version)
     }),
     new NamedModulesPlugin(),
     new NoEmitOnErrorsPlugin()
-  ]
+  ],
+  mode: env.type
 };
 
 // =====================
@@ -122,7 +146,7 @@ function addPugSupport(cfg) {
 // Compile TypeScript
 // Uglifies code in production
 // =====================
-function addBabelSupport(cfg) {
+function addTypeScriptSupport(cfg) {
   const rule = {
     test: /\.tsx?$/,
     exclude: /(node_modules|\.\/build|\.\/dist)/,
@@ -202,7 +226,7 @@ function addPostCSSSupport(cfg) {
 // Make final config support needed rules
 // =====================
 function makeConfig(cfg) {
-  return R.pipe(addPugSupport, addBabelSupport, addPostCSSSupport)(cfg);
+  return R.pipe(addPugSupport, addTypeScriptSupport, addPostCSSSupport)(cfg);
 }
 
 module.exports = makeConfig(webpackConfigTemplate);

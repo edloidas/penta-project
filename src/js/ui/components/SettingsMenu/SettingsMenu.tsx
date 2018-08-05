@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Title from '../texts/Title';
 import { AlignedFullscreen as Screen } from '../base';

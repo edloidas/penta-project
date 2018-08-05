@@ -1,7 +1,6 @@
-// @flow
-import React from 'react';
+import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
-import merge from 'lodash.merge';
+import { merge } from 'lodash';
 
 const flash = keyframes`
   15% {

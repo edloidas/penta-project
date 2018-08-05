@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -22,7 +22,7 @@ class Start extends Focusable<Props> {
     isReady: true
   };
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.handleAnyPress = this.handleAnyPress.bind(this);
   }
@@ -39,7 +39,7 @@ class Start extends Focusable<Props> {
   props: Props;
 
   // Absence of `handleAnyPress` type leads to flow errors in constructor.
-  handleAnyPress(e) {
+  handleAnyPress(e: MouseKeyboardEvent) {
     e.preventDefault();
     if (this.props.isReady) {
       this.props.actions.closeStart(true);

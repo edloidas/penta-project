@@ -1,5 +1,6 @@
 import { handleActions, Action as Action } from 'redux-actions';
-import merge from 'lodash.merge';
+import { merge } from  'lodash';
+
 import {
   switchSettings,
   setSettings,

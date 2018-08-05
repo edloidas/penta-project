@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { colors } from '../base';
 
@@ -48,7 +48,7 @@ const NavigationItem: SFC<NavigationItemProps> = (props: NavigationItemProps) =>
 
 NavigationItem.defaultProps = {
   active: false,
-  clickHandler: null
+  // clickHandler: null
 };
 
 export default NavigationItem;
