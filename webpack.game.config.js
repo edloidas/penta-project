@@ -120,7 +120,8 @@ const webpackConfigTemplate = {
     new NamedModulesPlugin(),
     new NoEmitOnErrorsPlugin()
   ],
-  mode: env.type
+  mode: env.type,
+  devtool: isProd ? false : 'inline-source-map'
 };
 
 // =====================
@@ -149,8 +150,11 @@ function addPugSupport(cfg) {
 function addTypeScriptSupport(cfg) {
   const rule = {
     test: /\.tsx?$/,
+    loader: 'ts-loader',
     exclude: /(node_modules|\.\/build|\.\/dist)/,
-    loader: 'ts-loader'
+    options: {
+      configFile: 'src/js/tsconfig.game.json'
+    }
   };
 
   const plugins = [

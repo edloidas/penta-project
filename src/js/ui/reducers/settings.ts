@@ -23,10 +23,10 @@ export type State = {
   data: SettingsData
 };
 
-type SwitchSettingsAction = Action<typeof switchSettings>;
-type SetSettingsAction = Action<typeof setSettings>;
-type ApplySettingsAction = Action<typeof applySettings>;
-type ResetSettingsAction = Action<typeof resetSettings>;
+type SwitchSettingsAction = Action<SettingsGroup>;
+type SetSettingsAction = Action<SettingsData>;
+type ApplySettingsAction = Action<void>;
+type ResetSettingsAction = Action<SettingsData>;
 
 const initialState: State = {
   activeGroup: 'graphics',
