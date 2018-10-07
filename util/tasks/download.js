@@ -6,7 +6,11 @@ const clean = require('../clean');
 const unzip = require('../unzip');
 const CONFIG = require('../config');
 
-const nameFromUrl = R.pipe(url.parse, R.prop('pathname'), path.basename);
+const nameFromUrl = R.pipe(
+  url.parse,
+  R.prop('pathname'),
+  path.basename
+);
 
 const dataUrl = CONFIG.data.url;
 const { temp } = CONFIG.root;

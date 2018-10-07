@@ -2,13 +2,10 @@ module.exports = {
   'parser': 'babel-eslint',
   'extends': [
     'airbnb',
-    'plugin:flowtype/recommended',
     'prettier',
-    'prettier/flowtype',
     'prettier/react',
   ],
   'plugins': [
-    'flowtype',
     'prettier',
   ],
   'rules': {

@@ -47,7 +47,12 @@ const stringifyBoolProperty = R.ifElse(
 // mergeOptions :: Object -> String
 const stringifyOptions = R.pipe(
   R.toPairs,
-  R.map(R.pipe(stringifyBoolProperty, R.join('='))),
+  R.map(
+    R.pipe(
+      stringifyBoolProperty,
+      R.join('=')
+    )
+  ),
   R.join('&')
 );
 // stringifyUse :: Object -> String
@@ -140,7 +145,10 @@ function addPugSupport(cfg) {
   };
   const plugin = new HtmlWebpackPlugin(htmlConfig);
 
-  return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
+  return R.pipe(
+    addRule(rule),
+    addPlugin(plugin)
+  )(cfg);
 }
 
 // =====================
@@ -177,7 +185,10 @@ function addTypeScriptSupport(cfg) {
       : [])
   ];
 
-  return R.pipe(addRule(rule), ...addPlugins(plugins))(cfg);
+  return R.pipe(
+    addRule(rule),
+    ...addPlugins(plugins)
+  )(cfg);
 }
 
 // =====================
@@ -223,14 +234,21 @@ function addPostCSSSupport(cfg) {
     R.merge({ filename: 'style.css' }, extractConfig)
   );
 
-  return R.pipe(addRule(rule), addPlugin(plugin))(cfg);
+  return R.pipe(
+    addRule(rule),
+    addPlugin(plugin)
+  )(cfg);
 }
 
 // =====================
 // Make final config support needed rules
 // =====================
 function makeConfig(cfg) {
-  return R.pipe(addPugSupport, addTypeScriptSupport, addPostCSSSupport)(cfg);
+  return R.pipe(
+    addPugSupport,
+    addTypeScriptSupport,
+    addPostCSSSupport
+  )(cfg);
 }
 
 module.exports = makeConfig(webpackConfigTemplate);
