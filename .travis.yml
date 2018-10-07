@@ -1,12 +1,14 @@
-# http://docs.travis-ci.com/user/languages/javascript-with-nodejs/
-
 language: node_js
 env: TRAVIS_CI=true
 
 node_js:
-  - "9"
+  - "10"
+
+cache:
+  directories:
+    - "node_modules"
 
 script:
-  - yarn typecheck
-  - yarn report
+  - npm run typecheck
+  - npm run report
   - npm run package

@@ -25,7 +25,7 @@ The guide on how to run the project, a list of all known _development_ issues an
 
 [GPL-3.0](LICENSE) © [Edloidas Production](https://edloidas.com)
 
-Take a note, that all project data in the `build/data/` directory (present after running `yarn download`) are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License][base-license-url]. ![CC BY-NC-SA][base-license-image]
+Take a note, that all project data in the `build/data/` directory (present after running `npm run download`) are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License][base-license-url]. ![CC BY-NC-SA][base-license-image]
 
 <!-- Links -->
 [travis-url]: https://travis-ci.org/edloidas/penta-project
