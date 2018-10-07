@@ -1,4 +1,4 @@
-import engine from '../../src/js/engine/index';
+import engine from '../../src/js/engine';
 
 describe('Engine:', () => {
   test(`Should be initialized`, () => {

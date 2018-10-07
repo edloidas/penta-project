@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { mount } from '../wrap';
 import configureStore from '../../src/js/ui/store';
 import Settings from '../../src/js/ui/containers/Settings';
 import {
@@ -8,7 +9,6 @@ import {
   resetSettings
 } from '../../src/js/ui/actions/settings';
 import { texts } from '../../src/js/ui/components/base';
-import renderTree from './renderTree';
 
 const initialData = {
   graphics: {
@@ -24,9 +24,7 @@ const data = {
 
 describe('<Settings />', () => {
   test('Should renders', () => {
-    const store = configureStore();
-
-    const tree = renderTree(store, <Settings />);
+    const tree = mount(<Settings />);
     expect(tree).toMatchSnapshot();
   });
 
@@ -34,7 +32,7 @@ describe('<Settings />', () => {
     const store = configureStore();
     store.dispatch(switchSettings(texts.settingsGroup[1]));
 
-    const tree = renderTree(store, <Settings />);
+    const tree = mount(<Settings />, store);
     expect(tree).toMatchSnapshot();
   });
 
@@ -42,21 +40,21 @@ describe('<Settings />', () => {
     const store = configureStore();
     store.dispatch(setSettings(data));
 
-    const tree = renderTree(store, <Settings />);
+    const tree = mount(<Settings />, store);
     expect(tree).toMatchSnapshot();
   });
 
   test('Should reset settings', () => {
     const store = configureStore();
 
-    const tree = renderTree(store, <Settings />);
+    const tree = mount(<Settings />, store);
 
     store.dispatch(setSettings(data));
-    const treeWithChanges = renderTree(store, <Settings />);
+    const treeWithChanges = mount(<Settings />, store);
     expect(treeWithChanges).toMatchSnapshot();
 
     store.dispatch(resetSettings(initialData));
-    const treeWithoutChanges = renderTree(store, <Settings />);
+    const treeWithoutChanges = mount(<Settings />, store);
     expect(treeWithoutChanges).toMatchSnapshot();
 
     expect(JSON.stringify(tree)).toEqual(JSON.stringify(treeWithoutChanges));
@@ -66,11 +64,11 @@ describe('<Settings />', () => {
     const store = configureStore();
 
     store.dispatch(setSettings(data));
-    const treeWithChanges = renderTree(store, <Settings />);
+    const treeWithChanges = mount(<Settings />, store);
     expect(treeWithChanges).toMatchSnapshot();
 
     store.dispatch(applySettings());
-    const tree = renderTree(store, <Settings />);
+    const tree = mount(<Settings />, store);
     expect(tree).toMatchSnapshot();
   });
 });

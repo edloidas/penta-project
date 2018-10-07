@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Start /> Should renders 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ConnectedRouter
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Start)>
+        <Start
+          actions={
+            Object {
+              "closeStart": [Function],
+              "finalizeStart": [Function],
+            }
+          }
+          isClosed={false}
+          isReady={false}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={false}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={500}
+            unmountOnExit={false}
+          >
+            <div
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <LogoScreen
+                duration={500}
+                isHiding={false}
+                isLoading={true}
+              >
+                <styled.div
+                  className="font__mono"
+                  theme={
+                    Object {
+                      "duration": 500,
+                      "isHiding": false,
+                    }
+                  }
+                >
+                  <div
+                    className="font__mono sc-dnqmqq difCss"
+                  >
+                    <Logo
+                      renderAuthor={true}
+                      theme={
+                        Object {
+                          "fontSize": 1,
+                        }
+                      }
+                    >
+                      <styled.div
+                        className="font__mono"
+                        theme={
+                          Object {
+                            "fontSize": 1,
+                          }
+                        }
+                      >
+                        <div
+                          className="font__mono sc-htpNat iytjrA"
+                        >
+                          <styled.div>
+                            <div
+                              className="sc-bxivhb iKpfLW"
+                            >
+                              edloidas production
+                            </div>
+                          </styled.div>
+                          <styled.div>
+                            <div
+                              className="sc-ifAKCX RfDSL"
+                            >
+                              Penta Project
+                            </div>
+                          </styled.div>
+                          <styled.div>
+                            <div
+                              className="sc-EHOje bMrtUk"
+                            >
+                              A Cyberpunk Action Game
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                    </Logo>
+                    <styled.div>
+                      <div
+                        className="sc-iwsKbI jRAMkw"
+                      >
+                        <InfiniteLoader
+                          theme={
+                            Object {
+                              "bg": "#f5f5f5",
+                            }
+                          }
+                        >
+                          <styled.ul>
+                            <ul
+                              className="sc-bZQynM cyleeR"
+                            >
+                              <styled.li
+                                theme={
+                                  Object {
+                                    "bg": "#f5f5f5",
+                                    "delay": "0.2s",
+                                  }
+                                }
+                              >
+                                <li
+                                  className="sc-gzVnrw jkUFCj"
+                                />
+                              </styled.li>
+                              <styled.li
+                                theme={
+                                  Object {
+                                    "bg": "#f5f5f5",
+                                    "delay": "0.4s",
+                                  }
+                                }
+                              >
+                                <li
+                                  className="sc-gzVnrw bVjxVl"
+                                />
+                              </styled.li>
+                              <styled.li
+                                theme={
+                                  Object {
+                                    "bg": "#f5f5f5",
+                                    "delay": "0.6s",
+                                  }
+                                }
+                              >
+                                <li
+                                  className="sc-gzVnrw jJviaV"
+                                />
+                              </styled.li>
+                              <styled.li
+                                theme={
+                                  Object {
+                                    "bg": "#f5f5f5",
+                                    "delay": "0.8s",
+                                  }
+                                }
+                              >
+                                <li
+                                  className="sc-gzVnrw kSojoV"
+                                />
+                              </styled.li>
+                            </ul>
+                          </styled.ul>
+                        </InfiniteLoader>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </LogoScreen>
+            </div>
+          </Transition>
+        </Start>
+      </Connect(Start)>
+    </Router>
+  </ConnectedRouter>
+</Provider>
+`;
+
+exports[`<Start /> Should switch to Await loader 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ConnectedRouter
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Start)>
+        <Start
+          actions={
+            Object {
+              "closeStart": [Function],
+              "finalizeStart": [Function],
+            }
+          }
+          isClosed={false}
+          isReady={true}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={false}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={500}
+            unmountOnExit={false}
+          >
+            <div
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <LogoScreen
+                duration={500}
+                isHiding={false}
+                isLoading={false}
+              >
+                <styled.div
+                  className="font__mono"
+                  theme={
+                    Object {
+                      "duration": 500,
+                      "isHiding": false,
+                    }
+                  }
+                >
+                  <div
+                    className="font__mono sc-dnqmqq difCss"
+                  >
+                    <Logo
+                      renderAuthor={true}
+                      theme={
+                        Object {
+                          "fontSize": 1,
+                        }
+                      }
+                    >
+                      <styled.div
+                        className="font__mono"
+                        theme={
+                          Object {
+                            "fontSize": 1,
+                          }
+                        }
+                      >
+                        <div
+                          className="font__mono sc-htpNat iytjrA"
+                        >
+                          <styled.div>
+                            <div
+                              className="sc-bxivhb iKpfLW"
+                            >
+                              edloidas production
+                            </div>
+                          </styled.div>
+                          <styled.div>
+                            <div
+                              className="sc-ifAKCX RfDSL"
+                            >
+                              Penta Project
+                            </div>
+                          </styled.div>
+                          <styled.div>
+                            <div
+                              className="sc-EHOje bMrtUk"
+                            >
+                              A Cyberpunk Action Game
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                    </Logo>
+                    <styled.div>
+                      <div
+                        className="sc-iwsKbI jRAMkw"
+                      >
+                        <AwaitInputLoader
+                          theme={
+                            Object {
+                              "color": "#c5c8c6",
+                            }
+                          }
+                        >
+                          <styled.button
+                            autoFocus={true}
+                            className="font__mono"
+                            theme={
+                              Object {
+                                "color": "#c5c8c6",
+                              }
+                            }
+                          >
+                            <button
+                              autoFocus={true}
+                              className="font__mono sc-htoDjs jDINIj"
+                            >
+                              Press Any Key
+                            </button>
+                          </styled.button>
+                        </AwaitInputLoader>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </LogoScreen>
+            </div>
+          </Transition>
+        </Start>
+      </Connect(Start)>
+    </Router>
+  </ConnectedRouter>
+</Provider>
+`;

@@ -3,7 +3,11 @@
     "eslint --fix",
     "git add"
   ],
-  "src/js/ui/components/**/*.js": [
+  "*.ts": [
+    "tslint --fix",
+    "git add"
+  ],
+  "src/js/ui/components/**/*.ts": [
     "stylelint",
     "git add"
   ],

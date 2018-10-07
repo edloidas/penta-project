@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import clone from 'lodash.clonedeep';
+import { cloneDeep } from 'lodash';
 import * as SettingsActions from '../actions/settings';
 import { SettingsData } from '../reducers/settings';
 import SettingsMenu from '../components/SettingsMenu/SettingsMenu';
@@ -116,7 +116,7 @@ function mapStateToProps(state: State) {
   return {
     activeGroup: settings.activeGroup,
     hasUnsavedChanges: settings.hasUnsavedChanges,
-    data: clone(settings.data)
+    data: cloneDeep(settings.data)
   };
 }
 

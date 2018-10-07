@@ -7,15 +7,15 @@ const R = require('ramda');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
-const extractConfig = require('./util/config/extract');
-const htmlConfig = require('./util/config/html');
-const minifyConfig = require('./util/config/minify');
 const {
   SourceMapDevToolPlugin,
   NamedModulesPlugin,
   NoEmitOnErrorsPlugin,
   DefinePlugin
 } = require('webpack');
+const extractConfig = require('./util/config/extract');
+const htmlConfig = require('./util/config/html');
+const minifyConfig = require('./util/config/minify');
 const env = require('./util/env');
 const project = require('./util/project');
 const CONFIG = require('./util/config');

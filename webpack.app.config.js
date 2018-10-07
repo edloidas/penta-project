@@ -4,12 +4,12 @@ Uses $NODE_ENV, `production` or `development` (also default)
 */
 const path = require('path');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
-const minifyConfig = require('./util/config/minify');
 const {
   NamedModulesPlugin,
   NoEmitOnErrorsPlugin,
   DefinePlugin
 } = require('webpack');
+const minifyConfig = require('./util/config/minify');
 const env = require('./util/env');
 const CONFIG = require('./util/config');
 
