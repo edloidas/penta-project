@@ -6,4 +6,3 @@ export const switchSettings: PActionCreator<SettingsGroup> = createAction('SETTI
 export const setSettings: PActionCreator<SettingsData> = createAction('SETTINGS_SET');
 export const applySettings: PActionCreator<void> = createAction('SETTINGS_APPLY');
 export const resetSettings: PActionCreator<SettingsData> = createAction('SETTINGS_RESET');
-/* eslint-enable prettier/prettier */

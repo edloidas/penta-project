@@ -1,15 +1,16 @@
 import { handleActions, Action as Action } from 'redux-actions';
-import { resumeGame, startNewGame, saveGame, loadGame } from '../actions/game';
 
 export type State = { isRunning?: boolean };
-type ResumeGameAction = Action<typeof resumeGame>;
-type StartNewGameAction = Action<typeof startNewGame>;
-type SaveGameAction = Action<typeof saveGame>;
-type LoadGameAction = Action<typeof loadGame>;
+type ResumeGameAction = Action<boolean>;
+type StartNewGameAction = Action<boolean>;
+type SaveGameAction = Action<boolean>;
+type LoadGameAction = Action<boolean>;
+
+type Payload = boolean;
 
 const initialState: State = { isRunning: false };
 
-export default handleActions(
+export default handleActions<State, Payload>(
   {
     GAME_RESUME(state: State, action: ResumeGameAction): State {
       return Object.assign({}, state, { isRunning: action.payload });

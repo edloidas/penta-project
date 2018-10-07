@@ -1,13 +1,6 @@
 import { handleActions, Action as Action } from 'redux-actions';
 import { merge } from  'lodash';
 
-import {
-  switchSettings,
-  setSettings,
-  applySettings,
-  resetSettings
-} from '../actions/settings';
-
 export type SettingsData = {
   graphics?: {
     screenSize?: ScreenSize,
@@ -28,6 +21,8 @@ type SetSettingsAction = Action<SettingsData>;
 type ApplySettingsAction = Action<void>;
 type ResetSettingsAction = Action<SettingsData>;
 
+type Payload = SettingsData | SettingsGroup | void;
+
 const initialState: State = {
   activeGroup: 'graphics',
   hasUnsavedChanges: false,
@@ -41,7 +36,7 @@ const initialState: State = {
   }
 };
 
-export default handleActions(
+export default handleActions<State, Payload>(
   {
     SETTINGS_SWITCH(state: State, action: SwitchSettingsAction): State {
       return Object.assign({}, state, { activeGroup: action.payload });

@@ -1,13 +1,14 @@
 import { handleActions, Action as Action } from 'redux-actions';
-import { finalizeStart, closeStart } from '../actions/start';
 
 export type State = { isReady?: boolean, isClosed?: boolean };
-type FinalizeStartAction = Action<typeof finalizeStart>;
-type CloseStartAction = Action<typeof closeStart>;
+type FinalizeStartAction = Action<boolean>;
+type CloseStartAction = Action<boolean>;
+
+type Payload = boolean;
 
 const initialState: State = { isReady: false, isClosed: false };
 
-export default handleActions(
+export default handleActions<State, Payload>(
   {
     START_FINALIZE(state: State, action: FinalizeStartAction): State {
       return Object.assign({}, state, { isReady: action.payload });
