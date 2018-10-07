@@ -120,7 +120,7 @@ function mapStateToProps(state: State) {
   };
 }
 
-function mapDispatchToProps(dispatch: Dispatch<any>) {
+function mapDispatchToProps(dispatch: Dispatch<SettingsActions.ActionsTypes>) {
   return {
     actions: bindActionCreators(SettingsActions, dispatch)
   };

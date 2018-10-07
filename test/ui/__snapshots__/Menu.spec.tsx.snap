@@ -105,79 +105,69 @@ exports[`<Menu /> Should renders 1`] = `
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-gZMcBi qaFpZ"
-                    >
-                      <styled.div>
-                        <div
-                          className="sc-gqjmRU cBrrLK"
-                        >
-                          <Logo
-                            renderAuthor={false}
-                            theme={
-                              Object {
-                                "fontSize": 0.5,
-                              }
-                            }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-gZMcBi qaFpZ"
+                      >
+                        <styled.div>
+                          <div
+                            className="sc-gqjmRU cBrrLK"
                           >
-                            <styled.div
-                              className="font__mono"
+                            <Logo
+                              renderAuthor={false}
                               theme={
                                 Object {
                                   "fontSize": 0.5,
                                 }
                               }
                             >
-                              <div
-                                className="font__mono sc-htpNat easqzJ"
+                              <styled.div
+                                className="font__mono"
+                                theme={
+                                  Object {
+                                    "fontSize": 0.5,
+                                  }
+                                }
                               >
-                                <styled.div>
-                                  <div
-                                    className="sc-ifAKCX RfDSL"
-                                  >
-                                    Penta Project
-                                  </div>
-                                </styled.div>
-                                <styled.div>
-                                  <div
-                                    className="sc-EHOje bMrtUk"
-                                  >
-                                    A Cyberpunk Action Game
-                                  </div>
-                                </styled.div>
-                              </div>
-                            </styled.div>
-                          </Logo>
-                        </div>
-                      </styled.div>
-                      <MainMenuItem
-                        clickHandler={[Function]}
-                        key="Resume"
-                        name="Resume"
-                      >
-                        <Button
+                                <div
+                                  className="font__mono sc-htpNat easqzJ"
+                                >
+                                  <styled.div>
+                                    <div
+                                      className="sc-ifAKCX RfDSL"
+                                    >
+                                      Penta Project
+                                    </div>
+                                  </styled.div>
+                                  <styled.div>
+                                    <div
+                                      className="sc-EHOje bMrtUk"
+                                    >
+                                      A Cyberpunk Action Game
+                                    </div>
+                                  </styled.div>
+                                </div>
+                              </styled.div>
+                            </Logo>
+                          </div>
+                        </styled.div>
+                        <MainMenuItem
                           clickHandler={[Function]}
+                          key="Resume"
                           name="Resume"
-                          theme={
-                            Object {
-                              "direction": "column",
-                              "textAlign": "left",
-                              "width": 19,
-                            }
-                          }
                         >
-                          <styled.button
-                            className="effect__glitch"
-                            data-text="Resume"
-                            onClick={[Function]}
-                            tabIndex={0}
+                          <Button
+                            clickHandler={[Function]}
+                            name="Resume"
                             theme={
                               Object {
                                 "direction": "column",
@@ -186,37 +176,37 @@ exports[`<Menu /> Should renders 1`] = `
                               }
                             }
                           >
-                            <button
-                              className="effect__glitch sc-iwsKbI ixchWs"
+                            <styled.button
+                              className="effect__glitch"
                               data-text="Resume"
                               onClick={[Function]}
                               tabIndex={0}
+                              theme={
+                                Object {
+                                  "direction": "column",
+                                  "textAlign": "left",
+                                  "width": 19,
+                                }
+                              }
                             >
-                              Resume
-                            </button>
-                          </styled.button>
-                        </Button>
-                      </MainMenuItem>
-                      <MainMenuItem
-                        key="New Game"
-                        name="New Game"
-                        to="/new"
-                      >
-                        <Button
+                              <button
+                                className="effect__glitch sc-iwsKbI ixchWs"
+                                data-text="Resume"
+                                onClick={[Function]}
+                                tabIndex={0}
+                              >
+                                Resume
+                              </button>
+                            </styled.button>
+                          </Button>
+                        </MainMenuItem>
+                        <MainMenuItem
+                          key="New Game"
                           name="New Game"
-                          theme={
-                            Object {
-                              "direction": "column",
-                              "textAlign": "left",
-                              "width": 19,
-                            }
-                          }
                           to="/new"
                         >
-                          <styled.button
-                            className="effect__glitch"
-                            data-text="New Game"
-                            tabIndex={-1}
+                          <Button
+                            name="New Game"
                             theme={
                               Object {
                                 "direction": "column",
@@ -224,48 +214,48 @@ exports[`<Menu /> Should renders 1`] = `
                                 "width": 19,
                               }
                             }
+                            to="/new"
                           >
-                            <button
-                              className="effect__glitch sc-iwsKbI ixchWs"
+                            <styled.button
+                              className="effect__glitch"
                               data-text="New Game"
                               tabIndex={-1}
+                              theme={
+                                Object {
+                                  "direction": "column",
+                                  "textAlign": "left",
+                                  "width": 19,
+                                }
+                              }
                             >
-                              New Game
-                              <Link
-                                replace={false}
-                                tabIndex={0}
-                                to="/new"
+                              <button
+                                className="effect__glitch sc-iwsKbI ixchWs"
+                                data-text="New Game"
+                                tabIndex={-1}
                               >
-                                <a
-                                  href="/new"
-                                  onClick={[Function]}
+                                New Game
+                                <Link
+                                  replace={false}
                                   tabIndex={0}
-                                />
-                              </Link>
-                            </button>
-                          </styled.button>
-                        </Button>
-                      </MainMenuItem>
-                      <MainMenuItem
-                        key="Save Game"
-                        name="Save Game"
-                        to="/save"
-                      >
-                        <Button
+                                  to="/new"
+                                >
+                                  <a
+                                    href="/new"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  />
+                                </Link>
+                              </button>
+                            </styled.button>
+                          </Button>
+                        </MainMenuItem>
+                        <MainMenuItem
+                          key="Save Game"
                           name="Save Game"
-                          theme={
-                            Object {
-                              "direction": "column",
-                              "textAlign": "left",
-                              "width": 19,
-                            }
-                          }
                           to="/save"
                         >
-                          <styled.button
-                            className="effect__glitch"
-                            data-text="Save Game"
-                            tabIndex={-1}
+                          <Button
+                            name="Save Game"
                             theme={
                               Object {
                                 "direction": "column",
@@ -273,48 +263,48 @@ exports[`<Menu /> Should renders 1`] = `
                                 "width": 19,
                               }
                             }
+                            to="/save"
                           >
-                            <button
-                              className="effect__glitch sc-iwsKbI ixchWs"
+                            <styled.button
+                              className="effect__glitch"
                               data-text="Save Game"
                               tabIndex={-1}
+                              theme={
+                                Object {
+                                  "direction": "column",
+                                  "textAlign": "left",
+                                  "width": 19,
+                                }
+                              }
                             >
-                              Save Game
-                              <Link
-                                replace={false}
-                                tabIndex={0}
-                                to="/save"
+                              <button
+                                className="effect__glitch sc-iwsKbI ixchWs"
+                                data-text="Save Game"
+                                tabIndex={-1}
                               >
-                                <a
-                                  href="/save"
-                                  onClick={[Function]}
+                                Save Game
+                                <Link
+                                  replace={false}
                                   tabIndex={0}
-                                />
-                              </Link>
-                            </button>
-                          </styled.button>
-                        </Button>
-                      </MainMenuItem>
-                      <MainMenuItem
-                        key="Load Game"
-                        name="Load Game"
-                        to="/load"
-                      >
-                        <Button
+                                  to="/save"
+                                >
+                                  <a
+                                    href="/save"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  />
+                                </Link>
+                              </button>
+                            </styled.button>
+                          </Button>
+                        </MainMenuItem>
+                        <MainMenuItem
+                          key="Load Game"
                           name="Load Game"
-                          theme={
-                            Object {
-                              "direction": "column",
-                              "textAlign": "left",
-                              "width": 19,
-                            }
-                          }
                           to="/load"
                         >
-                          <styled.button
-                            className="effect__glitch"
-                            data-text="Load Game"
-                            tabIndex={-1}
+                          <Button
+                            name="Load Game"
                             theme={
                               Object {
                                 "direction": "column",
@@ -322,48 +312,48 @@ exports[`<Menu /> Should renders 1`] = `
                                 "width": 19,
                               }
                             }
+                            to="/load"
                           >
-                            <button
-                              className="effect__glitch sc-iwsKbI ixchWs"
+                            <styled.button
+                              className="effect__glitch"
                               data-text="Load Game"
                               tabIndex={-1}
+                              theme={
+                                Object {
+                                  "direction": "column",
+                                  "textAlign": "left",
+                                  "width": 19,
+                                }
+                              }
                             >
-                              Load Game
-                              <Link
-                                replace={false}
-                                tabIndex={0}
-                                to="/load"
+                              <button
+                                className="effect__glitch sc-iwsKbI ixchWs"
+                                data-text="Load Game"
+                                tabIndex={-1}
                               >
-                                <a
-                                  href="/load"
-                                  onClick={[Function]}
+                                Load Game
+                                <Link
+                                  replace={false}
                                   tabIndex={0}
-                                />
-                              </Link>
-                            </button>
-                          </styled.button>
-                        </Button>
-                      </MainMenuItem>
-                      <MainMenuItem
-                        key="Hero"
-                        name="Hero"
-                        to="/hero"
-                      >
-                        <Button
+                                  to="/load"
+                                >
+                                  <a
+                                    href="/load"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  />
+                                </Link>
+                              </button>
+                            </styled.button>
+                          </Button>
+                        </MainMenuItem>
+                        <MainMenuItem
+                          key="Hero"
                           name="Hero"
-                          theme={
-                            Object {
-                              "direction": "column",
-                              "textAlign": "left",
-                              "width": 19,
-                            }
-                          }
                           to="/hero"
                         >
-                          <styled.button
-                            className="effect__glitch"
-                            data-text="Hero"
-                            tabIndex={-1}
+                          <Button
+                            name="Hero"
                             theme={
                               Object {
                                 "direction": "column",
@@ -371,48 +361,48 @@ exports[`<Menu /> Should renders 1`] = `
                                 "width": 19,
                               }
                             }
+                            to="/hero"
                           >
-                            <button
-                              className="effect__glitch sc-iwsKbI ixchWs"
+                            <styled.button
+                              className="effect__glitch"
                               data-text="Hero"
                               tabIndex={-1}
+                              theme={
+                                Object {
+                                  "direction": "column",
+                                  "textAlign": "left",
+                                  "width": 19,
+                                }
+                              }
                             >
-                              Hero
-                              <Link
-                                replace={false}
-                                tabIndex={0}
-                                to="/hero"
+                              <button
+                                className="effect__glitch sc-iwsKbI ixchWs"
+                                data-text="Hero"
+                                tabIndex={-1}
                               >
-                                <a
-                                  href="/hero"
-                                  onClick={[Function]}
+                                Hero
+                                <Link
+                                  replace={false}
                                   tabIndex={0}
-                                />
-                              </Link>
-                            </button>
-                          </styled.button>
-                        </Button>
-                      </MainMenuItem>
-                      <MainMenuItem
-                        key="Settings"
-                        name="Settings"
-                        to="/settings"
-                      >
-                        <Button
+                                  to="/hero"
+                                >
+                                  <a
+                                    href="/hero"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  />
+                                </Link>
+                              </button>
+                            </styled.button>
+                          </Button>
+                        </MainMenuItem>
+                        <MainMenuItem
+                          key="Settings"
                           name="Settings"
-                          theme={
-                            Object {
-                              "direction": "column",
-                              "textAlign": "left",
-                              "width": 19,
-                            }
-                          }
                           to="/settings"
                         >
-                          <styled.button
-                            className="effect__glitch"
-                            data-text="Settings"
-                            tabIndex={-1}
+                          <Button
+                            name="Settings"
                             theme={
                               Object {
                                 "direction": "column",
@@ -420,48 +410,48 @@ exports[`<Menu /> Should renders 1`] = `
                                 "width": 19,
                               }
                             }
+                            to="/settings"
                           >
-                            <button
-                              className="effect__glitch sc-iwsKbI ixchWs"
+                            <styled.button
+                              className="effect__glitch"
                               data-text="Settings"
                               tabIndex={-1}
+                              theme={
+                                Object {
+                                  "direction": "column",
+                                  "textAlign": "left",
+                                  "width": 19,
+                                }
+                              }
                             >
-                              Settings
-                              <Link
-                                replace={false}
-                                tabIndex={0}
-                                to="/settings"
+                              <button
+                                className="effect__glitch sc-iwsKbI ixchWs"
+                                data-text="Settings"
+                                tabIndex={-1}
                               >
-                                <a
-                                  href="/settings"
-                                  onClick={[Function]}
+                                Settings
+                                <Link
+                                  replace={false}
                                   tabIndex={0}
-                                />
-                              </Link>
-                            </button>
-                          </styled.button>
-                        </Button>
-                      </MainMenuItem>
-                      <MainMenuItem
-                        key="Exit"
-                        name="Exit"
-                        to="/exit"
-                      >
-                        <Button
+                                  to="/settings"
+                                >
+                                  <a
+                                    href="/settings"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  />
+                                </Link>
+                              </button>
+                            </styled.button>
+                          </Button>
+                        </MainMenuItem>
+                        <MainMenuItem
+                          key="Exit"
                           name="Exit"
-                          theme={
-                            Object {
-                              "direction": "column",
-                              "textAlign": "left",
-                              "width": 19,
-                            }
-                          }
                           to="/exit"
                         >
-                          <styled.button
-                            className="effect__glitch"
-                            data-text="Exit"
-                            tabIndex={-1}
+                          <Button
+                            name="Exit"
                             theme={
                               Object {
                                 "direction": "column",
@@ -469,105 +459,119 @@ exports[`<Menu /> Should renders 1`] = `
                                 "width": 19,
                               }
                             }
+                            to="/exit"
                           >
-                            <button
-                              className="effect__glitch sc-iwsKbI ixchWs"
+                            <styled.button
+                              className="effect__glitch"
                               data-text="Exit"
                               tabIndex={-1}
-                            >
-                              Exit
-                              <Link
-                                replace={false}
-                                tabIndex={0}
-                                to="/exit"
-                              >
-                                <a
-                                  href="/exit"
-                                  onClick={[Function]}
-                                  tabIndex={0}
-                                />
-                              </Link>
-                            </button>
-                          </styled.button>
-                        </Button>
-                      </MainMenuItem>
-                    </div>
-                  </styled.div>
-                  <styled.footer
-                    className="font__accent"
-                  >
-                    <footer
-                      className="font__accent sc-VigVT byUSmW"
-                    >
-                      <styled.div>
-                        <div
-                          className="sc-jTzLTM iHsIJR"
-                        >
-                          <Version
-                            theme={
-                              Object {
-                                "fontSize": 1,
+                              theme={
+                                Object {
+                                  "direction": "column",
+                                  "textAlign": "left",
+                                  "width": 19,
+                                }
                               }
-                            }
+                            >
+                              <button
+                                className="effect__glitch sc-iwsKbI ixchWs"
+                                data-text="Exit"
+                                tabIndex={-1}
+                              >
+                                Exit
+                                <Link
+                                  replace={false}
+                                  tabIndex={0}
+                                  to="/exit"
+                                >
+                                  <a
+                                    href="/exit"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  />
+                                </Link>
+                              </button>
+                            </styled.button>
+                          </Button>
+                        </MainMenuItem>
+                      </div>
+                    </styled.div>
+                    <styled.footer
+                      className="font__accent"
+                    >
+                      <footer
+                        className="font__accent sc-VigVT byUSmW"
+                      >
+                        <styled.div>
+                          <div
+                            className="sc-jTzLTM iHsIJR"
                           >
-                            <styled.span
+                            <Version
                               theme={
                                 Object {
                                   "fontSize": 1,
                                 }
                               }
                             >
-                              <span
-                                className="sc-bZQynM fjiOsu"
+                              <styled.span
+                                theme={
+                                  Object {
+                                    "fontSize": 1,
+                                  }
+                                }
                               >
-                                <styled.span>
-                                  <span
-                                    className="sc-gzVnrw hjuePL"
-                                  >
-                                    alpha version
-                                  </span>
-                                </styled.span>
-                                 
-                                "0.0.1-alpha.2"
-                              </span>
-                            </styled.span>
-                          </Version>
-                        </div>
-                      </styled.div>
-                      <Copyright
-                        theme={
-                          Object {
-                            "fontSize": 1,
-                          }
-                        }
-                      >
-                        <styled.span
+                                <span
+                                  className="sc-bZQynM fjiOsu"
+                                >
+                                  <styled.span>
+                                    <span
+                                      className="sc-gzVnrw hjuePL"
+                                    >
+                                      alpha version
+                                    </span>
+                                  </styled.span>
+                                   
+                                  "0.0.1-alpha.2"
+                                </span>
+                              </styled.span>
+                            </Version>
+                          </div>
+                        </styled.div>
+                        <Copyright
                           theme={
                             Object {
                               "fontSize": 1,
                             }
                           }
                         >
-                          <span
-                            className="sc-htoDjs dNFyTW"
+                          <styled.span
+                            theme={
+                              Object {
+                                "fontSize": 1,
+                              }
+                            }
                           >
-                            2017–current © 
-                            edloidas production
-                            . 
-                            <styled.span>
-                              <span
-                                className="sc-dnqmqq oqlux"
-                              >
-                                All Rights Reserved.
-                              </span>
-                            </styled.span>
-                          </span>
-                        </styled.span>
-                      </Copyright>
-                    </footer>
-                  </styled.footer>
-                </div>
-              </styled.div>
+                            <span
+                              className="sc-htoDjs dNFyTW"
+                            >
+                              2017–current © 
+                              edloidas production
+                              . 
+                              <styled.span>
+                                <span
+                                  className="sc-dnqmqq oqlux"
+                                >
+                                  All Rights Reserved.
+                                </span>
+                              </styled.span>
+                            </span>
+                          </styled.span>
+                        </Copyright>
+                      </footer>
+                    </styled.footer>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </MainMenu>
           </div>
         </Menu>

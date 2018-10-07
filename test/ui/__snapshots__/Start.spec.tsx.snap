@@ -93,7 +93,7 @@ exports[`<Start /> Should renders 1`] = `
                 isHiding={false}
                 isLoading={true}
               >
-                <styled.div
+                <Styled(styled.div)
                   className="font__mono"
                   theme={
                     Object {
@@ -102,122 +102,132 @@ exports[`<Start /> Should renders 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="font__mono sc-dnqmqq difCss"
-                  >
-                    <Logo
-                      renderAuthor={true}
-                      theme={
-                        Object {
-                          "fontSize": 1,
-                        }
+                  <styled.div
+                    className="font__mono sc-dnqmqq jtumug"
+                    theme={
+                      Object {
+                        "duration": 500,
+                        "isHiding": false,
                       }
+                    }
+                  >
+                    <div
+                      className="font__mono sc-dnqmqq jtumug sc-bdVaJa iVLFuM"
                     >
-                      <styled.div
-                        className="font__mono"
+                      <Logo
+                        renderAuthor={true}
                         theme={
                           Object {
                             "fontSize": 1,
                           }
                         }
                       >
-                        <div
-                          className="font__mono sc-htpNat iytjrA"
-                        >
-                          <styled.div>
-                            <div
-                              className="sc-bxivhb iKpfLW"
-                            >
-                              edloidas production
-                            </div>
-                          </styled.div>
-                          <styled.div>
-                            <div
-                              className="sc-ifAKCX RfDSL"
-                            >
-                              Penta Project
-                            </div>
-                          </styled.div>
-                          <styled.div>
-                            <div
-                              className="sc-EHOje bMrtUk"
-                            >
-                              A Cyberpunk Action Game
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </Logo>
-                    <styled.div>
-                      <div
-                        className="sc-iwsKbI jRAMkw"
-                      >
-                        <InfiniteLoader
+                        <styled.div
+                          className="font__mono"
                           theme={
                             Object {
-                              "bg": "#f5f5f5",
+                              "fontSize": 1,
                             }
                           }
                         >
-                          <styled.ul>
-                            <ul
-                              className="sc-bZQynM cyleeR"
-                            >
-                              <styled.li
-                                theme={
-                                  Object {
-                                    "bg": "#f5f5f5",
-                                    "delay": "0.2s",
-                                  }
-                                }
+                          <div
+                            className="font__mono sc-htpNat iytjrA"
+                          >
+                            <styled.div>
+                              <div
+                                className="sc-bxivhb iKpfLW"
                               >
-                                <li
-                                  className="sc-gzVnrw jkUFCj"
-                                />
-                              </styled.li>
-                              <styled.li
-                                theme={
-                                  Object {
-                                    "bg": "#f5f5f5",
-                                    "delay": "0.4s",
-                                  }
-                                }
+                                edloidas production
+                              </div>
+                            </styled.div>
+                            <styled.div>
+                              <div
+                                className="sc-ifAKCX RfDSL"
                               >
-                                <li
-                                  className="sc-gzVnrw bVjxVl"
-                                />
-                              </styled.li>
-                              <styled.li
-                                theme={
-                                  Object {
-                                    "bg": "#f5f5f5",
-                                    "delay": "0.6s",
-                                  }
-                                }
+                                Penta Project
+                              </div>
+                            </styled.div>
+                            <styled.div>
+                              <div
+                                className="sc-EHOje bMrtUk"
                               >
-                                <li
-                                  className="sc-gzVnrw jJviaV"
-                                />
-                              </styled.li>
-                              <styled.li
-                                theme={
-                                  Object {
-                                    "bg": "#f5f5f5",
-                                    "delay": "0.8s",
-                                  }
-                                }
+                                A Cyberpunk Action Game
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </Logo>
+                      <styled.div>
+                        <div
+                          className="sc-iwsKbI jRAMkw"
+                        >
+                          <InfiniteLoader
+                            theme={
+                              Object {
+                                "bg": "#f5f5f5",
+                              }
+                            }
+                          >
+                            <styled.ul>
+                              <ul
+                                className="sc-bZQynM cyleeR"
                               >
-                                <li
-                                  className="sc-gzVnrw kSojoV"
-                                />
-                              </styled.li>
-                            </ul>
-                          </styled.ul>
-                        </InfiniteLoader>
-                      </div>
-                    </styled.div>
-                  </div>
-                </styled.div>
+                                <styled.li
+                                  theme={
+                                    Object {
+                                      "bg": "#f5f5f5",
+                                      "delay": "0.2s",
+                                    }
+                                  }
+                                >
+                                  <li
+                                    className="sc-gzVnrw jkUFCj"
+                                  />
+                                </styled.li>
+                                <styled.li
+                                  theme={
+                                    Object {
+                                      "bg": "#f5f5f5",
+                                      "delay": "0.4s",
+                                    }
+                                  }
+                                >
+                                  <li
+                                    className="sc-gzVnrw bVjxVl"
+                                  />
+                                </styled.li>
+                                <styled.li
+                                  theme={
+                                    Object {
+                                      "bg": "#f5f5f5",
+                                      "delay": "0.6s",
+                                    }
+                                  }
+                                >
+                                  <li
+                                    className="sc-gzVnrw jJviaV"
+                                  />
+                                </styled.li>
+                                <styled.li
+                                  theme={
+                                    Object {
+                                      "bg": "#f5f5f5",
+                                      "delay": "0.8s",
+                                    }
+                                  }
+                                >
+                                  <li
+                                    className="sc-gzVnrw kSojoV"
+                                  />
+                                </styled.li>
+                              </ul>
+                            </styled.ul>
+                          </InfiniteLoader>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </Styled(styled.div)>
               </LogoScreen>
             </div>
           </Transition>
@@ -321,7 +331,7 @@ exports[`<Start /> Should switch to Await loader 1`] = `
                 isHiding={false}
                 isLoading={false}
               >
-                <styled.div
+                <Styled(styled.div)
                   className="font__mono"
                   theme={
                     Object {
@@ -330,84 +340,94 @@ exports[`<Start /> Should switch to Await loader 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="font__mono sc-dnqmqq difCss"
-                  >
-                    <Logo
-                      renderAuthor={true}
-                      theme={
-                        Object {
-                          "fontSize": 1,
-                        }
+                  <styled.div
+                    className="font__mono sc-dnqmqq jtumug"
+                    theme={
+                      Object {
+                        "duration": 500,
+                        "isHiding": false,
                       }
+                    }
+                  >
+                    <div
+                      className="font__mono sc-dnqmqq jtumug sc-bdVaJa iVLFuM"
                     >
-                      <styled.div
-                        className="font__mono"
+                      <Logo
+                        renderAuthor={true}
                         theme={
                           Object {
                             "fontSize": 1,
                           }
                         }
                       >
-                        <div
-                          className="font__mono sc-htpNat iytjrA"
-                        >
-                          <styled.div>
-                            <div
-                              className="sc-bxivhb iKpfLW"
-                            >
-                              edloidas production
-                            </div>
-                          </styled.div>
-                          <styled.div>
-                            <div
-                              className="sc-ifAKCX RfDSL"
-                            >
-                              Penta Project
-                            </div>
-                          </styled.div>
-                          <styled.div>
-                            <div
-                              className="sc-EHOje bMrtUk"
-                            >
-                              A Cyberpunk Action Game
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </Logo>
-                    <styled.div>
-                      <div
-                        className="sc-iwsKbI jRAMkw"
-                      >
-                        <AwaitInputLoader
+                        <styled.div
+                          className="font__mono"
                           theme={
                             Object {
-                              "color": "#c5c8c6",
+                              "fontSize": 1,
                             }
                           }
                         >
-                          <styled.button
-                            autoFocus={true}
-                            className="font__mono"
+                          <div
+                            className="font__mono sc-htpNat iytjrA"
+                          >
+                            <styled.div>
+                              <div
+                                className="sc-bxivhb iKpfLW"
+                              >
+                                edloidas production
+                              </div>
+                            </styled.div>
+                            <styled.div>
+                              <div
+                                className="sc-ifAKCX RfDSL"
+                              >
+                                Penta Project
+                              </div>
+                            </styled.div>
+                            <styled.div>
+                              <div
+                                className="sc-EHOje bMrtUk"
+                              >
+                                A Cyberpunk Action Game
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </Logo>
+                      <styled.div>
+                        <div
+                          className="sc-iwsKbI jRAMkw"
+                        >
+                          <AwaitInputLoader
                             theme={
                               Object {
                                 "color": "#c5c8c6",
                               }
                             }
                           >
-                            <button
+                            <styled.button
                               autoFocus={true}
-                              className="font__mono sc-htoDjs jDINIj"
+                              className="font__mono"
+                              theme={
+                                Object {
+                                  "color": "#c5c8c6",
+                                }
+                              }
                             >
-                              Press Any Key
-                            </button>
-                          </styled.button>
-                        </AwaitInputLoader>
-                      </div>
-                    </styled.div>
-                  </div>
-                </styled.div>
+                              <button
+                                autoFocus={true}
+                                className="font__mono sc-htoDjs jDINIj"
+                              >
+                                Press Any Key
+                              </button>
+                            </styled.button>
+                          </AwaitInputLoader>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </Styled(styled.div)>
               </LogoScreen>
             </div>
           </Transition>

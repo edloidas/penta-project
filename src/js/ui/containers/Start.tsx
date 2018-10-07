@@ -80,7 +80,7 @@ function mapStateToProps(state: State) {
   };
 }
 
-function mapDispatchToProps(dispatch: Dispatch<any>) {
+function mapDispatchToProps(dispatch: Dispatch<StartActions.ActionsTypes>) {
   return {
     actions: bindActionCreators(StartActions, dispatch)
   };

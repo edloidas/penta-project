@@ -75,7 +75,6 @@ const webpackConfigTemplate = {
       'redux',
       'redux-actions',
       'react-transition-group',
-      'lodash.clonedeep',
       'lodash'
       // 'three',
       // Unnesessary libraries

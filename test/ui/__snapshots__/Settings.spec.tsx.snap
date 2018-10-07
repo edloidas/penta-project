@@ -109,264 +109,268 @@ exports[`<Settings /> Should apply settings 1`] = `
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-bZQynM hKpJBw"
-                    >
-                      <Title
-                        text="Settings"
-                        theme={
-                          Object {
-                            "marginLeft": 2,
-                          }
-                        }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-bZQynM hKpJBw"
                       >
-                        <styled.h1
-                          className="font__accent"
+                        <Title
+                          text="Settings"
                           theme={
                             Object {
-                              "fontSize": 3,
                               "marginLeft": 2,
                             }
                           }
                         >
-                          <h1
-                            className="font__accent sc-htpNat ggNPGu"
+                          <styled.h1
+                            className="font__accent"
+                            theme={
+                              Object {
+                                "fontSize": 3,
+                                "marginLeft": 2,
+                              }
+                            }
                           >
-                            Settings
-                          </h1>
-                        </styled.h1>
-                      </Title>
-                      <Navigation
-                        activeKey="graphics"
-                        navigationItems={
-                          Array [
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "graphics",
-                              "name": "graphics",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "sound",
-                              "name": "sound",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "controls",
-                              "name": "controls",
-                            },
-                          ]
-                        }
-                      >
-                        <styled.div
-                          className="font__accent"
-                        >
-                          <div
-                            className="font__accent sc-EHOje hPfYAa"
-                          >
-                            <NavigationItem
-                              active={true}
-                              clickHandler={[Function]}
-                              dataKey="graphics"
-                              key="graphics"
-                              name="graphics"
+                            <h1
+                              className="font__accent sc-htpNat ggNPGu"
                             >
-                              <styled.button
-                                data-key="graphics"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": true,
-                                  }
-                                }
+                              Settings
+                            </h1>
+                          </styled.h1>
+                        </Title>
+                        <Navigation
+                          activeKey="graphics"
+                          navigationItems={
+                            Array [
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "graphics",
+                                "name": "graphics",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "sound",
+                                "name": "sound",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "controls",
+                                "name": "controls",
+                              },
+                            ]
+                          }
+                        >
+                          <styled.div
+                            className="font__accent"
+                          >
+                            <div
+                              className="font__accent sc-EHOje hPfYAa"
+                            >
+                              <NavigationItem
+                                active={true}
+                                clickHandler={[Function]}
+                                dataKey="graphics"
+                                key="graphics"
+                                name="graphics"
                               >
-                                <button
-                                  className="sc-ifAKCX hgRAff"
+                                <styled.button
                                   data-key="graphics"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  graphics
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="sound"
-                              key="sound"
-                              name="sound"
-                            >
-                              <styled.button
-                                data-key="sound"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": true,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX hgRAff"
+                                    data-key="graphics"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    graphics
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="sound"
+                                key="sound"
+                                name="sound"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="sound"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  sound
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="controls"
-                              key="controls"
-                              name="controls"
-                            >
-                              <styled.button
-                                data-key="controls"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="sound"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    sound
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="controls"
+                                key="controls"
+                                name="controls"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="controls"
                                   onClick={[Function]}
                                   tabIndex={0}
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
+                                  }
                                 >
-                                  controls
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                          </div>
-                        </styled.div>
-                      </Navigation>
-                      <styled.div>
-                        <div
-                          className="sc-gzVnrw jyBrwk"
-                        >
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Apply"
-                            name="Apply"
-                            to="/menu"
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="controls"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    controls
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                            </div>
+                          </styled.div>
+                        </Navigation>
+                        <styled.div>
+                          <div
+                            className="sc-gzVnrw jyBrwk"
                           >
-                            <Button
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Apply"
                               name="Apply"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Apply"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Apply"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Apply"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Apply
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Apply"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Apply
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Reset"
-                            name="Reset"
-                            to="/menu"
-                          >
-                            <Button
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Reset"
                               name="Reset"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Reset"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Reset"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Reset"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Reset
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Reset"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Reset
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </SettingsMenu>
           </div>
         </Settings>
@@ -485,213 +489,217 @@ exports[`<Settings /> Should apply settings 2`] = `
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-bZQynM hKpJBw"
-                    >
-                      <Title
-                        text="Settings"
-                        theme={
-                          Object {
-                            "marginLeft": 2,
-                          }
-                        }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-bZQynM hKpJBw"
                       >
-                        <styled.h1
-                          className="font__accent"
+                        <Title
+                          text="Settings"
                           theme={
                             Object {
-                              "fontSize": 3,
                               "marginLeft": 2,
                             }
                           }
                         >
-                          <h1
-                            className="font__accent sc-htpNat ggNPGu"
+                          <styled.h1
+                            className="font__accent"
+                            theme={
+                              Object {
+                                "fontSize": 3,
+                                "marginLeft": 2,
+                              }
+                            }
                           >
-                            Settings
-                          </h1>
-                        </styled.h1>
-                      </Title>
-                      <Navigation
-                        activeKey="graphics"
-                        navigationItems={
-                          Array [
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "graphics",
-                              "name": "graphics",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "sound",
-                              "name": "sound",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "controls",
-                              "name": "controls",
-                            },
-                          ]
-                        }
-                      >
-                        <styled.div
-                          className="font__accent"
-                        >
-                          <div
-                            className="font__accent sc-EHOje hPfYAa"
-                          >
-                            <NavigationItem
-                              active={true}
-                              clickHandler={[Function]}
-                              dataKey="graphics"
-                              key="graphics"
-                              name="graphics"
+                            <h1
+                              className="font__accent sc-htpNat ggNPGu"
                             >
-                              <styled.button
-                                data-key="graphics"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": true,
-                                  }
-                                }
+                              Settings
+                            </h1>
+                          </styled.h1>
+                        </Title>
+                        <Navigation
+                          activeKey="graphics"
+                          navigationItems={
+                            Array [
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "graphics",
+                                "name": "graphics",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "sound",
+                                "name": "sound",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "controls",
+                                "name": "controls",
+                              },
+                            ]
+                          }
+                        >
+                          <styled.div
+                            className="font__accent"
+                          >
+                            <div
+                              className="font__accent sc-EHOje hPfYAa"
+                            >
+                              <NavigationItem
+                                active={true}
+                                clickHandler={[Function]}
+                                dataKey="graphics"
+                                key="graphics"
+                                name="graphics"
                               >
-                                <button
-                                  className="sc-ifAKCX hgRAff"
+                                <styled.button
                                   data-key="graphics"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  graphics
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="sound"
-                              key="sound"
-                              name="sound"
-                            >
-                              <styled.button
-                                data-key="sound"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": true,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX hgRAff"
+                                    data-key="graphics"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    graphics
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="sound"
+                                key="sound"
+                                name="sound"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="sound"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  sound
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="controls"
-                              key="controls"
-                              name="controls"
-                            >
-                              <styled.button
-                                data-key="controls"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="sound"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    sound
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="controls"
+                                key="controls"
+                                name="controls"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="controls"
                                   onClick={[Function]}
                                   tabIndex={0}
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
+                                  }
                                 >
-                                  controls
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                          </div>
-                        </styled.div>
-                      </Navigation>
-                      <styled.div>
-                        <div
-                          className="sc-gzVnrw jyBrwk"
-                        >
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Back"
-                            name="Back"
-                            to="/menu"
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="controls"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    controls
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                            </div>
+                          </styled.div>
+                        </Navigation>
+                        <styled.div>
+                          <div
+                            className="sc-gzVnrw jyBrwk"
                           >
-                            <Button
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Back"
                               name="Back"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Back"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Back"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Back"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Back
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Back"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Back
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </SettingsMenu>
           </div>
         </Settings>
@@ -810,213 +818,217 @@ exports[`<Settings /> Should renders 1`] = `
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-bZQynM hKpJBw"
-                    >
-                      <Title
-                        text="Settings"
-                        theme={
-                          Object {
-                            "marginLeft": 2,
-                          }
-                        }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-bZQynM hKpJBw"
                       >
-                        <styled.h1
-                          className="font__accent"
+                        <Title
+                          text="Settings"
                           theme={
                             Object {
-                              "fontSize": 3,
                               "marginLeft": 2,
                             }
                           }
                         >
-                          <h1
-                            className="font__accent sc-htpNat ggNPGu"
+                          <styled.h1
+                            className="font__accent"
+                            theme={
+                              Object {
+                                "fontSize": 3,
+                                "marginLeft": 2,
+                              }
+                            }
                           >
-                            Settings
-                          </h1>
-                        </styled.h1>
-                      </Title>
-                      <Navigation
-                        activeKey="graphics"
-                        navigationItems={
-                          Array [
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "graphics",
-                              "name": "graphics",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "sound",
-                              "name": "sound",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "controls",
-                              "name": "controls",
-                            },
-                          ]
-                        }
-                      >
-                        <styled.div
-                          className="font__accent"
-                        >
-                          <div
-                            className="font__accent sc-EHOje hPfYAa"
-                          >
-                            <NavigationItem
-                              active={true}
-                              clickHandler={[Function]}
-                              dataKey="graphics"
-                              key="graphics"
-                              name="graphics"
+                            <h1
+                              className="font__accent sc-htpNat ggNPGu"
                             >
-                              <styled.button
-                                data-key="graphics"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": true,
-                                  }
-                                }
+                              Settings
+                            </h1>
+                          </styled.h1>
+                        </Title>
+                        <Navigation
+                          activeKey="graphics"
+                          navigationItems={
+                            Array [
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "graphics",
+                                "name": "graphics",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "sound",
+                                "name": "sound",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "controls",
+                                "name": "controls",
+                              },
+                            ]
+                          }
+                        >
+                          <styled.div
+                            className="font__accent"
+                          >
+                            <div
+                              className="font__accent sc-EHOje hPfYAa"
+                            >
+                              <NavigationItem
+                                active={true}
+                                clickHandler={[Function]}
+                                dataKey="graphics"
+                                key="graphics"
+                                name="graphics"
                               >
-                                <button
-                                  className="sc-ifAKCX hgRAff"
+                                <styled.button
                                   data-key="graphics"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  graphics
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="sound"
-                              key="sound"
-                              name="sound"
-                            >
-                              <styled.button
-                                data-key="sound"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": true,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX hgRAff"
+                                    data-key="graphics"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    graphics
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="sound"
+                                key="sound"
+                                name="sound"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="sound"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  sound
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="controls"
-                              key="controls"
-                              name="controls"
-                            >
-                              <styled.button
-                                data-key="controls"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="sound"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    sound
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="controls"
+                                key="controls"
+                                name="controls"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="controls"
                                   onClick={[Function]}
                                   tabIndex={0}
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
+                                  }
                                 >
-                                  controls
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                          </div>
-                        </styled.div>
-                      </Navigation>
-                      <styled.div>
-                        <div
-                          className="sc-gzVnrw jyBrwk"
-                        >
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Back"
-                            name="Back"
-                            to="/menu"
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="controls"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    controls
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                            </div>
+                          </styled.div>
+                        </Navigation>
+                        <styled.div>
+                          <div
+                            className="sc-gzVnrw jyBrwk"
                           >
-                            <Button
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Back"
                               name="Back"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Back"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Back"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Back"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Back
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Back"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Back
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </SettingsMenu>
           </div>
         </Settings>
@@ -1135,264 +1147,268 @@ exports[`<Settings /> Should reset settings 1`] = `
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-bZQynM hKpJBw"
-                    >
-                      <Title
-                        text="Settings"
-                        theme={
-                          Object {
-                            "marginLeft": 2,
-                          }
-                        }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-bZQynM hKpJBw"
                       >
-                        <styled.h1
-                          className="font__accent"
+                        <Title
+                          text="Settings"
                           theme={
                             Object {
-                              "fontSize": 3,
                               "marginLeft": 2,
                             }
                           }
                         >
-                          <h1
-                            className="font__accent sc-htpNat ggNPGu"
+                          <styled.h1
+                            className="font__accent"
+                            theme={
+                              Object {
+                                "fontSize": 3,
+                                "marginLeft": 2,
+                              }
+                            }
                           >
-                            Settings
-                          </h1>
-                        </styled.h1>
-                      </Title>
-                      <Navigation
-                        activeKey="graphics"
-                        navigationItems={
-                          Array [
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "graphics",
-                              "name": "graphics",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "sound",
-                              "name": "sound",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "controls",
-                              "name": "controls",
-                            },
-                          ]
-                        }
-                      >
-                        <styled.div
-                          className="font__accent"
-                        >
-                          <div
-                            className="font__accent sc-EHOje hPfYAa"
-                          >
-                            <NavigationItem
-                              active={true}
-                              clickHandler={[Function]}
-                              dataKey="graphics"
-                              key="graphics"
-                              name="graphics"
+                            <h1
+                              className="font__accent sc-htpNat ggNPGu"
                             >
-                              <styled.button
-                                data-key="graphics"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": true,
-                                  }
-                                }
+                              Settings
+                            </h1>
+                          </styled.h1>
+                        </Title>
+                        <Navigation
+                          activeKey="graphics"
+                          navigationItems={
+                            Array [
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "graphics",
+                                "name": "graphics",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "sound",
+                                "name": "sound",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "controls",
+                                "name": "controls",
+                              },
+                            ]
+                          }
+                        >
+                          <styled.div
+                            className="font__accent"
+                          >
+                            <div
+                              className="font__accent sc-EHOje hPfYAa"
+                            >
+                              <NavigationItem
+                                active={true}
+                                clickHandler={[Function]}
+                                dataKey="graphics"
+                                key="graphics"
+                                name="graphics"
                               >
-                                <button
-                                  className="sc-ifAKCX hgRAff"
+                                <styled.button
                                   data-key="graphics"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  graphics
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="sound"
-                              key="sound"
-                              name="sound"
-                            >
-                              <styled.button
-                                data-key="sound"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": true,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX hgRAff"
+                                    data-key="graphics"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    graphics
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="sound"
+                                key="sound"
+                                name="sound"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="sound"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  sound
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="controls"
-                              key="controls"
-                              name="controls"
-                            >
-                              <styled.button
-                                data-key="controls"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="sound"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    sound
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="controls"
+                                key="controls"
+                                name="controls"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="controls"
                                   onClick={[Function]}
                                   tabIndex={0}
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
+                                  }
                                 >
-                                  controls
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                          </div>
-                        </styled.div>
-                      </Navigation>
-                      <styled.div>
-                        <div
-                          className="sc-gzVnrw jyBrwk"
-                        >
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Apply"
-                            name="Apply"
-                            to="/menu"
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="controls"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    controls
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                            </div>
+                          </styled.div>
+                        </Navigation>
+                        <styled.div>
+                          <div
+                            className="sc-gzVnrw jyBrwk"
                           >
-                            <Button
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Apply"
                               name="Apply"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Apply"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Apply"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Apply"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Apply
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Apply"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Apply
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Reset"
-                            name="Reset"
-                            to="/menu"
-                          >
-                            <Button
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Reset"
                               name="Reset"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Reset"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Reset"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Reset"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Reset
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Reset"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Reset
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </SettingsMenu>
           </div>
         </Settings>
@@ -1511,213 +1527,217 @@ exports[`<Settings /> Should reset settings 2`] = `
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-bZQynM hKpJBw"
-                    >
-                      <Title
-                        text="Settings"
-                        theme={
-                          Object {
-                            "marginLeft": 2,
-                          }
-                        }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-bZQynM hKpJBw"
                       >
-                        <styled.h1
-                          className="font__accent"
+                        <Title
+                          text="Settings"
                           theme={
                             Object {
-                              "fontSize": 3,
                               "marginLeft": 2,
                             }
                           }
                         >
-                          <h1
-                            className="font__accent sc-htpNat ggNPGu"
+                          <styled.h1
+                            className="font__accent"
+                            theme={
+                              Object {
+                                "fontSize": 3,
+                                "marginLeft": 2,
+                              }
+                            }
                           >
-                            Settings
-                          </h1>
-                        </styled.h1>
-                      </Title>
-                      <Navigation
-                        activeKey="graphics"
-                        navigationItems={
-                          Array [
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "graphics",
-                              "name": "graphics",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "sound",
-                              "name": "sound",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "controls",
-                              "name": "controls",
-                            },
-                          ]
-                        }
-                      >
-                        <styled.div
-                          className="font__accent"
-                        >
-                          <div
-                            className="font__accent sc-EHOje hPfYAa"
-                          >
-                            <NavigationItem
-                              active={true}
-                              clickHandler={[Function]}
-                              dataKey="graphics"
-                              key="graphics"
-                              name="graphics"
+                            <h1
+                              className="font__accent sc-htpNat ggNPGu"
                             >
-                              <styled.button
-                                data-key="graphics"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": true,
-                                  }
-                                }
+                              Settings
+                            </h1>
+                          </styled.h1>
+                        </Title>
+                        <Navigation
+                          activeKey="graphics"
+                          navigationItems={
+                            Array [
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "graphics",
+                                "name": "graphics",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "sound",
+                                "name": "sound",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "controls",
+                                "name": "controls",
+                              },
+                            ]
+                          }
+                        >
+                          <styled.div
+                            className="font__accent"
+                          >
+                            <div
+                              className="font__accent sc-EHOje hPfYAa"
+                            >
+                              <NavigationItem
+                                active={true}
+                                clickHandler={[Function]}
+                                dataKey="graphics"
+                                key="graphics"
+                                name="graphics"
                               >
-                                <button
-                                  className="sc-ifAKCX hgRAff"
+                                <styled.button
                                   data-key="graphics"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  graphics
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="sound"
-                              key="sound"
-                              name="sound"
-                            >
-                              <styled.button
-                                data-key="sound"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": true,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX hgRAff"
+                                    data-key="graphics"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    graphics
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="sound"
+                                key="sound"
+                                name="sound"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="sound"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  sound
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="controls"
-                              key="controls"
-                              name="controls"
-                            >
-                              <styled.button
-                                data-key="controls"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="sound"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    sound
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="controls"
+                                key="controls"
+                                name="controls"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="controls"
                                   onClick={[Function]}
                                   tabIndex={0}
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
+                                  }
                                 >
-                                  controls
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                          </div>
-                        </styled.div>
-                      </Navigation>
-                      <styled.div>
-                        <div
-                          className="sc-gzVnrw jyBrwk"
-                        >
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Back"
-                            name="Back"
-                            to="/menu"
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="controls"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    controls
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                            </div>
+                          </styled.div>
+                        </Navigation>
+                        <styled.div>
+                          <div
+                            className="sc-gzVnrw jyBrwk"
                           >
-                            <Button
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Back"
                               name="Back"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Back"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Back"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Back"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Back
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Back"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Back
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </SettingsMenu>
           </div>
         </Settings>
@@ -1836,213 +1856,217 @@ exports[`<Settings /> Should switch group 1`] = `
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-bZQynM hKpJBw"
-                    >
-                      <Title
-                        text="Settings"
-                        theme={
-                          Object {
-                            "marginLeft": 2,
-                          }
-                        }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-bZQynM hKpJBw"
                       >
-                        <styled.h1
-                          className="font__accent"
+                        <Title
+                          text="Settings"
                           theme={
                             Object {
-                              "fontSize": 3,
                               "marginLeft": 2,
                             }
                           }
                         >
-                          <h1
-                            className="font__accent sc-htpNat ggNPGu"
+                          <styled.h1
+                            className="font__accent"
+                            theme={
+                              Object {
+                                "fontSize": 3,
+                                "marginLeft": 2,
+                              }
+                            }
                           >
-                            Settings
-                          </h1>
-                        </styled.h1>
-                      </Title>
-                      <Navigation
-                        activeKey="sound"
-                        navigationItems={
-                          Array [
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "graphics",
-                              "name": "graphics",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "sound",
-                              "name": "sound",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "controls",
-                              "name": "controls",
-                            },
-                          ]
-                        }
-                      >
-                        <styled.div
-                          className="font__accent"
-                        >
-                          <div
-                            className="font__accent sc-EHOje hPfYAa"
-                          >
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="graphics"
-                              key="graphics"
-                              name="graphics"
+                            <h1
+                              className="font__accent sc-htpNat ggNPGu"
                             >
-                              <styled.button
-                                data-key="graphics"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
-                                  }
-                                }
+                              Settings
+                            </h1>
+                          </styled.h1>
+                        </Title>
+                        <Navigation
+                          activeKey="sound"
+                          navigationItems={
+                            Array [
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "graphics",
+                                "name": "graphics",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "sound",
+                                "name": "sound",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "controls",
+                                "name": "controls",
+                              },
+                            ]
+                          }
+                        >
+                          <styled.div
+                            className="font__accent"
+                          >
+                            <div
+                              className="font__accent sc-EHOje hPfYAa"
+                            >
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="graphics"
+                                key="graphics"
+                                name="graphics"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="graphics"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  graphics
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={true}
-                              clickHandler={[Function]}
-                              dataKey="sound"
-                              key="sound"
-                              name="sound"
-                            >
-                              <styled.button
-                                data-key="sound"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": true,
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="graphics"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    graphics
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={true}
+                                clickHandler={[Function]}
+                                dataKey="sound"
+                                key="sound"
+                                name="sound"
                               >
-                                <button
-                                  className="sc-ifAKCX hgRAff"
+                                <styled.button
                                   data-key="sound"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  sound
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="controls"
-                              key="controls"
-                              name="controls"
-                            >
-                              <styled.button
-                                data-key="controls"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": true,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX hgRAff"
+                                    data-key="sound"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    sound
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="controls"
+                                key="controls"
+                                name="controls"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="controls"
                                   onClick={[Function]}
                                   tabIndex={0}
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
+                                  }
                                 >
-                                  controls
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                          </div>
-                        </styled.div>
-                      </Navigation>
-                      <styled.div>
-                        <div
-                          className="sc-gzVnrw jyBrwk"
-                        >
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Back"
-                            name="Back"
-                            to="/menu"
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="controls"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    controls
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                            </div>
+                          </styled.div>
+                        </Navigation>
+                        <styled.div>
+                          <div
+                            className="sc-gzVnrw jyBrwk"
                           >
-                            <Button
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Back"
                               name="Back"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Back"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Back"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Back"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Back
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Back"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Back
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </SettingsMenu>
           </div>
         </Settings>
@@ -2161,264 +2185,268 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                 ]
               }
             >
-              <styled.div
+              <Styled(styled.div)
                 className="effect__appear"
               >
-                <div
-                  className="effect__appear sc-bwzfXH iVThND"
+                <styled.div
+                  className="effect__appear sc-bwzfXH cAueB"
                 >
-                  <styled.div>
-                    <div
-                      className="sc-bZQynM hKpJBw"
-                    >
-                      <Title
-                        text="Settings"
-                        theme={
-                          Object {
-                            "marginLeft": 2,
-                          }
-                        }
+                  <div
+                    className="effect__appear sc-bwzfXH cAueB sc-bdVaJa iVLFuM"
+                  >
+                    <styled.div>
+                      <div
+                        className="sc-bZQynM hKpJBw"
                       >
-                        <styled.h1
-                          className="font__accent"
+                        <Title
+                          text="Settings"
                           theme={
                             Object {
-                              "fontSize": 3,
                               "marginLeft": 2,
                             }
                           }
                         >
-                          <h1
-                            className="font__accent sc-htpNat ggNPGu"
+                          <styled.h1
+                            className="font__accent"
+                            theme={
+                              Object {
+                                "fontSize": 3,
+                                "marginLeft": 2,
+                              }
+                            }
                           >
-                            Settings
-                          </h1>
-                        </styled.h1>
-                      </Title>
-                      <Navigation
-                        activeKey="graphics"
-                        navigationItems={
-                          Array [
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "graphics",
-                              "name": "graphics",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "sound",
-                              "name": "sound",
-                            },
-                            Object {
-                              "clickHandler": [Function],
-                              "dataKey": "controls",
-                              "name": "controls",
-                            },
-                          ]
-                        }
-                      >
-                        <styled.div
-                          className="font__accent"
-                        >
-                          <div
-                            className="font__accent sc-EHOje hPfYAa"
-                          >
-                            <NavigationItem
-                              active={true}
-                              clickHandler={[Function]}
-                              dataKey="graphics"
-                              key="graphics"
-                              name="graphics"
+                            <h1
+                              className="font__accent sc-htpNat ggNPGu"
                             >
-                              <styled.button
-                                data-key="graphics"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": true,
-                                  }
-                                }
+                              Settings
+                            </h1>
+                          </styled.h1>
+                        </Title>
+                        <Navigation
+                          activeKey="graphics"
+                          navigationItems={
+                            Array [
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "graphics",
+                                "name": "graphics",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "sound",
+                                "name": "sound",
+                              },
+                              Object {
+                                "clickHandler": [Function],
+                                "dataKey": "controls",
+                                "name": "controls",
+                              },
+                            ]
+                          }
+                        >
+                          <styled.div
+                            className="font__accent"
+                          >
+                            <div
+                              className="font__accent sc-EHOje hPfYAa"
+                            >
+                              <NavigationItem
+                                active={true}
+                                clickHandler={[Function]}
+                                dataKey="graphics"
+                                key="graphics"
+                                name="graphics"
                               >
-                                <button
-                                  className="sc-ifAKCX hgRAff"
+                                <styled.button
                                   data-key="graphics"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  graphics
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="sound"
-                              key="sound"
-                              name="sound"
-                            >
-                              <styled.button
-                                data-key="sound"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": true,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX hgRAff"
+                                    data-key="graphics"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    graphics
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="sound"
+                                key="sound"
+                                name="sound"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="sound"
                                   onClick={[Function]}
                                   tabIndex={0}
-                                >
-                                  sound
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                            <NavigationItem
-                              active={false}
-                              clickHandler={[Function]}
-                              dataKey="controls"
-                              key="controls"
-                              name="controls"
-                            >
-                              <styled.button
-                                data-key="controls"
-                                onClick={[Function]}
-                                tabIndex={0}
-                                theme={
-                                  Object {
-                                    "isActive": false,
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
                                   }
-                                }
+                                >
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="sound"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    sound
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                              <NavigationItem
+                                active={false}
+                                clickHandler={[Function]}
+                                dataKey="controls"
+                                key="controls"
+                                name="controls"
                               >
-                                <button
-                                  className="sc-ifAKCX gXidXF"
+                                <styled.button
                                   data-key="controls"
                                   onClick={[Function]}
                                   tabIndex={0}
+                                  theme={
+                                    Object {
+                                      "isActive": false,
+                                    }
+                                  }
                                 >
-                                  controls
-                                </button>
-                              </styled.button>
-                            </NavigationItem>
-                          </div>
-                        </styled.div>
-                      </Navigation>
-                      <styled.div>
-                        <div
-                          className="sc-gzVnrw jyBrwk"
-                        >
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Apply"
-                            name="Apply"
-                            to="/menu"
+                                  <button
+                                    className="sc-ifAKCX gXidXF"
+                                    data-key="controls"
+                                    onClick={[Function]}
+                                    tabIndex={0}
+                                  >
+                                    controls
+                                  </button>
+                                </styled.button>
+                              </NavigationItem>
+                            </div>
+                          </styled.div>
+                        </Navigation>
+                        <styled.div>
+                          <div
+                            className="sc-gzVnrw jyBrwk"
                           >
-                            <Button
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Apply"
                               name="Apply"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Apply"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Apply"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Apply"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Apply
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Apply"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Apply
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                          <SettingsMenuItem
-                            clickHandler={[Function]}
-                            key="Reset"
-                            name="Reset"
-                            to="/menu"
-                          >
-                            <Button
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                            <SettingsMenuItem
                               clickHandler={[Function]}
+                              key="Reset"
                               name="Reset"
-                              theme={
-                                Object {
-                                  "width": 10,
-                                }
-                              }
                               to="/menu"
                             >
-                              <styled.button
-                                className="effect__glitch"
-                                data-text="Reset"
-                                onClick={[Function]}
-                                tabIndex={-1}
+                              <Button
+                                clickHandler={[Function]}
+                                name="Reset"
                                 theme={
                                   Object {
-                                    "direction": "row",
-                                    "textAlign": "center",
                                     "width": 10,
                                   }
                                 }
+                                to="/menu"
                               >
-                                <button
-                                  className="effect__glitch sc-bxivhb eGYeuD"
+                                <styled.button
+                                  className="effect__glitch"
                                   data-text="Reset"
                                   onClick={[Function]}
                                   tabIndex={-1}
+                                  theme={
+                                    Object {
+                                      "direction": "row",
+                                      "textAlign": "center",
+                                      "width": 10,
+                                    }
+                                  }
                                 >
-                                  Reset
-                                  <Link
-                                    replace={false}
-                                    tabIndex={0}
-                                    to="/menu"
+                                  <button
+                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    data-text="Reset"
+                                    onClick={[Function]}
+                                    tabIndex={-1}
                                   >
-                                    <a
-                                      href="/menu"
-                                      onClick={[Function]}
+                                    Reset
+                                    <Link
+                                      replace={false}
                                       tabIndex={0}
-                                    />
-                                  </Link>
-                                </button>
-                              </styled.button>
-                            </Button>
-                          </SettingsMenuItem>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
+                                      to="/menu"
+                                    >
+                                      <a
+                                        href="/menu"
+                                        onClick={[Function]}
+                                        tabIndex={0}
+                                      />
+                                    </Link>
+                                  </button>
+                                </styled.button>
+                              </Button>
+                            </SettingsMenuItem>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Styled(styled.div)>
             </SettingsMenu>
           </div>
         </Settings>

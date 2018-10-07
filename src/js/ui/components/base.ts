@@ -29,7 +29,7 @@ export const Fullscreen = styled.div`
   overflow: hidden;
 `;
 
-export const AlignedFullscreen = Fullscreen.extend`
+export const AlignedFullscreen = styled(Fullscreen)`
   display: flex;
   justify-content: left;
   align-items: center;

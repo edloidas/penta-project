@@ -60,7 +60,7 @@ function mapStateToProps() {
   return {};
 }
 
-function mapDispatchToProps(dispatch: Dispatch<any>) {
+function mapDispatchToProps(dispatch: Dispatch<GameActions.ActionsTypes>) {
   return {
     actions: bindActionCreators(GameActions, dispatch)
   };

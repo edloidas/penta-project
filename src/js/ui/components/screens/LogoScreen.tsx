@@ -5,7 +5,7 @@ import Logo from '../texts/Logo';
 import InfiniteLoader from '../loaders/InfiniteLoader';
 import AwaitInputLoader from '../loaders/AwaitInputLoader';
 
-const Screen = Fullscreen.extend`
+const Screen = styled(Fullscreen)`
   display: flex;
   justify-content: center;
   align-items: center;
