@@ -4,10 +4,10 @@
     "indentation": 2,
     "selector-pseudo-class-no-unknown": true,
     "unit-whitelist": [
-      [ "em", "rem", "%", "s", "ms" ],
+      ["em", "rem", "%", "s", "ms"],
       {
         "ignoreProperties": {
-          "px": [ "background-position" ]
+          "px": ["background-position"]
         }
       }
     ]

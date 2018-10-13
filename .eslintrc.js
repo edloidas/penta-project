@@ -2,11 +2,6 @@ module.exports = {
   'parser': 'babel-eslint',
   'extends': [
     'airbnb',
-    'prettier',
-    'prettier/react',
-  ],
-  'plugins': [
-    'prettier',
   ],
   'rules': {
     'spaced-comment': [ 2, 'always', { 'exceptions': [ '-', '+' ] } ],
@@ -27,12 +22,6 @@ module.exports = {
             "ignoreNonDOM": true
         }],
     'jsx-a11y/anchor-is-valid': [ 'warn', { 'aspects': [ 'invalidHref' ] } ],
-    'prettier/prettier': ['error', {
-      'singleQuote': true,
-      'jsxBracketSameLine': true,
-    }],
-    // 'quotes': ['error', 'single'],
-    // no support in 'babel-eslint'; should be 'error'
     'no-await-in-loop': [ 'off' ],
     'jsx-a11y/href-no-hash': [ 'off' ],
   },
