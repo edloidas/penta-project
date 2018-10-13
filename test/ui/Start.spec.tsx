@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { mount } from '../wrap';
-import configureStore from '../../src/js/ui/store';
-import Start from '../../src/js/ui/containers/Start';
 import { finalizeStart } from '../../src/js/ui/actions/start';
+import Start from '../../src/js/ui/containers/Start';
+import configureStore from '../../src/js/ui/store';
+import { mount } from '../wrap';
 
 describe('<Start />', () => {
   test('Should renders', () => {

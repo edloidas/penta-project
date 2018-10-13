@@ -1,7 +1,8 @@
-import { MiddlewareAPI, Dispatch, AnyAction } from 'redux';
+import { AnyAction, Dispatch, MiddlewareAPI } from 'redux';
 
-// eslint-disable-next-line no-unused-vars
+/* tslint:disable max-line-length no-console */
 export default (middleware: MiddlewareAPI<any>) => (next: Dispatch<AnyAction>) => action => {
   console.log(action);
   return next(action);
 };
+/* tslint:ensable max-line-length no-console */

@@ -1,10 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 
 import { logger, router } from '../middleware';
 import rootReducer from '../reducers';
-import { State as StartState } from '../reducers/start';
 import { State as GameState } from '../reducers/game';
 import { State as SettingsState } from '../reducers/settings';
+import { State as StartState } from '../reducers/start';
 
 type RoutingState = {
   location: {

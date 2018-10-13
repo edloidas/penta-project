@@ -48,7 +48,7 @@ export const colors: Colors = {
   font:         '#fff',    // white
   accent:       '#b8860b', // darkgoldenrod
   hp:           '#b82739',
-  eg:           '#08637e'
+  eg:           '#08637e',
 };
 
 export const texts: Texts = {
@@ -62,6 +62,6 @@ export const texts: Texts = {
     windowMode: ['fullscreen', 'windowed'],
     frameRate: ['30fps', '60fps', '120fps', 'unlimited'],
     vSync: ['off', 'on'],
-    antiAliasing: ['off', 'x2', 'x4']
-  }
+    antiAliasing: ['off', 'x2', 'x4'],
+  },
 };

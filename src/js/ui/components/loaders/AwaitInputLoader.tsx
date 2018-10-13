@@ -1,6 +1,6 @@
+import { merge } from 'lodash';
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { merge } from 'lodash';
 
 const blink = keyframes`
   0% {opacity: 0.2;}
@@ -26,14 +26,15 @@ const theme: Theme = { color: 'grey' };
 
 type AwaitInputLoaderProps = { theme?: Theme };
 
-const AwaitInputLoader: SFC<AwaitInputLoaderProps> = (props: AwaitInputLoaderProps) => (
-  <TextHolder
-    autoFocus
-    theme={merge({}, theme, props.theme)}
-    className="font__mono">
-    Press Any Key
-  </TextHolder>
-);
+const AwaitInputLoader: SFC<AwaitInputLoaderProps> =
+  (props: AwaitInputLoaderProps) => (
+    <TextHolder
+      autoFocus
+      theme={merge({}, theme, props.theme)}
+      className="font__mono">
+      Press Any Key
+    </TextHolder>
+  );
 
 AwaitInputLoader.defaultProps = { theme };
 

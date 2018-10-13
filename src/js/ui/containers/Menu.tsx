@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
+import { Dispatch, bindActionCreators } from 'redux';
+import * as GameActions from '../actions/game';
 import MainMenu from '../components/MainMenu/MainMenu';
 import { MainMenuItemProps } from '../components/MainMenu/MainMenuItem';
-import * as GameActions from '../actions/game';
 import Focusable from './Focusable';
 
 type Props = {
@@ -17,6 +17,11 @@ type Props = {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Menu extends Focusable<Props> {
+
+  props: Props;
+
+  menuItems: MainMenuItemProps[];
+
   constructor(props) {
     super(props);
     this.handleResume = this.handleResume.bind(this);
@@ -28,13 +33,9 @@ class Menu extends Focusable<Props> {
       { name: 'Load Game', to: '/load' },
       { name: 'Hero', to: '/hero' },
       { name: 'Settings', to: '/settings' },
-      { name: 'Exit', to: '/exit' }
+      { name: 'Exit', to: '/exit' },
     ];
   }
-
-  props: Props;
-
-  menuItems: Array<MainMenuItemProps>;
 
   handleResume(e: MouseKeyboardEvent) {
     e.stopPropagation();
@@ -62,7 +63,7 @@ function mapStateToProps() {
 
 function mapDispatchToProps(dispatch: Dispatch<GameActions.ActionsTypes>) {
   return {
-    actions: bindActionCreators(GameActions, dispatch)
+    actions: bindActionCreators(GameActions, dispatch),
   };
 }
 

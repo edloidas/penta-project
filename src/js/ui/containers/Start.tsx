@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Transition from 'react-transition-group/Transition';
-import LogoScreen from '../components/screens/LogoScreen';
+import { Dispatch, bindActionCreators } from 'redux';
 import * as StartActions from '../actions/start';
+import LogoScreen from '../components/screens/LogoScreen';
 import { State } from '../store';
 import Focusable from './Focusable';
 
@@ -18,9 +18,12 @@ type Props = {
 };
 
 class Start extends Focusable<Props> {
+
   static defaultProps: {
     isReady: true
   };
+
+  props: Props;
 
   constructor(props: Props) {
     super(props);
@@ -35,8 +38,6 @@ class Start extends Focusable<Props> {
       this.focus();
     }, minimunAwait);
   }
-
-  props: Props;
 
   // Absence of `handleAnyPress` type leads to flow errors in constructor.
   handleAnyPress(e: MouseKeyboardEvent) {
@@ -76,13 +77,13 @@ class Start extends Focusable<Props> {
 function mapStateToProps(state: State) {
   return {
     isReady: state.start.isReady,
-    isClosed: state.start.isClosed
+    isClosed: state.start.isClosed,
   };
 }
 
 function mapDispatchToProps(dispatch: Dispatch<StartActions.ActionsTypes>) {
   return {
-    actions: bindActionCreators(StartActions, dispatch)
+    actions: bindActionCreators(StartActions, dispatch),
   };
 }
 

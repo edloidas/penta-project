@@ -1,4 +1,4 @@
-import { handleActions, Action as Action } from 'redux-actions';
+import { Action as Action, handleActions } from 'redux-actions';
 
 export type State = { isRunning?: boolean };
 type ResumeGameAction = Action<boolean>;
@@ -23,7 +23,7 @@ export default handleActions<State, Payload>(
     },
     GAME_LOAD(state: State, action: SaveGameAction): State {
       return Object.assign({}, state, { isRunning: action.payload });
-    }
+    },
   },
   initialState
 );

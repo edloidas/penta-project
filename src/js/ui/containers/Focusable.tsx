@@ -1,6 +1,11 @@
 import { Component } from 'react';
 
 class Focusable<Props> extends Component<Props> {
+
+  props: Props;
+
+  focusable: HTMLDivElement | Null;
+
   constructor(props: Props) {
     super(props);
     this.focus = this.focus.bind(this);
@@ -9,10 +14,6 @@ class Focusable<Props> extends Component<Props> {
   componentDidMount() {
     this.focus();
   }
-
-  props: Props;
-
-  focusable: HTMLDivElement | Null;
 
   focus() {
     if (this.focusable != null && document.activeElement !== this.focusable) {

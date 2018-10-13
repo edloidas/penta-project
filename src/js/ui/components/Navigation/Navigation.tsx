@@ -9,7 +9,7 @@ const NavigationHolder = styled.div`
 `;
 
 export type NavigationProps = {
-  navigationItems: Array<NavigationItemProps>,
+  navigationItems: NavigationItemProps[],
   activeKey: SettingsGroup
 };
 

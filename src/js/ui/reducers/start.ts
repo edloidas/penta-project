@@ -1,4 +1,4 @@
-import { handleActions, Action as Action } from 'redux-actions';
+import { Action as Action, handleActions } from 'redux-actions';
 
 export type State = { isReady?: boolean, isClosed?: boolean };
 type FinalizeStartAction = Action<boolean>;
@@ -15,7 +15,7 @@ export default handleActions<State, Payload>(
     },
     START_CLOSE(state: State, action: CloseStartAction): State {
       return Object.assign({}, state, { isClosed: action.payload });
-    }
+    },
   },
   initialState
 );

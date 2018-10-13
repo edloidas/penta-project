@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { AlignedFullscreen as Screen } from '../base';
+import Copyright from '../texts/Copyright';
 import Logo from '../texts/Logo';
 import Version from '../texts/Version';
-import Copyright from '../texts/Copyright';
 import MainMenuItem, { MainMenuItemProps } from './MainMenuItem';
-import { AlignedFullscreen as Screen } from '../base';
 
 const MainMenuHolder = styled.div`
   position: relative;
@@ -36,7 +36,7 @@ const VersionHolder = styled.div`
   width: 19rem;
 `;
 
-type MainMenuProps = { menuItems: Array<MainMenuItemProps> };
+type MainMenuProps = { menuItems: MainMenuItemProps[] };
 
 const MainMenu: SFC<MainMenuProps> = ({ menuItems }: MainMenuProps) => (
   <Screen className="effect__appear">

@@ -1,17 +1,18 @@
+/* tslint:disable max-line-length */
 declare type Null = null | void;
 //
 // webpack
 //
 interface NodeModule {
-  hot : {
+  hot: {
     accept(path: string, callback: () => void): void;
   };
-};
+}
 
 declare var module: NodeModule;
 
 interface Window {
-  __REDUX_DEVTOOLS_EXTENSION__: () => ((...args: any[]) => any)
+  __REDUX_DEVTOOLS_EXTENSION__: () => ((...args: any[]) => any);
 }
 
 //

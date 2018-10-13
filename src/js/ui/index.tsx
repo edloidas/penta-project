@@ -1,16 +1,14 @@
-import { Route, Switch, Redirect } from 'react-router-dom';
-import { ConnectedRouter as Router } from 'react-router-redux';
-import { Provider } from 'react-redux';
-import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-// import './types';
-
+import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import { ConnectedRouter as Router } from 'react-router-redux';
 
 import '../../styles/style.css';
 
-import Start from './containers/Start';
 import Menu from './containers/Menu';
 import Settings from './containers/Settings';
+import Start from './containers/Start';
 import configureStore from './store';
 import history from './store/history';
 

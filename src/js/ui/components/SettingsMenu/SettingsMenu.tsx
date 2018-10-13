@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Title from '../texts/Title';
-import { AlignedFullscreen as Screen } from '../base';
-import SettingsMenuItem from './SettingsMenuItem';
 import Navigation, { NavigationProps } from '../Navigation/Navigation';
+import { AlignedFullscreen as Screen } from '../base';
+import Title from '../texts/Title';
+import SettingsMenuItem from './SettingsMenuItem';
 
 const SettingsMenuHolder = styled.div`
   position: relative;

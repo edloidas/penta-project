@@ -1,5 +1,5 @@
-import { handleActions, Action as Action } from 'redux-actions';
-import { merge } from  'lodash';
+import { merge } from 'lodash';
+import { Action as Action, handleActions } from 'redux-actions';
 
 export type SettingsData = {
   graphics?: {
@@ -31,9 +31,9 @@ const initialState: State = {
       screenSize: '1920x1080',
       frameRateLimit: '60fps',
       vSync: 'on',
-      antiAliasing: 'off'
-    }
-  }
+      antiAliasing: 'off',
+    },
+  },
 };
 
 export default handleActions<State, Payload>(
@@ -44,7 +44,7 @@ export default handleActions<State, Payload>(
     SETTINGS_SET(state: State, action: SetSettingsAction): State {
       return merge({}, state, {
         data: action.payload,
-        hasUnsavedChanges: true
+        hasUnsavedChanges: true,
       });
     },
     // eslint-disable-next-line no-unused-vars
@@ -54,9 +54,9 @@ export default handleActions<State, Payload>(
     SETTINGS_RESET(state: State, action: ResetSettingsAction): State {
       return merge({}, state, {
         data: action.payload,
-        hasUnsavedChanges: false
+        hasUnsavedChanges: false,
       });
-    }
+    },
   },
   initialState
 );

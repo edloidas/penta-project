@@ -1,6 +1,6 @@
+import { merge } from 'lodash';
 import * as React from 'react';
 import styled from 'styled-components';
-import { merge } from 'lodash';
 import { colors, texts } from '../base';
 
 const CopyrightHolder = styled.span`

@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { merge } from 'lodash';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -55,7 +55,7 @@ type Theme = {
 const theme: Theme = {
   width: 0,
   textAlign: 'center',
-  direction: 'row'
+  direction: 'row',
 };
 
 export type ButtonProps = {
@@ -80,7 +80,7 @@ const Button: SFC<ButtonProps> = (props: ButtonProps) => (
 Button.defaultProps = {
   // to: null,
   // clickHandler: null,
-  theme
+  theme,
 };
 
 export default Button;

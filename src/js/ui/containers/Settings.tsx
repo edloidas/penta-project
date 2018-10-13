@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { bindActionCreators, Dispatch } from 'redux';
-import { connect } from 'react-redux';
 import { cloneDeep } from 'lodash';
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { Dispatch, bindActionCreators } from 'redux';
 import * as SettingsActions from '../actions/settings';
-import { SettingsData } from '../reducers/settings';
-import SettingsMenu from '../components/SettingsMenu/SettingsMenu';
 import { NavigationItemProps } from '../components/Navigation/NavigationItem';
+import SettingsMenu from '../components/SettingsMenu/SettingsMenu';
 import { texts } from '../components/base';
+import { SettingsData } from '../reducers/settings';
 import { State } from '../store';
 import Focusable from './Focusable';
 
@@ -37,6 +37,11 @@ type Props = {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Settings extends Focusable<Props> {
+
+  props: Props;
+
+  navigationItems: NavigationItemProps[];
+
   constructor(props) {
     super(props);
     this.handleSwitchGroup = this.handleSwitchGroup.bind(this);
@@ -49,13 +54,9 @@ class Settings extends Focusable<Props> {
     this.navigationItems = settingsGroup.map(name => ({
       name,
       dataKey: name,
-      clickHandler: this.handleSwitchGroup
+      clickHandler: this.handleSwitchGroup,
     }));
   }
-
-  props: Props;
-
-  navigationItems: Array<NavigationItemProps>;
 
   handleSwitchGroup(e?: MouseKeyboardEvent) {
     if (checkActivateEvent(e) && e && e.currentTarget) {
@@ -116,13 +117,13 @@ function mapStateToProps(state: State) {
   return {
     activeGroup: settings.activeGroup,
     hasUnsavedChanges: settings.hasUnsavedChanges,
-    data: cloneDeep(settings.data)
+    data: cloneDeep(settings.data),
   };
 }
 
 function mapDispatchToProps(dispatch: Dispatch<SettingsActions.ActionsTypes>) {
   return {
-    actions: bindActionCreators(SettingsActions, dispatch)
+    actions: bindActionCreators(SettingsActions, dispatch),
   };
 }
 

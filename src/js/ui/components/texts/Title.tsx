@@ -1,6 +1,6 @@
+import { merge } from 'lodash';
 import * as React from 'react';
 import styled from 'styled-components';
-import { merge } from 'lodash';
 import { colors } from '../base';
 
 const TitleHolder = styled.h1`
@@ -17,7 +17,7 @@ type Theme = {
 
 const theme: Theme = {
   fontSize: 3,
-  marginLeft: 0
+  marginLeft: 0,
 };
 
 type TitleProps = {

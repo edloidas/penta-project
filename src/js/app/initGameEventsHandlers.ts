@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-import { BrowserWindow, WebContents, Event } from 'electron';
+import { BrowserWindow, Event, WebContents } from 'electron';
 
 declare class WebContentsWithHistory extends WebContents {
-  history: History & Array<string>
+  history: History & string[];
 }
 
 export default function initGameEventsHandlers(win: BrowserWindow) {

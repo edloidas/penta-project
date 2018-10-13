@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Fullscreen, colors } from '../base';
-import Logo from '../texts/Logo';
-import InfiniteLoader from '../loaders/InfiniteLoader';
 import AwaitInputLoader from '../loaders/AwaitInputLoader';
+import InfiniteLoader from '../loaders/InfiniteLoader';
+import Logo from '../texts/Logo';
 
 const Screen = styled(Fullscreen)`
   display: flex;
@@ -45,7 +45,7 @@ const LogoScreen: SFC<LogoScreenProps> = (props: LogoScreenProps) => (
 );
 
 LogoScreen.defaultProps = {
-  duration: 1000
+  duration: 1000,
 };
 
 export default LogoScreen;

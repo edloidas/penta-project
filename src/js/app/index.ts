@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { BrowserWindow, app } from 'electron';
 // const { autoUpdater } = require('electron-updater');
 // const log = require('electron-log');
 import * as path from 'path';
@@ -22,8 +22,8 @@ const config = {
   fullscreen: !isDev,
   backgroundColor: '#111',
   webPreferences: {
-    devTools: isDev
-  }
+    devTools: isDev,
+  },
 };
 
 function createWindow() {
@@ -34,7 +34,7 @@ function createWindow() {
   const urlConfig = url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
-    slashes: true
+    slashes: true,
   });
   // and load the index.html of the app
   win.loadURL(urlConfig);

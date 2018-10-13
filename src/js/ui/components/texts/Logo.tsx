@@ -1,6 +1,6 @@
+import { merge } from 'lodash';
 import * as React from 'react';
 import styled from 'styled-components';
-import { merge } from 'lodash';
 import { colors, texts } from '../base';
 
 const LogoHolder = styled.div`
@@ -54,7 +54,7 @@ const Logo: SFC<LogoProps> = (props: LogoProps) => (
 
 Logo.defaultProps = {
   renderAuthor: true,
-  theme
+  theme,
 };
 
 export default Logo;
