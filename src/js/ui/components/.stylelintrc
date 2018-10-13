@@ -1,11 +1,15 @@
 {
-  "processors": ["stylelint-processor-styled-components"],
-  "extends": "stylelint-config-standard",
+  "processors": [ "stylelint-processor-styled-components" ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
   "syntax": "scss",
   "rules": {
     "indentation": 2,
     "unit-whitelist": [ "px", "em", "rem", "%", "s", "ms" ],
     "block-closing-brace-space-before": "never-single-line",
-    "block-opening-brace-space-after": "never-single-line"
+    "block-opening-brace-space-after": "never-single-line",
+    "no-empty-source": null
   }
 }
