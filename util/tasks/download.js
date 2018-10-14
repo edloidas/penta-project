@@ -26,4 +26,5 @@ clean([dataDest])
   .then(logger(`Downloaded '${dataUrl}' to '${path.join(root, temp)}'`))
   .then(() => unzip(dataZip, dataDest))
   .then(logger(`Unziped to '${path.join(root, dataDest)}'`))
-  .then(() => clean([temp]));
+  .then(() => clean([temp]))
+  .catch(error => console.error(error));
