@@ -8,16 +8,15 @@ import Focusable from './Focusable';
 
 type Props = {
   actions: {
-    resumeGame: typeof GameActions.resumeGame,
-    startNewGame: typeof GameActions.startNewGame,
-    saveGame: typeof GameActions.saveGame,
-    loadGame: typeof GameActions.loadGame
-  }
+    resumeGame: typeof GameActions.resumeGame;
+    startNewGame: typeof GameActions.startNewGame;
+    saveGame: typeof GameActions.saveGame;
+    loadGame: typeof GameActions.loadGame;
+  };
 };
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Menu extends Focusable<Props> {
-
   props: Props;
 
   menuItems: MainMenuItemProps[];
@@ -67,4 +66,7 @@ function mapDispatchToProps(dispatch: Dispatch<GameActions.ActionsTypes>) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Menu);

@@ -29,9 +29,6 @@
         "named-imports-order": "lowercase-last"
       }
     ],
-    "arrow-parens": [true, "ban-single-arg-parens"],
-    "max-line-length": {
-      "options": [80]
-    }
+    "arrow-parens": [true, "ban-single-arg-parens"]
   }
 }

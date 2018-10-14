@@ -9,7 +9,7 @@ const htmlMinify = {
   preserveLineBreaks: true,
   removeComments: true,
   removeEmptyAttributes: true,
-  useShortDoctype: true
+  useShortDoctype: true,
 };
 
 // ExtractTextPlugin options
@@ -19,5 +19,5 @@ module.exports = {
   minify: isProd ? htmlMinify : false,
   inject: false, // when enabled, use 'head' in production
   // Custom variables
-  production: isProd
+  production: isProd,
 };

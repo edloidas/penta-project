@@ -11,7 +11,7 @@ const {
   SourceMapDevToolPlugin,
   NamedModulesPlugin,
   NoEmitOnErrorsPlugin,
-  DefinePlugin
+  DefinePlugin,
 } = require('webpack');
 const extractConfig = require('./util/config/extract');
 const htmlConfig = require('./util/config/html');
@@ -75,24 +75,24 @@ const webpackConfigTemplate = {
       'redux',
       'redux-actions',
       'react-transition-group',
-      'lodash'
+      'lodash',
       // 'three',
       // Unnesessary libraries
       // 'styled-components',
       // 'redux-devtools',
       // Vendor libraris, that cause error after extraction
       // 'react-hot-loader',
-    ]
+    ],
   },
   output: {
     path: path.resolve(__dirname, CONFIG.root.dist),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   module: {
-    rules: []
+    rules: [],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.json']
+    extensions: ['.tsx', '.ts', '.js', '.json'],
   },
   optimization: {
     splitChunks: {
@@ -106,26 +106,26 @@ const webpackConfigTemplate = {
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10
+          priority: -10,
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
-        }
-      }
-    }
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   plugins: [
     new DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(env.type) },
-      GAME_VERSION: JSON.stringify(project.version)
+      GAME_VERSION: JSON.stringify(project.version),
     }),
     new NamedModulesPlugin(),
-    new NoEmitOnErrorsPlugin()
+    new NoEmitOnErrorsPlugin(),
   ],
   mode: env.type,
-  devtool: isProd ? false : 'inline-source-map'
+  devtool: isProd ? false : 'inline-source-map',
 };
 
 // =====================
@@ -139,8 +139,8 @@ function addPugSupport(cfg) {
     loader: 'pug-loader',
     options: {
       pretty: !isDev,
-      self: true
-    }
+      self: true,
+    },
   };
   const plugin = new HtmlWebpackPlugin(htmlConfig);
 
@@ -160,8 +160,8 @@ function addTypeScriptSupport(cfg) {
     loader: 'ts-loader',
     exclude: /(node_modules|\.\/build|\.\/dist)/,
     options: {
-      configFile: 'src/js/tsconfig.game.json'
-    }
+      configFile: 'src/js/tsconfig.game.json',
+    },
   };
 
   const plugins = [
@@ -171,17 +171,17 @@ function addTypeScriptSupport(cfg) {
           // new HotModuleReplacementPlugin(),
           new SourceMapDevToolPlugin({
             filename: '[name].js.map',
-            exclude: ['vendor.js']
-          })
+            exclude: ['vendor.js'],
+          }),
         ]
       : []),
     ...(isProd
       ? [
           // UglifyJs is replaced with Babili
           // Babili as preset in `.babelrc` does not optimize vendor chunk.
-          new MinifyPlugin(minifyConfig)
+          new MinifyPlugin(minifyConfig),
         ]
-      : [])
+      : []),
   ];
 
   return R.pipe(
@@ -197,33 +197,33 @@ function addTypeScriptSupport(cfg) {
 // =====================
 function addPostCSSSupport(cfg) {
   let rule = {
-    test: /\.css$/
+    test: /\.css$/,
   };
 
   const loader = {
     style: {
-      loader: 'style-loader'
+      loader: 'style-loader',
     },
     css: {
       loader: 'css-loader',
-      options: { importLoaders: 1 }
+      options: { importLoaders: 1 },
     },
     postcss: {
       loader: 'postcss-loader',
-      options: { sourceMap: 'inline' }
-    }
+      options: { sourceMap: 'inline' },
+    },
   };
 
   const devLoaders = {
-    use: Object.values(loader)
+    use: Object.values(loader),
   };
 
   const prodLoaders = {
     use: ExtractTextPlugin.extract({
       // use `devLoaders` converted to query string as `fallback`
       fallback: stringifyUse(loader.style),
-      use: `${stringifyUse(loader.css)}!postcss-loader`
-    })
+      use: `${stringifyUse(loader.css)}!postcss-loader`,
+    }),
   };
   const loaders = isProd ? prodLoaders : devLoaders;
 

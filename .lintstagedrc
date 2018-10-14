@@ -1,11 +1,11 @@
 {
   "*.js": [
-    "prettier",
+    "prettier --write",
     "eslint --fix",
     "git add"
   ],
   "*.ts*": [
-    "prettier",
+    "prettier --write",
     "tslint --fix",
     "git add"
   ],

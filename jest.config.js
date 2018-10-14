@@ -2,10 +2,10 @@ const project = require('./util/project');
 
 module.exports = {
   globals: {
-    GAME_VERSION: JSON.stringify(project.version)
+    GAME_VERSION: JSON.stringify(project.version),
   },
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.tsx?$': 'ts-jest',
   },
   testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.tsx?$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
@@ -14,5 +14,5 @@ module.exports = {
   testURL: 'http://localhost/',
   // Setup Enzyme
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupTestFrameworkScriptFile: './test/setupEnzyme.ts'
+  setupTestFrameworkScriptFile: './test/setupEnzyme.ts',
 };

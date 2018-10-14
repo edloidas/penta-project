@@ -131,25 +131,25 @@ exports[`<Start /> Should renders 1`] = `
                           }
                         >
                           <div
-                            className="font__mono sc-htpNat iytjrA"
+                            className="font__mono sc-EHOje kLsBzw"
                           >
                             <styled.div>
                               <div
-                                className="sc-bxivhb iKpfLW"
+                                className="sc-bZQynM ixtovb"
                               >
                                 edloidas production
                               </div>
                             </styled.div>
                             <styled.div>
                               <div
-                                className="sc-ifAKCX RfDSL"
+                                className="sc-gzVnrw MmFrt"
                               >
                                 Penta Project
                               </div>
                             </styled.div>
                             <styled.div>
                               <div
-                                className="sc-EHOje bMrtUk"
+                                className="sc-htoDjs ddYdqL"
                               >
                                 A Cyberpunk Action Game
                               </div>
@@ -170,7 +170,7 @@ exports[`<Start /> Should renders 1`] = `
                           >
                             <styled.ul>
                               <ul
-                                className="sc-bZQynM cyleeR"
+                                className="sc-bxivhb mKstk"
                               >
                                 <styled.li
                                   theme={
@@ -181,7 +181,7 @@ exports[`<Start /> Should renders 1`] = `
                                   }
                                 >
                                   <li
-                                    className="sc-gzVnrw jkUFCj"
+                                    className="sc-ifAKCX iUWNCO"
                                   />
                                 </styled.li>
                                 <styled.li
@@ -193,7 +193,7 @@ exports[`<Start /> Should renders 1`] = `
                                   }
                                 >
                                   <li
-                                    className="sc-gzVnrw bVjxVl"
+                                    className="sc-ifAKCX gadhOi"
                                   />
                                 </styled.li>
                                 <styled.li
@@ -205,7 +205,7 @@ exports[`<Start /> Should renders 1`] = `
                                   }
                                 >
                                   <li
-                                    className="sc-gzVnrw jJviaV"
+                                    className="sc-ifAKCX jEAgHN"
                                   />
                                 </styled.li>
                                 <styled.li
@@ -217,7 +217,7 @@ exports[`<Start /> Should renders 1`] = `
                                   }
                                 >
                                   <li
-                                    className="sc-gzVnrw kSojoV"
+                                    className="sc-ifAKCX eFvPdM"
                                   />
                                 </styled.li>
                               </ul>
@@ -369,25 +369,25 @@ exports[`<Start /> Should switch to Await loader 1`] = `
                           }
                         >
                           <div
-                            className="font__mono sc-htpNat iytjrA"
+                            className="font__mono sc-EHOje kLsBzw"
                           >
                             <styled.div>
                               <div
-                                className="sc-bxivhb iKpfLW"
+                                className="sc-bZQynM ixtovb"
                               >
                                 edloidas production
                               </div>
                             </styled.div>
                             <styled.div>
                               <div
-                                className="sc-ifAKCX RfDSL"
+                                className="sc-gzVnrw MmFrt"
                               >
                                 Penta Project
                               </div>
                             </styled.div>
                             <styled.div>
                               <div
-                                className="sc-EHOje bMrtUk"
+                                className="sc-htoDjs ddYdqL"
                               >
                                 A Cyberpunk Action Game
                               </div>
@@ -417,7 +417,7 @@ exports[`<Start /> Should switch to Await loader 1`] = `
                             >
                               <button
                                 autoFocus={true}
-                                className="font__mono sc-htoDjs jDINIj"
+                                className="font__mono sc-htpNat glyIiT"
                               >
                                 Press Any Key
                               </button>

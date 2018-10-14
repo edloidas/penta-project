@@ -139,18 +139,18 @@ exports[`<Menu /> Should renders 1`] = `
                                 }
                               >
                                 <div
-                                  className="font__mono sc-htpNat easqzJ"
+                                  className="font__mono sc-ifAKCX cnXwwJ"
                                 >
                                   <styled.div>
                                     <div
-                                      className="sc-ifAKCX RfDSL"
+                                      className="sc-bZQynM dhYivy"
                                     >
                                       Penta Project
                                     </div>
                                   </styled.div>
                                   <styled.div>
                                     <div
-                                      className="sc-EHOje bMrtUk"
+                                      className="sc-gzVnrw jOsOro"
                                     >
                                       A Cyberpunk Action Game
                                     </div>
@@ -521,11 +521,11 @@ exports[`<Menu /> Should renders 1`] = `
                                 }
                               >
                                 <span
-                                  className="sc-bZQynM fjiOsu"
+                                  className="sc-htoDjs dNFyTW"
                                 >
                                   <styled.span>
                                     <span
-                                      className="sc-gzVnrw hjuePL"
+                                      className="sc-dnqmqq kkwTWp"
                                     >
                                       alpha version
                                     </span>
@@ -552,14 +552,14 @@ exports[`<Menu /> Should renders 1`] = `
                             }
                           >
                             <span
-                              className="sc-htoDjs dNFyTW"
+                              className="sc-htpNat bvFkJH"
                             >
                               2017–current © 
                               edloidas production
                               . 
                               <styled.span>
                                 <span
-                                  className="sc-dnqmqq oqlux"
+                                  className="sc-bxivhb hjPKWb"
                                 >
                                   All Rights Reserved.
                                 </span>

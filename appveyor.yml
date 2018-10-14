@@ -13,5 +13,5 @@ install:
   - npm --version
 
 test_script:
-  - npm test
+  - npm review
   - npm run package

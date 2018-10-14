@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
 type Graphics = {
-  screenSize: ScreenSize[],
-  windowMode: WindowMode[],
-  frameRate: FrameRate[],
-  vSync: VSync[],
-  antiAliasing: AntiAliasing[]
+  screenSize: ScreenSize[];
+  windowMode: WindowMode[];
+  frameRate: FrameRate[];
+  vSync: VSync[];
+  antiAliasing: AntiAliasing[];
 };
 
 type Colors = { [key: string]: string };
 type Texts = {
-  author: string,
-  project: string,
-  genre: string,
-  version: string,
-  settingsGroup: SettingsGroup[],
-  graphics: Graphics
+  author: string;
+  project: string;
+  genre: string;
+  version: string;
+  settingsGroup: SettingsGroup[];
+  graphics: Graphics;
 };
 
 export const Fullscreen = styled.div`

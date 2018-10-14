@@ -22,7 +22,8 @@ type VersionProps = { theme?: Theme };
 
 const Version: SFC<VersionProps> = (props: VersionProps) => (
   <VersionHolder theme={merge({}, theme, props.theme)}>
-    <VersionNote>alpha version</VersionNote>&nbsp;
+    <VersionNote>alpha version</VersionNote>
+    &nbsp;
     {texts.version}
   </VersionHolder>
 );

@@ -40,8 +40,8 @@ type Theme = { fontSize: number };
 const theme: Theme = { fontSize: 1 };
 
 type LogoProps = {
-  renderAuthor?: boolean,
-  theme?: Theme
+  renderAuthor?: boolean;
+  theme?: Theme;
 };
 
 const Logo: SFC<LogoProps> = (props: LogoProps) => (

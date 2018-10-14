@@ -30,22 +30,23 @@ const Name = styled.button`
 /* stylelint-enable declaration-colon-newline-after */
 
 export type NavigationItemProps = {
-  name: string,
-  dataKey: SettingsGroup,
-  active?: boolean,
-  clickHandler?: (e?: MouseKeyboardEvent) => void
+  name: string;
+  dataKey: SettingsGroup;
+  active?: boolean;
+  clickHandler?: (e?: MouseKeyboardEvent) => void;
 };
 
-const NavigationItem: SFC<NavigationItemProps> =
-  (props: NavigationItemProps) => (
-    <Name
-      data-key={props.dataKey}
-      tabIndex={0}
-      onClick={props.clickHandler}
-      theme={{ isActive: props.active }}>
-      {props.name}
-    </Name>
-  );
+const NavigationItem: SFC<NavigationItemProps> = (
+  props: NavigationItemProps
+) => (
+  <Name
+    data-key={props.dataKey}
+    tabIndex={0}
+    onClick={props.clickHandler}
+    theme={{ isActive: props.active }}>
+    {props.name}
+  </Name>
+);
 
 NavigationItem.defaultProps = {
   active: false,

@@ -1,6 +1,6 @@
-import { Action as Action, handleActions } from 'redux-actions';
+import { Action, handleActions } from 'redux-actions';
 
-export type State = { isReady?: boolean, isClosed?: boolean };
+export type State = { isReady?: boolean; isClosed?: boolean };
 type FinalizeStartAction = Action<boolean>;
 type CloseStartAction = Action<boolean>;
 

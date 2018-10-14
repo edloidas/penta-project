@@ -1,1 +1,6 @@
+coverage/
+build/
+dist/
+temp/
+test/**/__snapshots__/
 .*

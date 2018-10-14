@@ -1,25 +1,25 @@
 import * as React from 'react';
-import { mount } from '../wrap';
-import configureStore from '../../src/js/ui/store';
-import Settings from '../../src/js/ui/containers/Settings';
 import {
-  switchSettings,
-  setSettings,
   applySettings,
-  resetSettings
+  resetSettings,
+  setSettings,
+  switchSettings,
 } from '../../src/js/ui/actions/settings';
 import { texts } from '../../src/js/ui/components/base';
+import Settings from '../../src/js/ui/containers/Settings';
+import configureStore from '../../src/js/ui/store';
+import { mount } from '../wrap';
 
 const initialData = {
   graphics: {
-    screenSize: texts.graphics.screenSize[0]
-  }
+    screenSize: texts.graphics.screenSize[0],
+  },
 };
 
 const data = {
   graphics: {
-    screenSize: texts.graphics.screenSize[1]
-  }
+    screenSize: texts.graphics.screenSize[1],
+  },
 };
 
 describe('<Settings />', () => {

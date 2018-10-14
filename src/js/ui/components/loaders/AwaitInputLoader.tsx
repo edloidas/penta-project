@@ -26,15 +26,16 @@ const theme: Theme = { color: 'grey' };
 
 type AwaitInputLoaderProps = { theme?: Theme };
 
-const AwaitInputLoader: SFC<AwaitInputLoaderProps> =
-  (props: AwaitInputLoaderProps) => (
-    <TextHolder
-      autoFocus
-      theme={merge({}, theme, props.theme)}
-      className="font__mono">
-      Press Any Key
-    </TextHolder>
-  );
+const AwaitInputLoader: SFC<AwaitInputLoaderProps> = (
+  props: AwaitInputLoaderProps
+) => (
+  <TextHolder
+    autoFocus
+    theme={merge({}, theme, props.theme)}
+    className="font__mono">
+    Press Any Key
+  </TextHolder>
+);
 
 AwaitInputLoader.defaultProps = { theme };
 

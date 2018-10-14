@@ -21,7 +21,8 @@ type CopyrightProps = { theme?: Theme };
 const Copyright: SFC<CopyrightProps> = (props: CopyrightProps) => (
   <CopyrightHolder theme={merge({}, theme, props.theme)}>
     2017&#8211;current ©&nbsp;
-    {texts.author}.&nbsp;
+    {texts.author}
+    .&nbsp;
     <CopyrightNote>All Rights Reserved.</CopyrightNote>
   </CopyrightHolder>
 );

@@ -1,4 +1,3 @@
-/* tslint:disable max-line-length */
 declare type Null = null | void;
 //
 // webpack
@@ -29,7 +28,7 @@ declare type SFC<P = {}> = React.SFC<P>;
 // Actions
 //
 declare type PAction<Payload> = ReduxActions.Action<Payload>;
-declare type PActionCreator<Payload> = ReduxActions.ActionFunctionAny<PAction<Payload>>;
+declare type PActionCreator<Payload> = ReduxActions.ActionFunctionAny<PAction<Payload>>; // prettier-ignore
 
 //
 // Settings
@@ -49,11 +48,25 @@ declare type AntiAliasing = 'off' | 'x2' | 'x4';
 // Events
 //
 // declare type MouseKeyboardEvent = MouseEvent | KeyboardEvent;
-declare type MouseKeyboardEvent = React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>;
-declare type CustomMouseKeyboardEvent<T extends HTMLElement = HTMLElement> = React.MouseEvent<T> | React.MouseEvent<T>;
+declare type MouseKeyboardEvent =
+  | React.MouseEvent<HTMLElement>
+  | React.KeyboardEvent<HTMLElement>;
+declare type CustomMouseKeyboardEvent<T extends HTMLElement = HTMLElement> =
+  | React.MouseEvent<T>
+  | React.MouseEvent<T>;
 
 //
 // CSS
 //
-declare type CSSTextAlign = 'center' | 'justify' | 'left' | 'right' | 'start' | 'end';
-declare type CSSFlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';
+declare type CSSTextAlign =
+  | 'center'
+  | 'justify'
+  | 'left'
+  | 'right'
+  | 'start'
+  | 'end';
+declare type CSSFlexDirection =
+  | 'row'
+  | 'row-reverse'
+  | 'column'
+  | 'column-reverse';

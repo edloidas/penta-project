@@ -9,8 +9,8 @@ const NavigationHolder = styled.div`
 `;
 
 export type NavigationProps = {
-  navigationItems: NavigationItemProps[],
-  activeKey: SettingsGroup
+  navigationItems: NavigationItemProps[];
+  activeKey: SettingsGroup;
 };
 
 const Navigation: SFC<NavigationProps> = (props: NavigationProps) => (

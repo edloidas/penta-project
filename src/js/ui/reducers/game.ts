@@ -1,4 +1,4 @@
-import { Action as Action, handleActions } from 'redux-actions';
+import { Action, handleActions } from 'redux-actions';
 
 export type State = { isRunning?: boolean };
 type ResumeGameAction = Action<boolean>;

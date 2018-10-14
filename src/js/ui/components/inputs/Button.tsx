@@ -47,9 +47,9 @@ const Name = styled.button`
 /* stylelint-enable declaration-colon-newline-after */
 
 type Theme = {
-  width?: number,
-  textAlign?: CSSTextAlign,
-  direction?: CSSFlexDirection
+  width?: number;
+  textAlign?: CSSTextAlign;
+  direction?: CSSFlexDirection;
 };
 
 const theme: Theme = {
@@ -59,10 +59,10 @@ const theme: Theme = {
 };
 
 export type ButtonProps = {
-  name: string,
-  to?: string | Null,
-  clickHandler?: (e?: MouseKeyboardEvent) => void,
-  theme?: Theme
+  name: string;
+  to?: string | Null;
+  clickHandler?: (e?: MouseKeyboardEvent) => void;
+  theme?: Theme;
 };
 
 const Button: SFC<ButtonProps> = (props: ButtonProps) => (

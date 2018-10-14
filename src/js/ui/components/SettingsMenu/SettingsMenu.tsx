@@ -22,10 +22,10 @@ const SettingsMenuActionsHolder = styled.div`
 
 /* eslint-disable no-unused-vars, react/no-unused-prop-types */
 type SettingsMenuProps = {
-  handleReturnToMenu: () => void,
-  handleApplySettings: (e?: MouseKeyboardEvent) => void,
-  handleResetSettings: (e?: MouseKeyboardEvent) => void,
-  hasUnsavedChanges: boolean
+  handleReturnToMenu: () => void;
+  handleApplySettings: (e?: MouseKeyboardEvent) => void;
+  handleResetSettings: (e?: MouseKeyboardEvent) => void;
+  hasUnsavedChanges: boolean;
 } & NavigationProps;
 
 const SettingsMenu: SFC<SettingsMenuProps> = (props: SettingsMenuProps) => (

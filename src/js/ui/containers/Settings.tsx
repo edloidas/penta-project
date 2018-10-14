@@ -24,20 +24,19 @@ function checkActivateEvent(event?: MouseKeyboardEvent) {
 }
 
 type Props = {
-  activeGroup: SettingsGroup,
-  hasUnsavedChanges: boolean,
-  data: SettingsData,
+  activeGroup: SettingsGroup;
+  hasUnsavedChanges: boolean;
+  data: SettingsData;
   actions: {
-    switchSettings: typeof SettingsActions.switchSettings,
-    setSettings: typeof SettingsActions.setSettings,
-    applySettings: typeof SettingsActions.applySettings,
-    resetSettings: typeof SettingsActions.resetSettings
-  }
+    switchSettings: typeof SettingsActions.switchSettings;
+    setSettings: typeof SettingsActions.setSettings;
+    applySettings: typeof SettingsActions.applySettings;
+    resetSettings: typeof SettingsActions.resetSettings;
+  };
 };
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Settings extends Focusable<Props> {
-
   props: Props;
 
   navigationItems: NavigationItemProps[];
@@ -127,4 +126,7 @@ function mapDispatchToProps(dispatch: Dispatch<SettingsActions.ActionsTypes>) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Settings);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Settings);

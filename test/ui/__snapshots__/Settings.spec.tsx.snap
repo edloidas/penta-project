@@ -140,7 +140,7 @@ exports[`<Settings /> Should apply settings 1`] = `
                             }
                           >
                             <h1
-                              className="font__accent sc-htpNat ggNPGu"
+                              className="font__accent sc-ifAKCX egDVTP"
                             >
                               Settings
                             </h1>
@@ -172,7 +172,7 @@ exports[`<Settings /> Should apply settings 1`] = `
                             className="font__accent"
                           >
                             <div
-                              className="font__accent sc-EHOje hPfYAa"
+                              className="font__accent sc-bxivhb fvOAWh"
                             >
                               <NavigationItem
                                 active={true}
@@ -192,7 +192,7 @@ exports[`<Settings /> Should apply settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX hgRAff"
+                                    className="sc-htpNat drLPrj"
                                     data-key="graphics"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -219,7 +219,7 @@ exports[`<Settings /> Should apply settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="sound"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -246,7 +246,7 @@ exports[`<Settings /> Should apply settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="controls"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -292,7 +292,7 @@ exports[`<Settings /> Should apply settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Apply"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -343,7 +343,7 @@ exports[`<Settings /> Should apply settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Reset"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -520,7 +520,7 @@ exports[`<Settings /> Should apply settings 2`] = `
                             }
                           >
                             <h1
-                              className="font__accent sc-htpNat ggNPGu"
+                              className="font__accent sc-ifAKCX egDVTP"
                             >
                               Settings
                             </h1>
@@ -552,7 +552,7 @@ exports[`<Settings /> Should apply settings 2`] = `
                             className="font__accent"
                           >
                             <div
-                              className="font__accent sc-EHOje hPfYAa"
+                              className="font__accent sc-bxivhb fvOAWh"
                             >
                               <NavigationItem
                                 active={true}
@@ -572,7 +572,7 @@ exports[`<Settings /> Should apply settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX hgRAff"
+                                    className="sc-htpNat drLPrj"
                                     data-key="graphics"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -599,7 +599,7 @@ exports[`<Settings /> Should apply settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="sound"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -626,7 +626,7 @@ exports[`<Settings /> Should apply settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="controls"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -672,7 +672,7 @@ exports[`<Settings /> Should apply settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Back"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -849,7 +849,7 @@ exports[`<Settings /> Should renders 1`] = `
                             }
                           >
                             <h1
-                              className="font__accent sc-htpNat ggNPGu"
+                              className="font__accent sc-ifAKCX egDVTP"
                             >
                               Settings
                             </h1>
@@ -881,7 +881,7 @@ exports[`<Settings /> Should renders 1`] = `
                             className="font__accent"
                           >
                             <div
-                              className="font__accent sc-EHOje hPfYAa"
+                              className="font__accent sc-bxivhb fvOAWh"
                             >
                               <NavigationItem
                                 active={true}
@@ -901,7 +901,7 @@ exports[`<Settings /> Should renders 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX hgRAff"
+                                    className="sc-htpNat drLPrj"
                                     data-key="graphics"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -928,7 +928,7 @@ exports[`<Settings /> Should renders 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="sound"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -955,7 +955,7 @@ exports[`<Settings /> Should renders 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="controls"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1001,7 +1001,7 @@ exports[`<Settings /> Should renders 1`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Back"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -1178,7 +1178,7 @@ exports[`<Settings /> Should reset settings 1`] = `
                             }
                           >
                             <h1
-                              className="font__accent sc-htpNat ggNPGu"
+                              className="font__accent sc-ifAKCX egDVTP"
                             >
                               Settings
                             </h1>
@@ -1210,7 +1210,7 @@ exports[`<Settings /> Should reset settings 1`] = `
                             className="font__accent"
                           >
                             <div
-                              className="font__accent sc-EHOje hPfYAa"
+                              className="font__accent sc-bxivhb fvOAWh"
                             >
                               <NavigationItem
                                 active={true}
@@ -1230,7 +1230,7 @@ exports[`<Settings /> Should reset settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX hgRAff"
+                                    className="sc-htpNat drLPrj"
                                     data-key="graphics"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1257,7 +1257,7 @@ exports[`<Settings /> Should reset settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="sound"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1284,7 +1284,7 @@ exports[`<Settings /> Should reset settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="controls"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1330,7 +1330,7 @@ exports[`<Settings /> Should reset settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Apply"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -1381,7 +1381,7 @@ exports[`<Settings /> Should reset settings 1`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Reset"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -1558,7 +1558,7 @@ exports[`<Settings /> Should reset settings 2`] = `
                             }
                           >
                             <h1
-                              className="font__accent sc-htpNat ggNPGu"
+                              className="font__accent sc-ifAKCX egDVTP"
                             >
                               Settings
                             </h1>
@@ -1590,7 +1590,7 @@ exports[`<Settings /> Should reset settings 2`] = `
                             className="font__accent"
                           >
                             <div
-                              className="font__accent sc-EHOje hPfYAa"
+                              className="font__accent sc-bxivhb fvOAWh"
                             >
                               <NavigationItem
                                 active={true}
@@ -1610,7 +1610,7 @@ exports[`<Settings /> Should reset settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX hgRAff"
+                                    className="sc-htpNat drLPrj"
                                     data-key="graphics"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1637,7 +1637,7 @@ exports[`<Settings /> Should reset settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="sound"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1664,7 +1664,7 @@ exports[`<Settings /> Should reset settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="controls"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1710,7 +1710,7 @@ exports[`<Settings /> Should reset settings 2`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Back"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -1887,7 +1887,7 @@ exports[`<Settings /> Should switch group 1`] = `
                             }
                           >
                             <h1
-                              className="font__accent sc-htpNat ggNPGu"
+                              className="font__accent sc-ifAKCX egDVTP"
                             >
                               Settings
                             </h1>
@@ -1919,7 +1919,7 @@ exports[`<Settings /> Should switch group 1`] = `
                             className="font__accent"
                           >
                             <div
-                              className="font__accent sc-EHOje hPfYAa"
+                              className="font__accent sc-bxivhb fvOAWh"
                             >
                               <NavigationItem
                                 active={false}
@@ -1939,7 +1939,7 @@ exports[`<Settings /> Should switch group 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="graphics"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1966,7 +1966,7 @@ exports[`<Settings /> Should switch group 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX hgRAff"
+                                    className="sc-htpNat drLPrj"
                                     data-key="sound"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -1993,7 +1993,7 @@ exports[`<Settings /> Should switch group 1`] = `
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="controls"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -2039,7 +2039,7 @@ exports[`<Settings /> Should switch group 1`] = `
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Back"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -2216,7 +2216,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                             }
                           >
                             <h1
-                              className="font__accent sc-htpNat ggNPGu"
+                              className="font__accent sc-ifAKCX egDVTP"
                             >
                               Settings
                             </h1>
@@ -2248,7 +2248,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                             className="font__accent"
                           >
                             <div
-                              className="font__accent sc-EHOje hPfYAa"
+                              className="font__accent sc-bxivhb fvOAWh"
                             >
                               <NavigationItem
                                 active={true}
@@ -2268,7 +2268,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX hgRAff"
+                                    className="sc-htpNat drLPrj"
                                     data-key="graphics"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -2295,7 +2295,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="sound"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -2322,7 +2322,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                                   }
                                 >
                                   <button
-                                    className="sc-ifAKCX gXidXF"
+                                    className="sc-htpNat cQahHD"
                                     data-key="controls"
                                     onClick={[Function]}
                                     tabIndex={0}
@@ -2368,7 +2368,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Apply"
                                     onClick={[Function]}
                                     tabIndex={-1}
@@ -2419,7 +2419,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
                                   }
                                 >
                                   <button
-                                    className="effect__glitch sc-bxivhb eGYeuD"
+                                    className="effect__glitch sc-EHOje gEPqud"
                                     data-text="Reset"
                                     onClick={[Function]}
                                     tabIndex={-1}

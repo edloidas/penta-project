@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { mount } from '../wrap';
 import Menu from '../../src/js/ui/containers/Menu';
+import { mount } from '../wrap';
 
 describe('<Menu />', () => {
   test('Should renders', () => {

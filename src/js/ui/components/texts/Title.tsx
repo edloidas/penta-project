@@ -11,8 +11,8 @@ const TitleHolder = styled.h1`
 `;
 
 type Theme = {
-  fontSize?: number,
-  marginLeft?: number
+  fontSize?: number;
+  marginLeft?: number;
 };
 
 const theme: Theme = {
@@ -21,8 +21,8 @@ const theme: Theme = {
 };
 
 type TitleProps = {
-  text: string,
-  theme?: Theme
+  text: string;
+  theme?: Theme;
 };
 
 const Title: SFC<TitleProps> = (props: TitleProps) => (

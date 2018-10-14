@@ -9,18 +9,17 @@ import { State } from '../store';
 import Focusable from './Focusable';
 
 type Props = {
-  isReady: boolean,
-  isClosed: boolean,
+  isReady: boolean;
+  isClosed: boolean;
   actions: {
-    finalizeStart: typeof StartActions.finalizeStart,
-    closeStart: typeof StartActions.closeStart
-  }
+    finalizeStart: typeof StartActions.finalizeStart;
+    closeStart: typeof StartActions.closeStart;
+  };
 };
 
 class Start extends Focusable<Props> {
-
   static defaultProps: {
-    isReady: true
+    isReady: true;
   };
 
   props: Props;
@@ -87,4 +86,7 @@ function mapDispatchToProps(dispatch: Dispatch<StartActions.ActionsTypes>) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Start);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Start);

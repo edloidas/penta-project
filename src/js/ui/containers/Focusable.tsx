@@ -1,7 +1,6 @@
 import { Component } from 'react';
 
 class Focusable<Props> extends Component<Props> {
-
   props: Props;
 
   focusable: HTMLDivElement | Null;

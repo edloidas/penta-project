@@ -1,19 +1,19 @@
 import { merge } from 'lodash';
-import { Action as Action, handleActions } from 'redux-actions';
+import { Action, handleActions } from 'redux-actions';
 
 export type SettingsData = {
   graphics?: {
-    screenSize?: ScreenSize,
-    frameRateLimit?: FrameRate,
-    vSync?: VSync,
-    antiAliasing?: AntiAliasing
-  }
+    screenSize?: ScreenSize;
+    frameRateLimit?: FrameRate;
+    vSync?: VSync;
+    antiAliasing?: AntiAliasing;
+  };
 };
 
 export type State = {
-  activeGroup: SettingsGroup,
-  hasUnsavedChanges: boolean,
-  data: SettingsData
+  activeGroup: SettingsGroup;
+  hasUnsavedChanges: boolean;
+  data: SettingsData;
 };
 
 type SwitchSettingsAction = Action<SettingsGroup>;

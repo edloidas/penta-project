@@ -8,17 +8,17 @@ import { State as StartState } from '../reducers/start';
 
 type RoutingState = {
   location: {
-    pathname?: string,
-    search?: string,
-    hash?: string
-  }
+    pathname?: string;
+    search?: string;
+    hash?: string;
+  };
 };
 
 export type State = {
-  routing: RoutingState,
-  start: StartState,
-  game: GameState,
-  settings: SettingsState
+  routing: RoutingState;
+  start: StartState;
+  game: GameState;
+  settings: SettingsState;
 };
 
 export default function configure(initialState?: State) {

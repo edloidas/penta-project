@@ -24,9 +24,9 @@ const LoaderHolder = styled.div`
 `;
 
 type LogoScreenProps = {
-  isLoading: boolean,
-  isHiding: boolean,
-  duration?: number
+  isLoading: boolean;
+  isHiding: boolean;
+  duration?: number;
 };
 
 const LogoScreen: SFC<LogoScreenProps> = (props: LogoScreenProps) => (
