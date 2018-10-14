@@ -17,12 +17,13 @@ const { temp } = CONFIG.root;
 const dataZip = path.join(temp, nameFromUrl(dataUrl));
 const dataDest = path.join(CONFIG.root.dist, CONFIG.data.dist);
 
-// eslint-disable-next-line no-console
+/* eslint-disable no-console */
 const logger = msg => () => console.log(msg);
 const root = path.resolve(__dirname, '../..');
+const headers = { headers: { 'content-type': 'application/zip' } };
 
 clean([dataDest])
-  .then(() => download(dataUrl, temp))
+  .then(() => download(dataUrl, temp, headers))
   .then(logger(`Downloaded '${dataUrl}' to '${path.join(root, temp)}'`))
   .then(() => unzip(dataZip, dataDest))
   .then(logger(`Unziped to '${path.join(root, dataDest)}'`))
