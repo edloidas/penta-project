@@ -44,12 +44,7 @@ class Menu extends Focusable<Props> {
 
   render() {
     return (
-      <div
-        tabIndex={0}
-        role="button"
-        ref={div => {
-          this.focusable = div;
-        }}>
+      <div>
         <MainMenu menuItems={this.menuItems} />
       </div>
     );

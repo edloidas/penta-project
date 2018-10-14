@@ -52,14 +52,7 @@ class Start extends Focusable<Props> {
     return (
       <Transition in={isClosed} timeout={hidingDuration}>
         {state => (
-          <div
-            tabIndex={0}
-            role="button"
-            ref={div => {
-              this.focusable = div;
-            }}
-            onKeyPress={this.handleAnyPress}
-            onClick={this.handleAnyPress}>
+          <div onKeyPress={this.handleAnyPress} onClick={this.handleAnyPress}>
             {state === 'entered' ? <Redirect to="/menu" push /> : null}
             <LogoScreen
               isLoading={!isReady}
