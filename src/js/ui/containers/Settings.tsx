@@ -35,7 +35,6 @@ type Props = {
   };
 };
 
-// eslint-disable-next-line react/prefer-stateless-function
 class Settings extends Focusable<Props> {
   props: Props;
 
