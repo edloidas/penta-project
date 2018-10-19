@@ -67,10 +67,7 @@ exports[`<Menu /> Should renders 1`] = `
             }
           }
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <MainMenu
               menuItems={
                 Array [

@@ -79,10 +79,7 @@ exports[`<Settings /> Should apply settings 1`] = `
           }
           hasUnsavedChanges={true}
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <SettingsMenu
               activeKey="graphics"
               handleApplySettings={[Function]}
@@ -459,10 +456,7 @@ exports[`<Settings /> Should apply settings 2`] = `
           }
           hasUnsavedChanges={false}
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <SettingsMenu
               activeKey="graphics"
               handleApplySettings={[Function]}
@@ -788,10 +782,7 @@ exports[`<Settings /> Should renders 1`] = `
           }
           hasUnsavedChanges={false}
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <SettingsMenu
               activeKey="graphics"
               handleApplySettings={[Function]}
@@ -1117,10 +1108,7 @@ exports[`<Settings /> Should reset settings 1`] = `
           }
           hasUnsavedChanges={true}
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <SettingsMenu
               activeKey="graphics"
               handleApplySettings={[Function]}
@@ -1497,10 +1485,7 @@ exports[`<Settings /> Should reset settings 2`] = `
           }
           hasUnsavedChanges={false}
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <SettingsMenu
               activeKey="graphics"
               handleApplySettings={[Function]}
@@ -1826,10 +1811,7 @@ exports[`<Settings /> Should switch group 1`] = `
           }
           hasUnsavedChanges={false}
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <SettingsMenu
               activeKey="sound"
               handleApplySettings={[Function]}
@@ -2155,10 +2137,7 @@ exports[`<Settings /> Should update settings and switch to "changed" state 1`] =
           }
           hasUnsavedChanges={true}
         >
-          <div
-            role="button"
-            tabIndex={0}
-          >
+          <div>
             <SettingsMenu
               activeKey="graphics"
               handleApplySettings={[Function]}

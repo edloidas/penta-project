@@ -85,8 +85,6 @@ exports[`<Start /> Should renders 1`] = `
             <div
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="button"
-              tabIndex={0}
             >
               <LogoScreen
                 duration={500}
@@ -323,8 +321,6 @@ exports[`<Start /> Should switch to Await loader 1`] = `
             <div
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="button"
-              tabIndex={0}
             >
               <LogoScreen
                 duration={500}
