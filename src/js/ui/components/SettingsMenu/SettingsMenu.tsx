@@ -20,7 +20,6 @@ const SettingsMenuActionsHolder = styled.div`
   justify-content: flex-end;
 `;
 
-/* eslint-disable no-unused-vars, react/no-unused-prop-types */
 type SettingsMenuProps = {
   handleReturnToMenu: () => void;
   handleApplySettings: (e?: MouseKeyboardEvent) => void;

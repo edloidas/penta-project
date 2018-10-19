@@ -32,7 +32,6 @@ export default function configure(initialState?: State) {
 
   if (module.hot) {
     module.hot.accept('../reducers', () => {
-      // eslint-disable-next-line global-require
       const nextReducer = require('../reducers');
       store.replaceReducer(nextReducer);
     });

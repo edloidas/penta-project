@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { BrowserWindow } from 'electron';
 
 const isDev = process.env.NODE_ENV === 'development';

@@ -47,7 +47,6 @@ export default handleActions<State, Payload>(
         hasUnsavedChanges: true,
       });
     },
-    // eslint-disable-next-line no-unused-vars
     SETTINGS_APPLY(state: State, action: ApplySettingsAction): State {
       return Object.assign({}, state, { hasUnsavedChanges: false });
     },
