@@ -110,7 +110,7 @@
     "postcss-normalize": "^7.0.1",
     "postcss-simple-vars": "^5.0.1",
     "prettier": "^1.14.3",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-loader": "^2.3.0",
     "ramda": "^0.25.0",
     "react": "^16.5.2",
